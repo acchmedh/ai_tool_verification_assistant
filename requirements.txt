@@ -23,7 +23,6 @@ loguru>=0.7.3
 
 # Code quality (development)
 black>=24.8.0
-flake8>=7.1.0
 mypy>=1.11.0
 ruff>=0.6.0
 

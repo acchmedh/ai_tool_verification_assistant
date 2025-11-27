@@ -18,7 +18,6 @@ setup: ## Initial setup: create venv and install dependencies
 
 lint: ## Run linters
 	ruff check src/
-	flake8 src/ || true
 
 lint-fix: ## Run Ruff with auto-fix
 	ruff check src/ --fix
