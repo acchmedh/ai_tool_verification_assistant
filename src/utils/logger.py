@@ -44,4 +44,3 @@ def setup_logger() -> None:
         )
 
     logger.info("Logger configured successfully")
-
