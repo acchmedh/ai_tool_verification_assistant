@@ -5,7 +5,7 @@ This module handles all configuration loading from environment variables
 and provides a centralized configuration object.
 """
 
-from pydantic import Field
+from pydantic import Field, ValidationError
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -59,5 +59,6 @@ class Settings(BaseSettings):
     data_dir: str = Field(default="./data", description="Data directory path")
 
 
-# Global settings instance
-settings = Settings()
+# Loaded from environment/.env at runtime; type checker cannot detect it.
+# Suppress false-positive "unfilled parameter" warning.
+settings = Settings()  # type: ignore[call-arg]
