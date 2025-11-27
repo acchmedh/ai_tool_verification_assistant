@@ -6,6 +6,7 @@ This module configures the application logger using loguru.
 
 import sys
 from pathlib import Path
+
 from loguru import logger
 
 from src.config import settings

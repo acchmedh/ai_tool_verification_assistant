@@ -5,8 +5,8 @@ This module handles all configuration loading from environment variables
 and provides a centralized configuration object.
 """
 
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):

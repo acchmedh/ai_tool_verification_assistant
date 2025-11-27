@@ -20,6 +20,9 @@ lint: ## Run linters
 	ruff check src/
 	flake8 src/ || true
 
+lint-fix: ## Run Ruff with auto-fix
+	ruff check src/ --fix
+
 format: ## Format code with black and ruff
 	black src/ main.py
 	ruff format src/ main.py
