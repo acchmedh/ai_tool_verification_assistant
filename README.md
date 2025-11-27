@@ -30,7 +30,7 @@ This solution helps automate and accelerate the verification process by providin
 
 ## 🎯 Features
 
-- **Synthetic Data Generation**: Generate realistic legal and compliance documents for testing
+- **Synthetic Data Generation**: Generate realistic legal and compliance documents for verification
 - **Semantic Search**: Advanced RAG-based document retrieval using embeddings
 - **Intelligent Chatbot**: Natural language Q&A interface for document queries
 - **Evaluation Framework**: Standard metrics for performance assessment
@@ -52,10 +52,6 @@ ai_tool_verification_assistant/
 │   └── utils/            # Utility functions
 │       ├── __init__.py
 │       └── logger.py     # Logging configuration
-├── tests/                # Test suite
-│   ├── __init__.py
-│   ├── unit/            # Unit tests
-│   └── integration/     # Integration tests
 ├── logs/                 # Application logs (generated)
 ├── rag_store/            # ChromaDB vector store (generated)
 ├── .gitignore           # Git ignore patterns
@@ -143,42 +139,18 @@ python main.py
 
 1. **Code Formatting**
    ```bash
-   black src/ tests/
+   black src/ main.py
    ```
 
 2. **Linting**
    ```bash
-   ruff check src/ tests/
+   ruff check src/
    ```
 
 3. **Type Checking**
    ```bash
    mypy src/
    ```
-
-4. **Running Tests**
-   ```bash
-   pytest
-   ```
-
-   With coverage:
-   ```bash
-   pytest --cov=src --cov-report=html
-   ```
-
-## 🧪 Testing
-
-The project includes a comprehensive test suite. Run tests with:
-
-```bash
-pytest
-```
-
-For detailed coverage reports:
-
-```bash
-pytest --cov=src --cov-report=term-missing --cov-report=html
-```
 
 ## 🛠️ Development
 
@@ -189,13 +161,12 @@ This project uses several tools to ensure code quality:
 - **Black**: Code formatting
 - **Ruff**: Fast Python linter
 - **MyPy**: Static type checking
-- **Pytest**: Testing framework
 
 ### Adding Dependencies
 
 1. Add the package to `requirements.txt` with version pinning
 2. Update `pyproject.toml` if it's a project dependency
-3. Install and test: `pip install -r requirements.txt`
+3. Install and verify: `pip install -r requirements.txt`
 
 ## 📝 Code Style
 
@@ -210,8 +181,7 @@ This project follows PEP 8 style guidelines:
 ## 🤝 Development Guidelines
 
 1. Follow the code style guidelines outlined above
-2. Write or update tests for new features
-3. Run tests and code quality checks before committing
+2. Keep code quality checks green before committing
 4. Document your changes in code comments and docstrings
 
 ## 📚 Documentation
