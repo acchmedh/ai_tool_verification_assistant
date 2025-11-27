@@ -36,4 +36,3 @@ def mock_settings(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "test-key")
     monkeypatch.setenv("OPENAI_BASE_URL", "https://test.example.com")
     monkeypatch.setenv("DATA_DIR", "./test_data")
-
