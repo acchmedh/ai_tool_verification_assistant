@@ -7,4 +7,3 @@ This module handles:
 - RAG pipeline implementation
 - Response generation
 """
-

@@ -7,4 +7,3 @@ This module handles:
 - Vector store indexing
 - Data pipeline orchestration
 """
-
