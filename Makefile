@@ -1,4 +1,4 @@
-.PHONY: help install install-dev lint format type-check clean run setup
+.PHONY: help install install-dev lint format type-check clean run setup test-connection
 
 help: ## Show this help message
 	@echo "Available commands:"
@@ -40,4 +40,7 @@ clean: ## Clean generated files
 
 run: ## Run the main application
 	python main.py
+
+test-connection: ## Test OpenAI/LiteLLM connection
+	python test_connection.py
 

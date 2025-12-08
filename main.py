@@ -6,6 +6,7 @@ the necessary components for the verification assistant.
 """
 
 from loguru import logger
+import openai
 
 from src.config import settings
 from src.utils.logger import setup_logger
@@ -34,6 +35,24 @@ def main() -> None:
     # - Data ingestion pipeline
     # - RAG chatbot interface
     # - Evaluation framework
+
+
+    client = openai.OpenAI(
+        api_key="sk-pjXWROx1o6pYvLXyiEJgkA",
+        base_url="https://litellm.ai.paas.htec.rs"
+    )
+
+    response = client.chat.completions.create(
+        model="l2-gpt-4o-mini",
+        messages=[
+            {
+                "role": "user",
+                "content": "tell me a joke"
+            }
+        ]
+    )
+
+    print(response.choices[0].message.content)
 
 
 if __name__ == "__main__":

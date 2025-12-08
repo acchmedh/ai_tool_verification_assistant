@@ -210,9 +210,6 @@ This project is developed for HTEC L2 AI Course completion.
 - [ ] Performance optimization
 - [ ] User interface development
 
-## 📞 Support
-
-For questions or issues, please contact the HTEC verification team.
 
 ---
 
