@@ -1,0 +1,17 @@
+{
+  "tool_name": "Tool_1",
+  "category": "Collaboration",
+  "user_base": "Compliance officers",
+  "document_types": [
+    "terms_of_service",
+    "data_processing_agreement",
+    "security_whitepaper",
+    "service_level_agreement"
+  ],
+  "description": {
+    "name": "Tool_1",
+    "purpose": "A secure collaboration platform designed specifically for compliance officers to share documents, track regulatory changes, and manage audits in real-time.",
+    "category": "Collaboration",
+    "user_base": "Compliance officers"
+  }
+}
