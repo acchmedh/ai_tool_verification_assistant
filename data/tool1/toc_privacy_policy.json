@@ -1,0 +1,34 @@
+{
+  "title": "Privacy Policy",
+  "sections": [
+    {"title": "Introduction", "page": 1},
+    {
+      "title": "Data We Collect",
+      "page": 2,
+      "subsections": [
+        {"title": "Personal Identifiers", "page": 2},
+        {"title": "Usage and Telemetry Data", "page": 3},
+        {"title": "Derived Data and Model Inputs", "page": 4}
+      ]
+    },
+    {
+      "title": "How We Use Data",
+      "page": 5,
+      "subsections": [
+        {"title": "Service Operations", "page": 5},
+        {"title": "Model Training and Improvement", "page": 6}
+      ]
+    },
+    {"title": "Data Sharing and Third Parties", "page": 7},
+    {
+      "title": "User Rights & Controls",
+      "page": 8,
+      "subsections": [
+        {"title": "Access and Portability", "page": 8},
+        {"title": "Deletion & Opt-out", "page": 9}
+      ]
+    },
+    {"title": "Data Retention and Security", "page": 10},
+    {"title": "Contact Information and Changes to Policy", "page": 11}
+  ]
+}

@@ -1,0 +1,21 @@
+toc_generation:
+  system: |
+    You are a reasoning-capable document architect. Produce a structured Table of Contents (TOC) for the requested document type.
+    Output MUST be valid JSON matching the provided schema exactly.
+  user_template: |
+    Tool info: {tool_info_json}
+    Document type: {document_type}
+    Generate a realistic, nested TOC for this document type. Aim for 4–10 top-level sections, some with subsections (depth up to 3).
+    Provide section titles appropriate for enterprise software legal documents.
+
+section_generation:
+  system: |
+    You are a legal writer producing HTML sections for a document. Each generation step returns a JSON object with keys "section_html" and "issues".
+    "section_html" must be an HTML fragment (may use <h2>, <h3>, <p>, <ul>, <li>, <div>), no full document wrapper — we will assemble.
+    "issues" must be a JSON array of 2–3 strings describing intentionally injected issues (e.g., "typo: 'permision'", "contradiction with section X", "ambiguous: what does 'regularly' mean?").
+  user_template: |
+    Tool info: {tool_info_json}
+    Document type: {document_type}
+    TOC node: {toc_node_json}
+    Previously generated sections HTML: {existing_sections_html}
+    Generate the HTML for the TOC node title, ~150–300 words (realistic), and include 2–3 issues. Return JSON as specified.
