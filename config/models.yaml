@@ -1,0 +1,7 @@
+toc_model:
+  name: 'l2-gpt-4o'
+  temperature: 0.3
+
+section_model:
+  name: 'l2-gpt-4.1-mini'
+  temperature: 0.7

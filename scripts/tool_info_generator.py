@@ -1,41 +1,35 @@
 import os
 import json
 import random
+import re
+import sys
+from pathlib import Path
 
-from dotenv import load_dotenv
-from openai import OpenAI
+# Add project root to path for imports
+ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT))
 
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    raise ValueError("OPENAI_API_KEY not found in environment variables or .env file")
+from src.utils.constants import CATEGORIES, USER_BASES, DOCUMENT_TYPES
+from src.utils.openai_client import get_openai_client
 
-client = OpenAI(api_key=api_key)
+client = get_openai_client()
 
-CATEGORIES = [
-    "Data Processing",
-    "AI Analytics",
-    "Collaboration",
-    "Compliance Monitoring",
-    "Security"
-]
 
-USER_BASES = [
-    "ML engineers",
-    "Data analysts",
-    "Enterprise IT",
-    "Compliance officers",
-    "Product managers"
-]
-
-DOCUMENT_TYPES = [
-    "privacy_policy",
-    "terms_of_service",
-    "data_processing_agreement",
-    "service_level_agreement",
-    "security_whitepaper",
-    "compliance_and_certifications"
-]
+def extract_json(text: str):
+    """Extracts JSON object from text, trying direct parse first, then searching for JSON patterns."""
+    text = text.strip()
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
+    matches = re.finditer(r"\{.*\}", text, re.DOTALL)
+    for m in matches:
+        candidate = m.group(0)
+        try:
+            return json.loads(candidate)
+        except Exception:
+            continue
+    return None
 
 
 def generate_tool_description(name, category, user_base):
@@ -58,8 +52,10 @@ def generate_tool_description(name, category, user_base):
     )
 
     content = response.choices[0].message.content.strip()
-    print("LLM output:", content)
-    return json.loads(content)
+    result = extract_json(content)
+    if result is None:
+        raise ValueError(f"Failed to extract JSON from LLM response: {content[:100]}...")
+    return result
 
 
 def generate_tool_info(tool_index):
