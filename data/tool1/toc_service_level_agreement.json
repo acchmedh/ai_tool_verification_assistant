@@ -1,0 +1,151 @@
+{
+  "title": "Service Level Agreement for Tool_1",
+  "sections": [
+    {
+      "title": "Introduction",
+      "subsections": [
+        {
+          "title": "Purpose of the Agreement"
+        },
+        {
+          "title": "Parties to the Agreement"
+        },
+        {
+          "title": "Effective Date and Term"
+        }
+      ]
+    },
+    {
+      "title": "Definitions",
+      "subsections": [
+        {
+          "title": "Key Terms"
+        },
+        {
+          "title": "Interpretation Guidelines"
+        }
+      ]
+    },
+    {
+      "title": "Scope of Services",
+      "subsections": [
+        {
+          "title": "Description of Tool_1 Services"
+        },
+        {
+          "title": "Service Limitations"
+        },
+        {
+          "title": "Exclusions"
+        }
+      ]
+    },
+    {
+      "title": "Service Availability and Performance",
+      "subsections": [
+        {
+          "title": "Uptime Commitment"
+        },
+        {
+          "title": "Performance Metrics"
+        },
+        {
+          "title": "Scheduled Maintenance"
+        },
+        {
+          "title": "Unscheduled Downtime"
+        }
+      ]
+    },
+    {
+      "title": "Support and Incident Management",
+      "subsections": [
+        {
+          "title": "Support Tiers"
+        },
+        {
+          "title": "Incident Reporting Procedures"
+        },
+        {
+          "title": "Response and Resolution Times"
+        }
+      ]
+    },
+    {
+      "title": "Customer Obligations",
+      "subsections": [
+        {
+          "title": "Compliance with Terms"
+        },
+        {
+          "title": "Access and Security Responsibilities"
+        },
+        {
+          "title": "Data Backup and Retention"
+        }
+      ]
+    },
+    {
+      "title": "Service Credits",
+      "subsections": [
+        {
+          "title": "Eligibility for Service Credits"
+        },
+        {
+          "title": "Calculation of Service Credits"
+        },
+        {
+          "title": "Claim Process"
+        }
+      ]
+    },
+    {
+      "title": "Confidentiality and Data Protection",
+      "subsections": [
+        {
+          "title": "Confidentiality Obligations"
+        },
+        {
+          "title": "Data Processing and Security Measures"
+        },
+        {
+          "title": "Compliance with Applicable Laws"
+        }
+      ]
+    },
+    {
+      "title": "Termination and Suspension",
+      "subsections": [
+        {
+          "title": "Termination by Customer"
+        },
+        {
+          "title": "Termination by Tool_1"
+        },
+        {
+          "title": "Suspension of Services"
+        },
+        {
+          "title": "Effect of Termination"
+        }
+      ]
+    },
+    {
+      "title": "General Provisions",
+      "subsections": [
+        {
+          "title": "Governing Law and Jurisdiction"
+        },
+        {
+          "title": "Force Majeure"
+        },
+        {
+          "title": "Amendments and Modifications"
+        },
+        {
+          "title": "Entire Agreement"
+        }
+      ]
+    }
+  ]
+}

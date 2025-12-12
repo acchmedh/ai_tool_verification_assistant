@@ -1,9 +1,0 @@
-toc_model:
-  name: "gpt-4"        # reasoning-capable model (example)
-  temperature: 0.3
-section_model:
-  name: "gpt-3.5-turbo" # cost-effective
-  temperature: 0.7
-retry:
-  attempts: 3
-  backoff_seconds: 1.5

@@ -1,0 +1,134 @@
+{
+  "title": "Compliance and Certifications for Tool_2",
+  "sections": [
+    {
+      "title": "Introduction",
+      "subsections": [
+        {
+          "title": "Purpose of This Document"
+        },
+        {
+          "title": "Scope of Compliance"
+        },
+        {
+          "title": "Audience"
+        }
+      ]
+    },
+    {
+      "title": "Regulatory Compliance",
+      "subsections": [
+        {
+          "title": "General Data Protection Regulation (GDPR)"
+        },
+        {
+          "title": "California Consumer Privacy Act (CCPA)"
+        },
+        {
+          "title": "Health Insurance Portability and Accountability Act (HIPAA)"
+        },
+        {
+          "title": "Other Regional and Industry Standards"
+        }
+      ]
+    },
+    {
+      "title": "Certifications and Standards",
+      "subsections": [
+        {
+          "title": "ISO/IEC 27001 Certification"
+        },
+        {
+          "title": "SOC 2 Type II Certification"
+        },
+        {
+          "title": "Cloud Security Alliance (CSA) STAR Certification"
+        },
+        {
+          "title": "Other Relevant Certifications"
+        }
+      ]
+    },
+    {
+      "title": "Data Security and Privacy Measures",
+      "subsections": [
+        {
+          "title": "Encryption Standards"
+        },
+        {
+          "title": "Access Control and Authentication"
+        },
+        {
+          "title": "Data Retention and Deletion Policies"
+        },
+        {
+          "title": "Incident Response and Breach Notification"
+        }
+      ]
+    },
+    {
+      "title": "Third-Party Audits and Assessments",
+      "subsections": [
+        {
+          "title": "Frequency of Audits"
+        },
+        {
+          "title": "Independent Audit Firms"
+        },
+        {
+          "title": "Summary of Findings"
+        }
+      ]
+    },
+    {
+      "title": "Compliance Responsibilities",
+      "subsections": [
+        {
+          "title": "Responsibilities of Tool_2"
+        },
+        {
+          "title": "Responsibilities of Users"
+        },
+        {
+          "title": "Shared Responsibility Model"
+        }
+      ]
+    },
+    {
+      "title": "Legal and Regulatory Updates",
+      "subsections": [
+        {
+          "title": "Monitoring Changes in Regulations"
+        },
+        {
+          "title": "Process for Updating Compliance Measures"
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions (FAQs)",
+      "subsections": [
+        {
+          "title": "General Compliance Questions"
+        },
+        {
+          "title": "Certification-Specific Questions"
+        },
+        {
+          "title": "Data Security and Privacy Questions"
+        }
+      ]
+    },
+    {
+      "title": "Contact Information",
+      "subsections": [
+        {
+          "title": "Compliance Team Contact Details"
+        },
+        {
+          "title": "Support Channels for Compliance Queries"
+        }
+      ]
+    }
+  ]
+}
