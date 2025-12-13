@@ -1,14 +1,14 @@
 {
   "description": {
     "name": "Tool_1",
-    "purpose": "Tool_1 is designed to enhance security measures for machine learning models by providing advanced threat detection, vulnerability assessments, and secure model deployment processes. It utilizes AI-driven algorithms to identify potential risks in data and model integrity, ensuring that ML engineers can develop and deploy their solutions with confidence.",
-    "category": "Security",
-    "user_base": "ML engineers"
+    "purpose": "To provide actionable insights and predictive analysis for product managers, helping them to optimize product development and enhance user experience.",
+    "category": "AI Analytics",
+    "user_base": "Product managers"
   },
   "document_types": [
-    "data_processing_agreement",
+    "service_level_agreement",
     "security_whitepaper",
-    "privacy_policy",
-    "terms_of_service"
+    "terms_of_service",
+    "data_processing_agreement"
   ]
 }

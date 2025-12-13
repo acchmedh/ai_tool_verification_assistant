@@ -1,14 +1,14 @@
 {
   "description": {
     "name": "Tool_2",
-    "purpose": "A comprehensive security compliance management tool that helps organizations ensure adherence to regulatory standards and streamline audit processes.",
-    "category": "Security",
-    "user_base": "Compliance officers"
+    "purpose": "A powerful collaboration platform designed to enhance communication and data sharing among data analysts, facilitating real-time insights and collaborative project management.",
+    "category": "Collaboration",
+    "user_base": "Data analysts"
   },
   "document_types": [
-    "data_processing_agreement",
-    "privacy_policy",
+    "service_level_agreement",
+    "terms_of_service",
     "compliance_and_certifications",
-    "terms_of_service"
+    "privacy_policy"
   ]
 }

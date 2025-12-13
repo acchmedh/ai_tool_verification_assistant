@@ -11,76 +11,35 @@
           "title": "Scope of Compliance"
         },
         {
-          "title": "Audience and Applicability"
+          "title": "Definitions and Terminology"
         }
       ]
     },
     {
-      "title": "Regulatory Frameworks",
+      "title": "Regulatory Compliance Standards",
       "subsections": [
         {
-          "title": "Overview of Applicable Regulations"
+          "title": "General Data Protection Regulation (GDPR)"
         },
         {
-          "title": "Global Standards"
+          "title": "California Consumer Privacy Act (CCPA)"
         },
         {
-          "title": "Industry-Specific Requirements"
+          "title": "Other Regional Regulations"
         }
       ]
     },
     {
-      "title": "Certifications Overview",
+      "title": "Industry Certifications",
       "subsections": [
         {
-          "title": "ISO Certifications",
-          "subsections": [
-            {
-              "title": "ISO 27001: Information Security Management"
-            },
-            {
-              "title": "ISO 27701: Privacy Information Management"
-            }
-          ]
+          "title": "ISO 27001 Certification"
         },
         {
-          "title": "SOC Reports",
-          "subsections": [
-            {
-              "title": "SOC 1: Financial Reporting Controls"
-            },
-            {
-              "title": "SOC 2: Trust Service Criteria"
-            },
-            {
-              "title": "SOC 3: Public Trust Report"
-            }
-          ]
+          "title": "SOC 2 Type II Compliance"
         },
         {
-          "title": "Other Certifications",
-          "subsections": [
-            {
-              "title": "GDPR Compliance Certification"
-            },
-            {
-              "title": "HIPAA Compliance Certification"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Audit Processes",
-      "subsections": [
-        {
-          "title": "Internal Audits"
-        },
-        {
-          "title": "External Audits"
-        },
-        {
-          "title": "Third-Party Assessments"
+          "title": "Other Relevant Certifications"
         }
       ]
     },
@@ -91,52 +50,80 @@
           "title": "Encryption Standards"
         },
         {
-          "title": "Access Controls"
+          "title": "Access Control Policies"
         },
         {
-          "title": "Incident Response Protocols"
+          "title": "Incident Response Procedures"
         }
       ]
     },
     {
-      "title": "Privacy Compliance",
+      "title": "Audit and Assessment Processes",
       "subsections": [
         {
-          "title": "Data Subject Rights"
+          "title": "Internal Audits"
         },
         {
-          "title": "Data Retention Policies"
+          "title": "Third-Party Assessments"
         },
         {
-          "title": "Cross-Border Data Transfers"
+          "title": "Frequency and Reporting"
         }
       ]
     },
     {
-      "title": "Compliance Monitoring",
+      "title": "Compliance Maintenance",
       "subsections": [
         {
-          "title": "Continuous Monitoring Tools"
+          "title": "Continuous Monitoring"
         },
         {
-          "title": "Reporting Mechanisms"
+          "title": "Policy Updates"
         },
         {
-          "title": "Risk Assessment Procedures"
+          "title": "Employee Training Programs"
         }
       ]
     },
     {
-      "title": "Legal and Regulatory Updates",
+      "title": "Third-Party Vendor Compliance",
       "subsections": [
         {
-          "title": "Tracking Changes in Regulations"
+          "title": "Vendor Selection Criteria"
         },
         {
-          "title": "Impact Analysis"
+          "title": "Ongoing Vendor Assessments"
         },
         {
-          "title": "Implementation of Updates"
+          "title": "Contractual Obligations"
+        }
+      ]
+    },
+    {
+      "title": "Reporting and Documentation",
+      "subsections": [
+        {
+          "title": "Compliance Reports"
+        },
+        {
+          "title": "Incident Documentation"
+        },
+        {
+          "title": "Retention Policies"
+        }
+      ]
+    },
+    {
+      "title": "Legal Disclosures",
+      "subsections": [
+        {
+          "title": "Liability Limitations"
+        },
+        {
+          "title": "Jurisdictional Considerations"
+        },
+        {
+          "title": "Dispute Resolution"
         }
       ]
     },

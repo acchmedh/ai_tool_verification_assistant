@@ -1,11 +1,11 @@
 {
-  "title": "Privacy Policy",
+  "title": "Privacy Policy for Tool_3",
   "sections": [
     {
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of This Policy"
+          "title": "Purpose of This Privacy Policy"
         },
         {
           "title": "Scope of Application"
@@ -44,7 +44,7 @@
           "title": "Legal Basis for Processing"
         },
         {
-          "title": "Data Analytics and Algorithm Optimization"
+          "title": "Automated Decision-Making and Profiling"
         }
       ]
     },
@@ -55,7 +55,7 @@
           "title": "Third-Party Service Providers"
         },
         {
-          "title": "Legal Obligations"
+          "title": "Compliance with Legal Obligations"
         },
         {
           "title": "Business Transfers"
@@ -83,10 +83,10 @@
           "title": "Data Portability"
         },
         {
-          "title": "Right to Erasure"
+          "title": "Right to Object"
         },
         {
-          "title": "Opt-Out Options"
+          "title": "Withdrawal of Consent"
         }
       ]
     },
@@ -97,10 +97,7 @@
           "title": "Technical Safeguards"
         },
         {
-          "title": "Organizational Measures"
-        },
-        {
-          "title": "Incident Response"
+          "title": "Organizational Safeguards"
         }
       ]
     },
@@ -108,24 +105,21 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Cross-Border Transfers"
+          "title": "Data Transfer Mechanisms"
         },
         {
-          "title": "Adequacy Decisions"
-        },
-        {
-          "title": "Standard Contractual Clauses"
+          "title": "Compliance with Local Regulations"
         }
       ]
     },
     {
-      "title": "Changes to This Privacy Policy",
+      "title": "Updates to This Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
         },
         {
-          "title": "Effective Date"
+          "title": "Effective Date of Updates"
         }
       ]
     },
@@ -133,10 +127,10 @@
       "title": "Contact Information",
       "subsections": [
         {
-          "title": "Data Protection Officer"
+          "title": "Privacy Inquiries"
         },
         {
-          "title": "Support Channels"
+          "title": "Data Protection Officer Contact"
         }
       ]
     }

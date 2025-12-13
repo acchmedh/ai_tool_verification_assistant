@@ -7,9 +7,9 @@ from jsonschema import validate, ValidationError
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.utils.config import DATA_DIR, load_generator_config
-from src.utils.json_utils import extract_json
-from src.utils.constants import TOC_SCHEMA
+from scripts.utils.config import DATA_DIR, load_generator_config
+from scripts.utils.json_utils import extract_json
+from scripts.utils.constants import TOC_SCHEMA
 from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()

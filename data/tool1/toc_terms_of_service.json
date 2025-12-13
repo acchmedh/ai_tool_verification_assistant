@@ -1,11 +1,11 @@
 {
-  "title": "Terms of Service for Tool_1",
+  "title": "Terms of Service",
   "sections": [
     {
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of the Terms"
+          "title": "Purpose of the Agreement"
         },
         {
           "title": "Acceptance of Terms"
@@ -16,41 +16,41 @@
       ]
     },
     {
-      "title": "Account Registration and Responsibilities",
+      "title": "Scope of Services",
       "subsections": [
         {
-          "title": "Eligibility Requirements"
+          "title": "Description of Services"
         },
+        {
+          "title": "Service Availability and Limitations"
+        },
+        {
+          "title": "Modifications to Services"
+        }
+      ]
+    },
+    {
+      "title": "User Responsibilities",
+      "subsections": [
         {
           "title": "Account Creation and Maintenance"
         },
         {
-          "title": "User Responsibilities"
-        }
-      ]
-    },
-    {
-      "title": "Use of the Service",
-      "subsections": [
-        {
-          "title": "Permitted Uses"
+          "title": "Compliance with Applicable Laws"
         },
         {
           "title": "Prohibited Activities"
-        },
-        {
-          "title": "Compliance with Laws"
         }
       ]
     },
     {
-      "title": "Fees and Payment Terms",
+      "title": "Fees and Payment",
       "subsections": [
         {
-          "title": "Subscription Plans"
+          "title": "Subscription Fees"
         },
         {
-          "title": "Billing and Payment Methods"
+          "title": "Payment Terms"
         },
         {
           "title": "Refund Policy"
@@ -58,72 +58,72 @@
       ]
     },
     {
-      "title": "Data Privacy and Security",
+      "title": "Intellectual Property",
       "subsections": [
         {
-          "title": "Data Collection and Usage"
+          "title": "Ownership of Content"
         },
         {
-          "title": "User Data Protection"
+          "title": "License to Use the Service"
         },
         {
-          "title": "Confidentiality Obligations"
+          "title": "Restrictions on Use"
         }
       ]
     },
     {
-      "title": "Intellectual Property Rights",
+      "title": "Privacy and Data Protection",
       "subsections": [
         {
-          "title": "Ownership of Tool_1"
+          "title": "Collection and Use of Data"
         },
         {
-          "title": "User Content"
+          "title": "User Rights and Data Access"
         },
         {
-          "title": "License Grant and Restrictions"
+          "title": "Third-Party Data Sharing"
         }
       ]
     },
     {
-      "title": "Warranties and Disclaimers",
+      "title": "Confidentiality",
       "subsections": [
         {
-          "title": "No Warranty on Service"
+          "title": "Definition of Confidential Information"
         },
         {
-          "title": "Disclaimer of Liability"
+          "title": "Obligations of Confidentiality"
+        },
+        {
+          "title": "Exclusions from Confidentiality"
         }
       ]
     },
     {
-      "title": "Limitation of Liability"
+      "title": "Liability and Disclaimers",
+      "subsections": [
+        {
+          "title": "Limitation of Liability"
+        },
+        {
+          "title": "Disclaimer of Warranties"
+        },
+        {
+          "title": "Indemnification"
+        }
+      ]
     },
     {
-      "title": "Termination and Suspension",
+      "title": "Termination",
       "subsections": [
         {
           "title": "Termination by User"
         },
         {
-          "title": "Termination by Tool_1"
+          "title": "Termination by Provider"
         },
         {
-          "title": "Effect of Termination"
-        }
-      ]
-    },
-    {
-      "title": "Governing Law and Dispute Resolution",
-      "subsections": [
-        {
-          "title": "Applicable Law"
-        },
-        {
-          "title": "Arbitration Agreement"
-        },
-        {
-          "title": "Venue and Jurisdiction"
+          "title": "Effects of Termination"
         }
       ]
     },
@@ -131,16 +131,16 @@
       "title": "Miscellaneous Provisions",
       "subsections": [
         {
+          "title": "Governing Law"
+        },
+        {
+          "title": "Dispute Resolution"
+        },
+        {
           "title": "Entire Agreement"
         },
         {
-          "title": "Severability"
-        },
-        {
-          "title": "Assignment"
-        },
-        {
-          "title": "Force Majeure"
+          "title": "Amendments"
         }
       ]
     }

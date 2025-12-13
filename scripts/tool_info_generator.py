@@ -8,9 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.utils.config import load_generator_config
-from src.utils.json_utils import extract_json
-from src.utils.constants import CATEGORIES, USER_BASES, DOCUMENT_TYPES
+from scripts.utils.config import load_generator_config
+from scripts.utils.json_utils import extract_json
+from scripts.utils.constants import CATEGORIES, USER_BASES, DOCUMENT_TYPES
 from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()

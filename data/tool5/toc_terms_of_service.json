@@ -1,5 +1,5 @@
 {
-  "title": "Terms of Service for Tool_5",
+  "title": "Terms of Service",
   "sections": [
     {
       "title": "Introduction",
@@ -19,7 +19,7 @@
       "title": "Scope of Services",
       "subsections": [
         {
-          "title": "Description of Tool_5 Services"
+          "title": "Description of Tool_5 Features"
         },
         {
           "title": "Limitations of Use"
@@ -33,46 +33,32 @@
       "title": "User Responsibilities",
       "subsections": [
         {
-          "title": "Account Registration and Maintenance"
-        },
-        {
-          "title": "Compliance with Applicable Laws"
+          "title": "Compliance Obligations"
         },
         {
           "title": "Prohibited Activities"
+        },
+        {
+          "title": "Account Security"
         }
       ]
     },
     {
-      "title": "Fees and Payment Terms",
+      "title": "Fees and Payment",
       "subsections": [
         {
-          "title": "Pricing Structure"
+          "title": "Subscription Plans"
         },
         {
-          "title": "Billing and Invoicing"
+          "title": "Payment Terms"
         },
         {
-          "title": "Late Payments and Penalties"
+          "title": "Refund Policy"
         }
       ]
     },
     {
-      "title": "Confidentiality and Data Protection",
-      "subsections": [
-        {
-          "title": "Confidential Information"
-        },
-        {
-          "title": "Data Security Measures"
-        },
-        {
-          "title": "User Data Ownership"
-        }
-      ]
-    },
-    {
-      "title": "Intellectual Property Rights",
+      "title": "Intellectual Property",
       "subsections": [
         {
           "title": "Ownership of Tool_5"
@@ -86,30 +72,44 @@
       ]
     },
     {
-      "title": "Termination and Suspension",
+      "title": "Privacy and Data Protection",
       "subsections": [
         {
-          "title": "Termination by User"
+          "title": "Collection of User Data"
         },
         {
-          "title": "Termination by Provider"
+          "title": "Data Usage and Sharing"
         },
         {
-          "title": "Effect of Termination"
+          "title": "User Rights and Controls"
         }
       ]
     },
     {
-      "title": "Liability and Indemnification",
+      "title": "Liability and Disclaimers",
       "subsections": [
         {
           "title": "Limitation of Liability"
         },
         {
-          "title": "Indemnification Obligations"
+          "title": "Disclaimer of Warranties"
         },
         {
-          "title": "Force Majeure"
+          "title": "Indemnification"
+        }
+      ]
+    },
+    {
+      "title": "Termination",
+      "subsections": [
+        {
+          "title": "Termination by User"
+        },
+        {
+          "title": "Termination by Tool_5"
+        },
+        {
+          "title": "Effect of Termination"
         }
       ]
     },
@@ -128,19 +128,19 @@
       ]
     },
     {
-      "title": "Miscellaneous Provisions",
+      "title": "Miscellaneous",
       "subsections": [
         {
-          "title": "Entire Agreement"
+          "title": "Amendments to Terms"
         },
         {
-          "title": "Amendments and Modifications"
+          "title": "Entire Agreement"
         },
         {
           "title": "Severability"
         },
         {
-          "title": "Assignment"
+          "title": "Force Majeure"
         }
       ]
     }

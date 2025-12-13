@@ -5,7 +5,7 @@
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of the Agreement"
+          "title": "Purpose of Agreement"
         },
         {
           "title": "Acceptance of Terms"
@@ -19,13 +19,13 @@
       "title": "Scope of Services",
       "subsections": [
         {
-          "title": "Description of Services"
+          "title": "Description of Tool_3 Features"
         },
         {
-          "title": "Service Availability and Limitations"
+          "title": "Service Availability"
         },
         {
-          "title": "Modifications to Services"
+          "title": "Limitations and Restrictions"
         }
       ]
     },
@@ -36,10 +36,10 @@
           "title": "Account Registration and Security"
         },
         {
-          "title": "Prohibited Activities"
+          "title": "Compliance with Applicable Laws"
         },
         {
-          "title": "Compliance with Applicable Laws"
+          "title": "Prohibited Activities"
         }
       ]
     },
@@ -47,18 +47,32 @@
       "title": "Fees and Payment Terms",
       "subsections": [
         {
-          "title": "Pricing Structure"
+          "title": "Subscription Plans"
         },
         {
-          "title": "Payment Methods"
+          "title": "Billing and Payment Methods"
         },
         {
-          "title": "Late Payments and Penalties"
+          "title": "Refund Policy"
         }
       ]
     },
     {
-      "title": "Intellectual Property Rights",
+      "title": "Privacy and Data Protection",
+      "subsections": [
+        {
+          "title": "Data Collection and Usage"
+        },
+        {
+          "title": "User Data Rights"
+        },
+        {
+          "title": "Security Measures"
+        }
+      ]
+    },
+    {
+      "title": "Intellectual Property",
       "subsections": [
         {
           "title": "Ownership of Content"
@@ -72,27 +86,13 @@
       ]
     },
     {
-      "title": "Confidentiality and Privacy",
+      "title": "Disclaimers and Limitations of Liability",
       "subsections": [
         {
-          "title": "Confidential Information"
+          "title": "Warranty Disclaimer"
         },
-        {
-          "title": "Data Privacy and Protection"
-        },
-        {
-          "title": "User Data Rights"
-        }
-      ]
-    },
-    {
-      "title": "Liability and Disclaimers",
-      "subsections": [
         {
           "title": "Limitation of Liability"
-        },
-        {
-          "title": "Disclaimer of Warranties"
         },
         {
           "title": "Indemnification"
@@ -100,30 +100,27 @@
       ]
     },
     {
-      "title": "Term and Termination",
+      "title": "Termination",
       "subsections": [
         {
-          "title": "Duration of Agreement"
+          "title": "Grounds for Termination"
         },
         {
-          "title": "Termination by User"
+          "title": "Effect of Termination"
         },
         {
-          "title": "Termination by Provider"
-        },
-        {
-          "title": "Effects of Termination"
+          "title": "Survival of Terms"
         }
       ]
     },
     {
-      "title": "Dispute Resolution",
+      "title": "Governing Law and Dispute Resolution",
       "subsections": [
         {
-          "title": "Governing Law"
+          "title": "Applicable Law"
         },
         {
-          "title": "Arbitration Procedures"
+          "title": "Arbitration Clause"
         },
         {
           "title": "Jurisdiction"
@@ -137,13 +134,13 @@
           "title": "Entire Agreement"
         },
         {
+          "title": "Severability"
+        },
+        {
           "title": "Amendments"
         },
         {
-          "title": "Waivers"
-        },
-        {
-          "title": "Severability"
+          "title": "Force Majeure"
         }
       ]
     }

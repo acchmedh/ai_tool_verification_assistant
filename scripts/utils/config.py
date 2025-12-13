@@ -3,7 +3,7 @@ from pathlib import Path
 import yaml
 from typing import Any
 
-ROOT = Path(".")
+ROOT = Path(__file__).parent.parent.parent
 DATA_DIR = ROOT / "data"
 CONFIG_DIR = ROOT / "config"
 PROMPTS_PATH = CONFIG_DIR / "prompts.yaml"

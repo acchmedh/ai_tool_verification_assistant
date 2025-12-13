@@ -5,7 +5,7 @@
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of This Policy"
+          "title": "Purpose of This Privacy Policy"
         },
         {
           "title": "Scope of Application"
@@ -19,13 +19,13 @@
       "title": "Information We Collect",
       "subsections": [
         {
-          "title": "Personal Data"
+          "title": "Personal Data You Provide"
         },
         {
-          "title": "Non-Personal Data"
+          "title": "Data Collected Automatically"
         },
         {
-          "title": "Data Collection Methods"
+          "title": "Third-Party Data Sources"
         }
       ]
     },
@@ -44,16 +44,41 @@
       ]
     },
     {
-      "title": "Sharing and Disclosure of Information",
+      "title": "How We Share Your Information",
       "subsections": [
         {
-          "title": "Third-Party Service Providers"
+          "title": "Internal Sharing"
         },
         {
-          "title": "Legal Requirements and Compliance"
+          "title": "Sharing with Service Providers"
         },
         {
-          "title": "Business Transfers"
+          "title": "Legal and Regulatory Disclosures"
+        }
+      ]
+    },
+    {
+      "title": "Data Retention and Deletion",
+      "subsections": [
+        {
+          "title": "Retention Periods"
+        },
+        {
+          "title": "Deletion Procedures"
+        }
+      ]
+    },
+    {
+      "title": "Your Rights and Choices",
+      "subsections": [
+        {
+          "title": "Accessing and Updating Your Information"
+        },
+        {
+          "title": "Opt-Out Options"
+        },
+        {
+          "title": "Exercising Your Rights"
         }
       ]
     },
@@ -61,38 +86,10 @@
       "title": "Data Security",
       "subsections": [
         {
-          "title": "Security Measures"
+          "title": "Measures to Protect Your Data"
         },
         {
-          "title": "Incident Response"
-        }
-      ]
-    },
-    {
-      "title": "Your Rights",
-      "subsections": [
-        {
-          "title": "Access and Correction"
-        },
-        {
-          "title": "Data Portability"
-        },
-        {
-          "title": "Right to Object"
-        },
-        {
-          "title": "Right to Erasure"
-        }
-      ]
-    },
-    {
-      "title": "Retention of Data",
-      "subsections": [
-        {
-          "title": "Retention Periods"
-        },
-        {
-          "title": "Criteria for Retention"
+          "title": "Incident Response Protocols"
         }
       ]
     },
@@ -100,21 +97,21 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Transfer Mechanisms"
+          "title": "Cross-Border Data Transfers"
         },
         {
-          "title": "Compliance with Local Regulations"
+          "title": "Safeguards for International Transfers"
         }
       ]
     },
     {
-      "title": "Updates to This Privacy Policy",
+      "title": "Changes to This Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
         },
         {
-          "title": "Effective Date of Updates"
+          "title": "Effective Date of Changes"
         }
       ]
     },
@@ -125,7 +122,7 @@
           "title": "How to Reach Us"
         },
         {
-          "title": "Complaints and Dispute Resolution"
+          "title": "Data Protection Officer Contact"
         }
       ]
     }

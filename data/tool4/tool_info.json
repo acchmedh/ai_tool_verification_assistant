@@ -1,14 +1,14 @@
 {
   "description": {
     "name": "Tool_4",
-    "purpose": "Tool_4 is designed to streamline data processing tasks for product managers, enabling them to analyze user feedback, sales data, and market trends efficiently. With powerful visualization tools and automated reporting features, it helps PMs make data-driven decisions quickly.",
-    "category": "Data Processing",
-    "user_base": "Product managers"
+    "purpose": "Tool_4 is designed to provide advanced AI-driven analytics for enterprise IT environments. It enables organizations to extract actionable insights from complex data sets, optimize resource allocation, and enhance decision-making processes through predictive modeling and intelligent reporting.",
+    "category": "AI Analytics",
+    "user_base": "Enterprise IT"
   },
   "document_types": [
     "compliance_and_certifications",
+    "security_whitepaper",
     "privacy_policy",
-    "terms_of_service",
-    "data_processing_agreement"
+    "service_level_agreement"
   ]
 }

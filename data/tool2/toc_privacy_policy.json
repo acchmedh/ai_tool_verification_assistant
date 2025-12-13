@@ -5,7 +5,7 @@
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of This Policy"
+          "title": "Purpose of the Privacy Policy"
         },
         {
           "title": "Scope of Application"
@@ -16,29 +16,37 @@
       ]
     },
     {
-      "title": "Information We Collect",
+      "title": "Information Collection",
       "subsections": [
         {
-          "title": "Personal Data",
+          "title": "Types of Information Collected",
           "subsections": [
             {
-              "title": "Data Provided by Users"
+              "title": "Personal Information"
             },
             {
-              "title": "Data Collected Automatically"
+              "title": "Non-Personal Information"
             }
           ]
         },
         {
-          "title": "Non-Personal Data"
+          "title": "Methods of Collection",
+          "subsections": [
+            {
+              "title": "Direct Collection"
+            },
+            {
+              "title": "Automated Collection"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "How We Use Your Information",
+      "title": "Use of Collected Information",
       "subsections": [
         {
-          "title": "Purpose of Data Processing"
+          "title": "Purpose of Use"
         },
         {
           "title": "Legal Basis for Processing"
@@ -46,55 +54,61 @@
       ]
     },
     {
-      "title": "Data Sharing and Disclosure",
+      "title": "Information Sharing and Disclosure",
       "subsections": [
         {
           "title": "Third-Party Service Providers"
         },
         {
-          "title": "Compliance with Legal Obligations"
+          "title": "Legal Requirements"
         },
         {
-          "title": "Corporate Transactions"
+          "title": "Business Transfers"
         }
       ]
     },
     {
-      "title": "Data Retention",
+      "title": "Data Storage and Security",
       "subsections": [
         {
-          "title": "Retention Periods"
+          "title": "Storage Locations"
         },
         {
-          "title": "Criteria for Retention"
+          "title": "Security Measures"
+        },
+        {
+          "title": "Data Retention Policy"
         }
       ]
     },
     {
-      "title": "Your Rights and Choices",
+      "title": "User Rights and Choices",
       "subsections": [
         {
-          "title": "Access and Correction"
+          "title": "Accessing and Updating Information"
+        },
+        {
+          "title": "Opt-Out Options"
         },
         {
           "title": "Data Portability"
         },
         {
           "title": "Right to Erasure"
-        },
-        {
-          "title": "Objection to Processing"
         }
       ]
     },
     {
-      "title": "Security Measures",
+      "title": "Cookies and Tracking Technologies",
       "subsections": [
         {
-          "title": "Technical Safeguards"
+          "title": "Types of Cookies Used"
         },
         {
-          "title": "Organizational Safeguards"
+          "title": "Purpose of Cookies"
+        },
+        {
+          "title": "Managing Cookie Preferences"
         }
       ]
     },
@@ -102,15 +116,15 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Transfer Mechanisms"
+          "title": "Compliance with Global Privacy Laws"
         },
         {
-          "title": "Safeguards for Cross-Border Transfers"
+          "title": "Standard Contractual Clauses"
         }
       ]
     },
     {
-      "title": "Updates to This Policy",
+      "title": "Changes to the Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
@@ -124,10 +138,10 @@
       "title": "Contact Information",
       "subsections": [
         {
-          "title": "Questions and Concerns"
+          "title": "Privacy Inquiries"
         },
         {
-          "title": "Data Protection Officer Contact"
+          "title": "Reporting Concerns"
         }
       ]
     }

@@ -8,10 +8,10 @@
           "title": "Purpose of the Document"
         },
         {
-          "title": "Overview of Tool_1"
+          "title": "Scope and Audience"
         },
         {
-          "title": "Intended Audience"
+          "title": "Overview of Tool_1 Security Features"
         }
       ]
     },
@@ -19,116 +19,115 @@
       "title": "Security Framework",
       "subsections": [
         {
-          "title": "Core Principles",
-          "subsections": [
-            {
-              "title": "Confidentiality"
-            },
-            {
-              "title": "Integrity"
-            },
-            {
-              "title": "Availability"
-            }
-          ]
-        },
-        {
           "title": "Compliance Standards",
           "subsections": [
             {
               "title": "GDPR"
             },
             {
-              "title": "ISO/IEC 27001"
+              "title": "CCPA"
             },
             {
-              "title": "NIST Cybersecurity Framework"
+              "title": "ISO 27001"
             }
           ]
+        },
+        {
+          "title": "Risk Management Approach"
+        },
+        {
+          "title": "Continuous Monitoring and Improvement"
         }
       ]
     },
     {
-      "title": "Threat Detection and Mitigation",
+      "title": "Data Protection",
       "subsections": [
         {
-          "title": "AI-Driven Threat Detection"
+          "title": "Encryption Standards",
+          "subsections": [
+            {
+              "title": "Data at Rest"
+            },
+            {
+              "title": "Data in Transit"
+            }
+          ]
         },
         {
-          "title": "Vulnerability Assessment Process"
+          "title": "Access Controls",
+          "subsections": [
+            {
+              "title": "Role-Based Access Control (RBAC)"
+            },
+            {
+              "title": "Multi-Factor Authentication (MFA)"
+            }
+          ]
         },
         {
-          "title": "Incident Response Protocols"
+          "title": "Data Retention Policies"
         }
       ]
     },
     {
-      "title": "Secure Model Deployment",
+      "title": "Application Security",
       "subsections": [
         {
-          "title": "Deployment Best Practices"
+          "title": "Secure Development Lifecycle (SDLC)"
         },
         {
-          "title": "Encryption and Key Management"
+          "title": "Vulnerability Management",
+          "subsections": [
+            {
+              "title": "Regular Security Testing"
+            },
+            {
+              "title": "Patch Management"
+            }
+          ]
         },
         {
-          "title": "Access Control Mechanisms"
+          "title": "Incident Response Procedures"
         }
       ]
     },
     {
-      "title": "Data Security",
+      "title": "Infrastructure Security",
       "subsections": [
         {
-          "title": "Data Encryption Standards"
+          "title": "Cloud Security Measures"
         },
         {
-          "title": "Secure Data Transmission"
+          "title": "Network Security Protocols"
         },
         {
-          "title": "Data Storage Policies"
+          "title": "Physical Security Controls"
         }
       ]
     },
     {
-      "title": "Risk Management",
+      "title": "Third-Party Integrations",
       "subsections": [
         {
-          "title": "Risk Assessment Methodology"
+          "title": "Vendor Security Assessments"
         },
         {
-          "title": "Continuous Monitoring"
+          "title": "API Security Standards"
         },
         {
-          "title": "Remediation Strategies"
+          "title": "Data Sharing Agreements"
         }
       ]
     },
     {
-      "title": "Compliance and Certification",
+      "title": "User Responsibilities",
       "subsections": [
         {
-          "title": "Auditing Processes"
+          "title": "Account Security Best Practices"
         },
         {
-          "title": "Third-Party Certifications"
-        },
-        {
-          "title": "Ongoing Compliance Efforts"
-        }
-      ]
-    },
-    {
-      "title": "Conclusion",
-      "subsections": [
-        {
-          "title": "Summary of Security Measures"
-        },
-        {
-          "title": "Commitment to Security"
-        },
-        {
-          "title": "Future Enhancements"
+          "title": "Reporting Security Concerns"
         }
       ]
     },
@@ -139,10 +138,7 @@
           "title": "Glossary of Terms"
         },
         {
-          "title": "References"
-        },
-        {
-          "title": "Contact Information"
+          "title": "References and Resources"
         }
       ]
     }

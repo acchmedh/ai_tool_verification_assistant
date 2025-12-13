@@ -8,10 +8,10 @@
           "title": "Purpose of the Agreement"
         },
         {
-          "title": "Scope of Data Processing"
+          "title": "Definitions and Interpretations"
         },
         {
-          "title": "Definitions"
+          "title": "Scope of Data Processing"
         }
       ]
     },
@@ -33,7 +33,7 @@
       "title": "Data Processing Details",
       "subsections": [
         {
-          "title": "Categories of Data Processed"
+          "title": "Categories of Data"
         },
         {
           "title": "Purpose of Processing"
@@ -50,71 +50,65 @@
           "title": "Technical and Organizational Safeguards"
         },
         {
-          "title": "Encryption Standards"
-        },
-        {
-          "title": "Access Control Protocols"
+          "title": "Incident Response and Notification"
         }
       ]
     },
     {
-      "title": "Data Subject Rights",
+      "title": "Compliance with Legal Frameworks",
       "subsections": [
         {
-          "title": "Access and Rectification"
+          "title": "GDPR Compliance"
         },
         {
-          "title": "Erasure and Restriction"
-        },
-        {
-          "title": "Data Portability"
+          "title": "Other Applicable Regulations"
         }
       ]
     },
     {
-      "title": "Incident Management",
+      "title": "Rights of Data Subjects",
       "subsections": [
         {
-          "title": "Breach Notification Procedures"
+          "title": "Access and Portability"
         },
         {
-          "title": "Mitigation and Remediation"
+          "title": "Rectification and Erasure"
+        },
+        {
+          "title": "Objections and Restrictions"
         }
       ]
     },
     {
-      "title": "Audit and Compliance",
+      "title": "Audit and Monitoring",
       "subsections": [
         {
           "title": "Audit Rights"
         },
         {
-          "title": "Compliance with Applicable Laws"
+          "title": "Frequency and Scope of Audits"
         }
       ]
     },
     {
-      "title": "International Data Transfers",
+      "title": "Liability and Indemnification",
       "subsections": [
         {
-          "title": "Transfer Mechanisms"
+          "title": "Limitations of Liability"
         },
         {
-          "title": "Adequacy Decisions"
-        },
-        {
-          "title": "Standard Contractual Clauses"
+          "title": "Indemnification Clauses"
         }
       ]
     },
     {
-      "title": "Termination and Consequences",
+      "title": "Termination of Agreement",
       "subsections": [
         {
-          "title": "Termination Conditions"
+          "title": "Conditions for Termination"
         },
         {
-          "title": "Return or Deletion of Data"
+          "title": "Post-Termination Obligations"
         }
       ]
     },
@@ -128,7 +122,7 @@
           "title": "Dispute Resolution"
         },
         {
-          "title": "Amendments to the Agreement"
+          "title": "Amendments and Modifications"
         }
       ]
     }

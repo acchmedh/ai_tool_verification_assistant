@@ -8,10 +8,10 @@
           "title": "Purpose of the Agreement"
         },
         {
-          "title": "Definitions and Interpretations"
+          "title": "Scope of Data Processing"
         },
         {
-          "title": "Scope of the Agreement"
+          "title": "Definitions and Interpretations"
         }
       ]
     },
@@ -25,7 +25,7 @@
           "title": "Responsibilities of the Data Processor"
         },
         {
-          "title": "Third-Party Subprocessors"
+          "title": "Joint Responsibilities"
         }
       ]
     },
@@ -33,16 +33,13 @@
       "title": "Data Processing Details",
       "subsections": [
         {
-          "title": "Nature and Purpose of Processing"
+          "title": "Categories of Data Processed"
         },
         {
-          "title": "Categories of Data Subjects"
+          "title": "Processing Activities"
         },
         {
-          "title": "Types of Personal Data Processed"
-        },
-        {
-          "title": "Duration of Processing"
+          "title": "Retention and Deletion of Data"
         }
       ]
     },
@@ -53,7 +50,10 @@
           "title": "Technical and Organizational Measures"
         },
         {
-          "title": "Incident Response and Breach Notification"
+          "title": "Incident Response and Notification"
+        },
+        {
+          "title": "Access Control and Encryption"
         }
       ]
     },
@@ -61,10 +61,27 @@
       "title": "Data Subject Rights",
       "subsections": [
         {
-          "title": "Assistance with Data Subject Requests"
+          "title": "Access Requests"
         },
         {
-          "title": "Correction, Deletion, and Access Requests"
+          "title": "Rectification and Erasure"
+        },
+        {
+          "title": "Data Portability"
+        },
+        {
+          "title": "Objection to Processing"
+        }
+      ]
+    },
+    {
+      "title": "Subprocessors",
+      "subsections": [
+        {
+          "title": "Approval and Management of Subprocessors"
+        },
+        {
+          "title": "Responsibilities of Subprocessors"
         }
       ]
     },
@@ -72,21 +89,13 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Mechanisms for Cross-Border Transfers"
+          "title": "Compliance with Transfer Mechanisms"
         },
         {
-          "title": "Compliance with Applicable Laws"
-        }
-      ]
-    },
-    {
-      "title": "Confidentiality Obligations",
-      "subsections": [
-        {
-          "title": "Confidentiality of Processing Activities"
+          "title": "Adequacy Decisions"
         },
         {
-          "title": "Employee and Subprocessor Confidentiality"
+          "title": "Standard Contractual Clauses"
         }
       ]
     },
@@ -94,21 +103,27 @@
       "title": "Audit and Compliance",
       "subsections": [
         {
-          "title": "Audit Rights of the Data Controller"
+          "title": "Audit Rights"
         },
         {
-          "title": "Processor’s Cooperation with Audits"
+          "title": "Compliance Documentation"
+        },
+        {
+          "title": "Reporting Obligations"
         }
       ]
     },
     {
-      "title": "Termination and Data Return/Deletion",
+      "title": "Termination and Consequences",
       "subsections": [
         {
-          "title": "Obligations Upon Termination"
+          "title": "Termination Conditions"
         },
         {
-          "title": "Data Return and Deletion Procedures"
+          "title": "Data Return or Deletion"
+        },
+        {
+          "title": "Survival of Obligations"
         }
       ]
     },
@@ -116,13 +131,16 @@
       "title": "General Provisions",
       "subsections": [
         {
-          "title": "Governing Law and Jurisdiction"
+          "title": "Governing Law"
+        },
+        {
+          "title": "Liability and Indemnification"
         },
         {
           "title": "Amendments to the Agreement"
         },
         {
-          "title": "Severability"
+          "title": "Entire Agreement"
         }
       ]
     }

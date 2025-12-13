@@ -1,14 +1,14 @@
 {
   "description": {
     "name": "Tool_5",
-    "purpose": "A robust data processing tool designed to streamline and optimize data workflows for large enterprises, enabling timely insights and improved decision-making.",
-    "category": "Data Processing",
-    "user_base": "Enterprise IT"
+    "purpose": "Tool_5 is designed to help product managers ensure compliance with industry regulations and internal standards throughout the product development lifecycle. It automates compliance checks, generates reports, and provides actionable insights to mitigate risks associated with regulatory violations.",
+    "category": "Compliance Monitoring",
+    "user_base": "Product managers"
   },
   "document_types": [
-    "terms_of_service",
-    "compliance_and_certifications",
+    "service_level_agreement",
     "security_whitepaper",
-    "service_level_agreement"
+    "privacy_policy",
+    "terms_of_service"
   ]
 }

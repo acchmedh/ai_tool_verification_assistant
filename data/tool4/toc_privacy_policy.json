@@ -1,5 +1,5 @@
 {
-  "title": "Privacy Policy",
+  "title": "Privacy Policy for Tool_4",
   "sections": [
     {
       "title": "Introduction",
@@ -8,10 +8,10 @@
           "title": "Purpose of This Privacy Policy"
         },
         {
-          "title": "Scope and Applicability"
+          "title": "Scope of Application"
         },
         {
-          "title": "Definitions"
+          "title": "Definitions and Key Terms"
         }
       ]
     },
@@ -19,18 +19,18 @@
       "title": "Information We Collect",
       "subsections": [
         {
-          "title": "Personal Information",
+          "title": "Personal Data",
           "subsections": [
             {
-              "title": "Information You Provide Directly"
+              "title": "User-Provided Information"
             },
             {
-              "title": "Information Collected Automatically"
+              "title": "Automatically Collected Information"
             }
           ]
         },
         {
-          "title": "Non-Personal Information"
+          "title": "Non-Personal Data"
         }
       ]
     },
@@ -38,10 +38,10 @@
       "title": "How We Use Your Information",
       "subsections": [
         {
-          "title": "Providing and Improving Our Services"
+          "title": "Service Delivery and Optimization"
         },
         {
-          "title": "Communication and Support"
+          "title": "Analytics and Reporting"
         },
         {
           "title": "Compliance with Legal Obligations"
@@ -52,38 +52,55 @@
       "title": "How We Share Your Information",
       "subsections": [
         {
-          "title": "With Service Providers"
+          "title": "Service Providers and Partners"
         },
         {
-          "title": "For Legal and Compliance Purposes"
+          "title": "Legal and Regulatory Disclosures"
         },
         {
-          "title": "In Business Transfers"
+          "title": "Business Transfers"
         }
       ]
     },
     {
-      "title": "Your Rights and Choices",
-      "subsections": [
-        {
-          "title": "Access and Correction of Information"
-        },
-        {
-          "title": "Opt-Out Options"
-        },
-        {
-          "title": "Data Portability"
-        }
-      ]
-    },
-    {
-      "title": "Data Retention and Security",
+      "title": "Data Retention and Deletion",
       "subsections": [
         {
           "title": "Retention Periods"
         },
         {
-          "title": "Security Measures"
+          "title": "Deletion Requests"
+        }
+      ]
+    },
+    {
+      "title": "Your Privacy Rights",
+      "subsections": [
+        {
+          "title": "Access and Correction"
+        },
+        {
+          "title": "Data Portability"
+        },
+        {
+          "title": "Right to Object or Restrict Processing"
+        },
+        {
+          "title": "Right to Erasure"
+        }
+      ]
+    },
+    {
+      "title": "Security Measures",
+      "subsections": [
+        {
+          "title": "Technical Safeguards"
+        },
+        {
+          "title": "Organizational Measures"
+        },
+        {
+          "title": "Incident Response"
         }
       ]
     },
@@ -91,26 +108,15 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Data Transfer Mechanisms"
+          "title": "Compliance with Cross-Border Regulations"
         },
         {
-          "title": "Compliance with Local Laws"
+          "title": "Standard Contractual Clauses"
         }
       ]
     },
     {
-      "title": "Children’s Privacy",
-      "subsections": [
-        {
-          "title": "Age Restrictions"
-        },
-        {
-          "title": "Parental Consent Requirements"
-        }
-      ]
-    },
-    {
-      "title": "Changes to This Privacy Policy",
+      "title": "Updates to This Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
@@ -124,10 +130,10 @@
       "title": "Contact Information",
       "subsections": [
         {
-          "title": "How to Reach Us"
+          "title": "Privacy Inquiries"
         },
         {
-          "title": "Dispute Resolution"
+          "title": "Data Protection Officer Contact"
         }
       ]
     }
