@@ -1,11 +1,11 @@
 {
-  "title": "Privacy Policy for Tool_2",
+  "title": "Privacy Policy",
   "sections": [
     {
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of This Privacy Policy"
+          "title": "Purpose of This Policy"
         },
         {
           "title": "Scope of Application"
@@ -19,21 +19,18 @@
       "title": "Information We Collect",
       "subsections": [
         {
-          "title": "Personal Information",
+          "title": "Personal Data",
           "subsections": [
             {
-              "title": "Information You Provide Directly"
+              "title": "Data Provided by Users"
             },
             {
-              "title": "Information Collected Automatically"
+              "title": "Data Collected Automatically"
             }
           ]
         },
         {
-          "title": "Non-Personal Information"
-        },
-        {
-          "title": "Cookies and Tracking Technologies"
+          "title": "Non-Personal Data"
         }
       ]
     },
@@ -41,52 +38,24 @@
       "title": "How We Use Your Information",
       "subsections": [
         {
-          "title": "Providing and Improving Our Services"
+          "title": "Purpose of Data Processing"
         },
         {
-          "title": "Communication and Notifications"
-        },
-        {
-          "title": "Compliance and Legal Obligations"
+          "title": "Legal Basis for Processing"
         }
       ]
     },
     {
-      "title": "How We Share Your Information",
+      "title": "Data Sharing and Disclosure",
       "subsections": [
         {
           "title": "Third-Party Service Providers"
         },
         {
-          "title": "Business Transfers"
+          "title": "Compliance with Legal Obligations"
         },
         {
-          "title": "Legal Requirements"
-        }
-      ]
-    },
-    {
-      "title": "Your Rights and Choices",
-      "subsections": [
-        {
-          "title": "Accessing and Updating Your Information"
-        },
-        {
-          "title": "Opting Out of Communications"
-        },
-        {
-          "title": "Managing Cookies and Tracking Preferences"
-        }
-      ]
-    },
-    {
-      "title": "Data Security",
-      "subsections": [
-        {
-          "title": "Measures to Protect Your Information"
-        },
-        {
-          "title": "Reporting Security Incidents"
+          "title": "Corporate Transactions"
         }
       ]
     },
@@ -97,7 +66,35 @@
           "title": "Retention Periods"
         },
         {
-          "title": "Deletion Requests"
+          "title": "Criteria for Retention"
+        }
+      ]
+    },
+    {
+      "title": "Your Rights and Choices",
+      "subsections": [
+        {
+          "title": "Access and Correction"
+        },
+        {
+          "title": "Data Portability"
+        },
+        {
+          "title": "Right to Erasure"
+        },
+        {
+          "title": "Objection to Processing"
+        }
+      ]
+    },
+    {
+      "title": "Security Measures",
+      "subsections": [
+        {
+          "title": "Technical Safeguards"
+        },
+        {
+          "title": "Organizational Safeguards"
         }
       ]
     },
@@ -105,21 +102,21 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Cross-Border Data Transfers"
+          "title": "Transfer Mechanisms"
         },
         {
-          "title": "Compliance with Regional Regulations"
+          "title": "Safeguards for Cross-Border Transfers"
         }
       ]
     },
     {
-      "title": "Changes to This Privacy Policy",
+      "title": "Updates to This Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
         },
         {
-          "title": "Effective Date of Changes"
+          "title": "Effective Date"
         }
       ]
     },
@@ -127,10 +124,10 @@
       "title": "Contact Information",
       "subsections": [
         {
-          "title": "How to Reach Us"
+          "title": "Questions and Concerns"
         },
         {
-          "title": "Submitting Complaints or Questions"
+          "title": "Data Protection Officer Contact"
         }
       ]
     }

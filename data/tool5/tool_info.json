@@ -1,17 +1,14 @@
 {
-  "tool_name": "Tool_5",
-  "category": "Collaboration",
-  "user_base": "Compliance officers",
-  "document_types": [
-    "service_level_agreement",
-    "terms_of_service",
-    "compliance_and_certifications",
-    "privacy_policy"
-  ],
   "description": {
     "name": "Tool_5",
-    "purpose": "A comprehensive platform designed for collaboration among compliance officers, enabling real-time communication, document sharing, and regulatory tracking to ensure adherence to industry standards.",
-    "category": "Collaboration",
-    "user_base": "Compliance officers"
-  }
+    "purpose": "A robust data processing tool designed to streamline and optimize data workflows for large enterprises, enabling timely insights and improved decision-making.",
+    "category": "Data Processing",
+    "user_base": "Enterprise IT"
+  },
+  "document_types": [
+    "terms_of_service",
+    "compliance_and_certifications",
+    "security_whitepaper",
+    "service_level_agreement"
+  ]
 }

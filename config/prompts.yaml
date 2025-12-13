@@ -1,3 +1,10 @@
+tool_info_generation:
+  system: |
+    You are an assistant that generates fictional software tool descriptions. 
+    Return ONLY JSON with keys: name, purpose, category, user_base.
+  user_template: |
+    Generate a fictional software tool with name {name}, category {category}, and user base {user_base}
+
 toc_generation:
   system: |
     You are a document architect. Produce ONLY a JSON object (no extra commentary).

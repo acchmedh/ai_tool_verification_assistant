@@ -11,65 +11,54 @@
           "title": "Acceptance of Terms"
         },
         {
-          "title": "Modifications to Terms"
+          "title": "Definitions"
         }
       ]
     },
     {
-      "title": "Definitions",
+      "title": "Scope of Services",
       "subsections": [
         {
-          "title": "Key Terms"
-        },
-        {
-          "title": "Interpretation Guidelines"
-        }
-      ]
-    },
-    {
-      "title": "User Obligations",
-      "subsections": [
-        {
-          "title": "Account Registration and Maintenance"
-        },
-        {
-          "title": "Compliance with Applicable Laws"
-        },
-        {
-          "title": "Prohibited Activities"
-        }
-      ]
-    },
-    {
-      "title": "Service Provision",
-      "subsections": [
-        {
-          "title": "Scope of Services"
+          "title": "Description of Services"
         },
         {
           "title": "Service Availability and Limitations"
         },
         {
-          "title": "Third-Party Integrations"
+          "title": "Modifications to Services"
         }
       ]
     },
     {
-      "title": "Fees and Payment",
+      "title": "User Responsibilities",
+      "subsections": [
+        {
+          "title": "Account Registration and Security"
+        },
+        {
+          "title": "Prohibited Activities"
+        },
+        {
+          "title": "Compliance with Applicable Laws"
+        }
+      ]
+    },
+    {
+      "title": "Fees and Payment Terms",
       "subsections": [
         {
           "title": "Pricing Structure"
         },
         {
-          "title": "Billing and Invoicing"
+          "title": "Payment Methods"
         },
         {
-          "title": "Refund Policy"
+          "title": "Late Payments and Penalties"
         }
       ]
     },
     {
-      "title": "Intellectual Property",
+      "title": "Intellectual Property Rights",
       "subsections": [
         {
           "title": "Ownership of Content"
@@ -83,36 +72,39 @@
       ]
     },
     {
-      "title": "Confidentiality",
+      "title": "Confidentiality and Privacy",
       "subsections": [
         {
-          "title": "Definition of Confidential Information"
+          "title": "Confidential Information"
         },
         {
-          "title": "Obligations of Non-Disclosure"
+          "title": "Data Privacy and Protection"
         },
         {
-          "title": "Exceptions to Confidentiality"
+          "title": "User Data Rights"
         }
       ]
     },
     {
-      "title": "Liability and Indemnification",
+      "title": "Liability and Disclaimers",
       "subsections": [
         {
           "title": "Limitation of Liability"
         },
         {
-          "title": "Indemnification Obligations"
+          "title": "Disclaimer of Warranties"
         },
         {
-          "title": "Force Majeure"
+          "title": "Indemnification"
         }
       ]
     },
     {
-      "title": "Termination",
+      "title": "Term and Termination",
       "subsections": [
+        {
+          "title": "Duration of Agreement"
+        },
         {
           "title": "Termination by User"
         },
@@ -125,22 +117,33 @@
       ]
     },
     {
-      "title": "General Provisions",
+      "title": "Dispute Resolution",
       "subsections": [
         {
           "title": "Governing Law"
         },
         {
-          "title": "Dispute Resolution"
+          "title": "Arbitration Procedures"
         },
+        {
+          "title": "Jurisdiction"
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous Provisions",
+      "subsections": [
         {
           "title": "Entire Agreement"
         },
         {
-          "title": "Severability"
+          "title": "Amendments"
         },
         {
-          "title": "Assignment"
+          "title": "Waivers"
+        },
+        {
+          "title": "Severability"
         }
       ]
     }

@@ -5,7 +5,7 @@
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of the Privacy Policy"
+          "title": "Purpose of This Policy"
         },
         {
           "title": "Scope of Application"
@@ -16,91 +16,77 @@
       ]
     },
     {
-      "title": "Data Collection Practices",
+      "title": "Information We Collect",
       "subsections": [
         {
-          "title": "Types of Data Collected",
+          "title": "Personal Data",
           "subsections": [
             {
-              "title": "Personal Data"
+              "title": "Data Provided by Users"
             },
             {
-              "title": "Non-Personal Data"
+              "title": "Data Collected Automatically"
             }
           ]
         },
         {
-          "title": "Methods of Data Collection"
-        },
-        {
-          "title": "Third-Party Data Sources"
+          "title": "Non-Personal Data"
         }
       ]
     },
     {
-      "title": "Use of Collected Data",
+      "title": "How We Use Your Information",
       "subsections": [
         {
-          "title": "Purpose of Data Usage"
-        },
-        {
-          "title": "Data Aggregation and Anonymization"
+          "title": "Purpose of Data Processing"
         },
         {
           "title": "Legal Basis for Processing"
-        }
-      ]
-    },
-    {
-      "title": "Data Sharing and Disclosure",
-      "subsections": [
-        {
-          "title": "Internal Sharing"
         },
         {
-          "title": "External Sharing",
-          "subsections": [
-            {
-              "title": "Service Providers"
-            },
-            {
-              "title": "Legal Obligations"
-            },
-            {
-              "title": "Business Transfers"
-            }
-          ]
+          "title": "Data Analytics and Algorithm Optimization"
         }
       ]
     },
     {
-      "title": "Data Retention and Deletion",
+      "title": "Sharing and Disclosure of Information",
+      "subsections": [
+        {
+          "title": "Third-Party Service Providers"
+        },
+        {
+          "title": "Legal Obligations"
+        },
+        {
+          "title": "Business Transfers"
+        }
+      ]
+    },
+    {
+      "title": "Data Retention",
       "subsections": [
         {
           "title": "Retention Periods"
         },
         {
-          "title": "Deletion Procedures"
-        },
-        {
-          "title": "User Rights to Request Deletion"
+          "title": "Criteria for Retention"
         }
       ]
     },
     {
-      "title": "User Rights and Controls",
+      "title": "Your Rights and Choices",
       "subsections": [
         {
-          "title": "Access to Personal Data"
-        },
-        {
-          "title": "Correction of Data"
-        },
-        {
-          "title": "Opt-Out Options"
+          "title": "Access and Correction"
         },
         {
           "title": "Data Portability"
+        },
+        {
+          "title": "Right to Erasure"
+        },
+        {
+          "title": "Opt-Out Options"
         }
       ]
     },
@@ -111,35 +97,35 @@
           "title": "Technical Safeguards"
         },
         {
-          "title": "Organizational Safeguards"
+          "title": "Organizational Measures"
         },
         {
-          "title": "Incident Response Protocols"
+          "title": "Incident Response"
         }
       ]
     },
     {
-      "title": "Compliance and Regulatory Adherence",
+      "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Applicable Laws and Regulations"
+          "title": "Cross-Border Transfers"
         },
         {
-          "title": "International Data Transfers"
+          "title": "Adequacy Decisions"
         },
         {
-          "title": "Audit and Monitoring Procedures"
+          "title": "Standard Contractual Clauses"
         }
       ]
     },
     {
-      "title": "Updates to the Privacy Policy",
+      "title": "Changes to This Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
         },
         {
-          "title": "Effective Date of Updates"
+          "title": "Effective Date"
         }
       ]
     },
@@ -147,7 +133,7 @@
       "title": "Contact Information",
       "subsections": [
         {
-          "title": "Privacy Officer Contact Details"
+          "title": "Data Protection Officer"
         },
         {
           "title": "Support Channels"

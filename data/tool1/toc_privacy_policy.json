@@ -1,17 +1,17 @@
 {
-  "title": "Privacy Policy for Tool_5",
+  "title": "Privacy Policy",
   "sections": [
     {
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of This Privacy Policy"
+          "title": "Purpose of This Policy"
         },
         {
           "title": "Scope of Application"
         },
         {
-          "title": "Definitions and Key Terms"
+          "title": "Definitions"
         }
       ]
     },
@@ -19,13 +19,13 @@
       "title": "Information We Collect",
       "subsections": [
         {
-          "title": "Personal Data Provided by Users"
+          "title": "Personal Data"
         },
         {
-          "title": "Data Collected Automatically"
+          "title": "Non-Personal Data"
         },
         {
-          "title": "Third-Party Data Sources"
+          "title": "Data Collection Methods"
         }
       ]
     },
@@ -44,13 +44,13 @@
       ]
     },
     {
-      "title": "Data Sharing and Disclosure",
+      "title": "Sharing and Disclosure of Information",
       "subsections": [
         {
-          "title": "Sharing with Service Providers"
+          "title": "Third-Party Service Providers"
         },
         {
-          "title": "Legal Obligations and Compliance"
+          "title": "Legal Requirements and Compliance"
         },
         {
           "title": "Business Transfers"
@@ -58,47 +58,41 @@
       ]
     },
     {
-      "title": "Data Retention and Storage",
+      "title": "Data Security",
       "subsections": [
         {
-          "title": "Retention Periods"
-        },
-        {
-          "title": "Data Storage Locations"
-        },
-        {
           "title": "Security Measures"
+        },
+        {
+          "title": "Incident Response"
         }
       ]
     },
     {
-      "title": "Your Privacy Rights",
+      "title": "Your Rights",
       "subsections": [
         {
-          "title": "Access, Correction, and Deletion"
+          "title": "Access and Correction"
         },
         {
           "title": "Data Portability"
         },
         {
-          "title": "Right to Object to Processing"
+          "title": "Right to Object"
         },
         {
-          "title": "Filing Complaints with Authorities"
+          "title": "Right to Erasure"
         }
       ]
     },
     {
-      "title": "Cookies and Tracking Technologies",
+      "title": "Retention of Data",
       "subsections": [
         {
-          "title": "Types of Cookies Used"
+          "title": "Retention Periods"
         },
         {
-          "title": "Managing Cookie Preferences"
-        },
-        {
-          "title": "Third-Party Tracking Technologies"
+          "title": "Criteria for Retention"
         }
       ]
     },
@@ -106,15 +100,15 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Cross-Border Data Transfers"
+          "title": "Transfer Mechanisms"
         },
         {
-          "title": "Safeguards for International Transfers"
+          "title": "Compliance with Local Regulations"
         }
       ]
     },
     {
-      "title": "Changes to This Privacy Policy",
+      "title": "Updates to This Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
@@ -131,7 +125,7 @@
           "title": "How to Reach Us"
         },
         {
-          "title": "Data Protection Officer Contact"
+          "title": "Complaints and Dispute Resolution"
         }
       ]
     }

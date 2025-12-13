@@ -1,17 +1,14 @@
 {
-  "tool_name": "Tool_3",
-  "category": "Compliance Monitoring",
-  "user_base": "Data analysts",
-  "document_types": [
-    "data_processing_agreement",
-    "service_level_agreement",
-    "privacy_policy",
-    "security_whitepaper"
-  ],
   "description": {
     "name": "Tool_3",
-    "purpose": "A comprehensive compliance monitoring software that enables data analysts to track, analyze, and report on regulatory compliance across various industries. It features real-time alerts, detailed analytics, and customizable dashboards to ensure adherence to legal and regulatory standards.",
-    "category": "Compliance Monitoring",
-    "user_base": "Data analysts"
-  }
+    "purpose": "A comprehensive AI analytics platform that assists ML engineers in tracking model performance, optimizing algorithms, and visualizing data trends to enhance decision-making processes.",
+    "category": "AI Analytics",
+    "user_base": "ML engineers"
+  },
+  "document_types": [
+    "service_level_agreement",
+    "privacy_policy",
+    "data_processing_agreement",
+    "terms_of_service"
+  ]
 }

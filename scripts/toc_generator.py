@@ -1,35 +1,33 @@
 import json
-import re
 import sys
 from pathlib import Path
 from jsonschema import validate, ValidationError
 
-# Add project root to path for imports
+# Add project root to a path for imports
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.utils.config import DATA_DIR, load_prompts, load_models
+from src.utils.config import DATA_DIR, load_generator_config
+from src.utils.json_utils import extract_json
 from src.utils.constants import TOC_SCHEMA
 from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
-prompts = load_prompts()
-TOC_SYSTEM = prompts["toc_generation"]["system"]
-TOC_USER_TEMPLATE = prompts["toc_generation"]["user_template"]
-
-models = load_models()
-MODEL_NAME = models['toc_model']['name']
-TEMPERATURE = models['toc_model']['temperature']
+config = load_generator_config('toc_generation', 'toc_model')
+TOC_SYSTEM = config["SYSTEM"]
+TOC_USER_TEMPLATE = config["USER_TEMPLATE"]
+MODEL_NAME = config["MODEL_NAME"]
+TEMPERATURE = config["TEMPERATURE"]
 
 
 def call_toc_model(tool_info: dict, document_type: str) -> str:
     """Calls the LLM API to generate a TOC JSON.
-    
+
     Args:
         tool_info: Dictionary containing tool metadata (name, category, user_base, etc.)
         document_type: Type of document to generate TOC for (e.g., "privacy_policy", "terms_of_service")
-    
+
     Returns:
         str: Raw text response from the LLM containing the TOC JSON
     """
@@ -37,7 +35,7 @@ def call_toc_model(tool_info: dict, document_type: str) -> str:
         tool_info_json=json.dumps(tool_info, ensure_ascii=False, indent=2),
         document_type=document_type
     )
-    resp = client.chat.completions.create(
+    response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
             {"role": "system", "content": TOC_SYSTEM},
@@ -45,28 +43,22 @@ def call_toc_model(tool_info: dict, document_type: str) -> str:
         ],
         temperature=TEMPERATURE
     )
-    return resp.choices[0].message.content
+    return response.choices[0].message.content
 
 
-def extract_json(text: str):
-    """Extracts JSON object from text, trying direct parse first, then searching for JSON patterns."""
-    text = text.strip()
-    try:
-        return json.loads(text)
-    except Exception:
-        pass
-    matches = re.finditer(r"\{.*\}", text, re.DOTALL)
-    for m in matches:
-        candidate = m.group(0)
-        try:
-            return json.loads(candidate)
-        except Exception:
-            continue
-    return None
+def validate_and_save_toc(raw_text: str, out_path: Path) -> dict:
+    """Extracts JSON from LLM response, validates it against TOC_SCHEMA, and saves to file.
 
+    Args:
+        raw_text: Raw text response from LLM that should contain JSON
+        out_path: Path where the validated TOC JSON will be saved
 
-def validate_and_save_toc(raw_text: str, out_path: Path):
-    """Extracts JSON from LLM response, validates it against TOC_SCHEMA, and saves to file."""
+    Returns:
+        dict: Validated TOC dictionary that was saved to file
+
+    Raises:
+        ValueError: If JSON extraction fails or schema validation fails
+    """
     obj = extract_json(raw_text)
     if obj is None:
         raise ValueError("No JSON object found in model output")
@@ -79,8 +71,20 @@ def validate_and_save_toc(raw_text: str, out_path: Path):
     return obj
 
 
-def generate_all_tocs(model_name="l2-gpt-4o"):
-    """Main function that iterates through all tool folders and generates TOC files for each document type."""
+def generate_all_tocs() -> None:
+    """Main function that iterates through all tool folders and generates TOC files for each document type.
+    
+    Processes all tool directories in the data folder, reads their tool_info.json files,
+    and generates Table of Contents (TOC) JSON files for each document type specified
+    in the tool's configuration. The generated TOC files are validated against TOC_SCHEMA
+    before being saved.
+    
+    The function will skip tool folders that:
+    - Don't contain a tool_info.json file
+    - Don't have any document_types specified
+    
+    Generated TOC files are saved as `toc_{document_type}.json` in each tool's directory.
+    """
     for tool_folder in sorted(DATA_DIR.iterdir()):
         if not tool_folder.is_dir(): continue
         tool_info_path = tool_folder / "tool_info.json"
@@ -107,6 +111,4 @@ def generate_all_tocs(model_name="l2-gpt-4o"):
 
 
 if __name__ == '__main__':
-    # generate_all_tocs()
-    print(prompts)
-    print(models)
+    generate_all_tocs()

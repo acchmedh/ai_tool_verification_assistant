@@ -9,20 +9,9 @@
         },
         {
           "title": "Definitions and Interpretations"
-        }
-      ]
-    },
-    {
-      "title": "Scope of Data Processing",
-      "subsections": [
-        {
-          "title": "Categories of Data Processed"
         },
         {
-          "title": "Processing Activities"
-        },
-        {
-          "title": "Geographical Scope"
+          "title": "Scope of the Agreement"
         }
       ]
     },
@@ -36,24 +25,35 @@
           "title": "Responsibilities of the Data Processor"
         },
         {
-          "title": "Joint Responsibilities"
+          "title": "Third-Party Subprocessors"
         }
       ]
     },
     {
-      "title": "Data Security Measures",
+      "title": "Data Processing Details",
+      "subsections": [
+        {
+          "title": "Nature and Purpose of Processing"
+        },
+        {
+          "title": "Categories of Data Subjects"
+        },
+        {
+          "title": "Types of Personal Data Processed"
+        },
+        {
+          "title": "Duration of Processing"
+        }
+      ]
+    },
+    {
+      "title": "Security Measures",
       "subsections": [
         {
           "title": "Technical and Organizational Measures"
         },
         {
-          "title": "Access Controls"
-        },
-        {
-          "title": "Encryption Standards"
-        },
-        {
-          "title": "Incident Response and Reporting"
+          "title": "Incident Response and Breach Notification"
         }
       ]
     },
@@ -61,35 +61,18 @@
       "title": "Data Subject Rights",
       "subsections": [
         {
-          "title": "Access and Rectification"
+          "title": "Assistance with Data Subject Requests"
         },
         {
-          "title": "Erasure and Restriction"
-        },
-        {
-          "title": "Data Portability"
+          "title": "Correction, Deletion, and Access Requests"
         }
       ]
     },
     {
-      "title": "Subprocessors",
+      "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Approval and Notification Process"
-        },
-        {
-          "title": "Liability for Subprocessors"
-        }
-      ]
-    },
-    {
-      "title": "Audit and Compliance",
-      "subsections": [
-        {
-          "title": "Audit Rights"
-        },
-        {
-          "title": "Frequency and Scope of Audits"
+          "title": "Mechanisms for Cross-Border Transfers"
         },
         {
           "title": "Compliance with Applicable Laws"
@@ -97,32 +80,40 @@
       ]
     },
     {
-      "title": "Term and Termination",
+      "title": "Confidentiality Obligations",
       "subsections": [
         {
-          "title": "Duration of Processing"
+          "title": "Confidentiality of Processing Activities"
         },
         {
-          "title": "Termination Conditions"
-        },
-        {
-          "title": "Post-Termination Obligations"
+          "title": "Employee and Subprocessor Confidentiality"
         }
       ]
     },
     {
-      "title": "Liability and Indemnification",
+      "title": "Audit and Compliance",
       "subsections": [
         {
-          "title": "Liability Limitations"
+          "title": "Audit Rights of the Data Controller"
         },
         {
-          "title": "Indemnification Clauses"
+          "title": "Processor’s Cooperation with Audits"
         }
       ]
     },
     {
-      "title": "Miscellaneous Provisions",
+      "title": "Termination and Data Return/Deletion",
+      "subsections": [
+        {
+          "title": "Obligations Upon Termination"
+        },
+        {
+          "title": "Data Return and Deletion Procedures"
+        }
+      ]
+    },
+    {
+      "title": "General Provisions",
       "subsections": [
         {
           "title": "Governing Law and Jurisdiction"
@@ -132,9 +123,6 @@
         },
         {
           "title": "Severability"
-        },
-        {
-          "title": "Entire Agreement"
         }
       ]
     }

@@ -1,96 +1,128 @@
 {
-  "title": "Compliance and Certifications for Tool_2",
+  "title": "Compliance and Certifications",
   "sections": [
     {
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of This Document"
+          "title": "Purpose of Document"
         },
         {
           "title": "Scope of Compliance"
         },
         {
-          "title": "Audience"
+          "title": "Audience and Applicability"
         }
       ]
     },
     {
-      "title": "Regulatory Compliance",
+      "title": "Regulatory Frameworks",
       "subsections": [
         {
-          "title": "General Data Protection Regulation (GDPR)"
+          "title": "Overview of Applicable Regulations"
         },
         {
-          "title": "California Consumer Privacy Act (CCPA)"
+          "title": "Global Standards"
         },
         {
-          "title": "Health Insurance Portability and Accountability Act (HIPAA)"
-        },
-        {
-          "title": "Other Regional and Industry Standards"
+          "title": "Industry-Specific Requirements"
         }
       ]
     },
     {
-      "title": "Certifications and Standards",
+      "title": "Certifications Overview",
       "subsections": [
         {
-          "title": "ISO/IEC 27001 Certification"
+          "title": "ISO Certifications",
+          "subsections": [
+            {
+              "title": "ISO 27001: Information Security Management"
+            },
+            {
+              "title": "ISO 27701: Privacy Information Management"
+            }
+          ]
         },
         {
-          "title": "SOC 2 Type II Certification"
+          "title": "SOC Reports",
+          "subsections": [
+            {
+              "title": "SOC 1: Financial Reporting Controls"
+            },
+            {
+              "title": "SOC 2: Trust Service Criteria"
+            },
+            {
+              "title": "SOC 3: Public Trust Report"
+            }
+          ]
         },
         {
-          "title": "Cloud Security Alliance (CSA) STAR Certification"
-        },
-        {
-          "title": "Other Relevant Certifications"
+          "title": "Other Certifications",
+          "subsections": [
+            {
+              "title": "GDPR Compliance Certification"
+            },
+            {
+              "title": "HIPAA Compliance Certification"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "Data Security and Privacy Measures",
+      "title": "Audit Processes",
+      "subsections": [
+        {
+          "title": "Internal Audits"
+        },
+        {
+          "title": "External Audits"
+        },
+        {
+          "title": "Third-Party Assessments"
+        }
+      ]
+    },
+    {
+      "title": "Data Security Measures",
       "subsections": [
         {
           "title": "Encryption Standards"
         },
         {
-          "title": "Access Control and Authentication"
+          "title": "Access Controls"
         },
         {
-          "title": "Data Retention and Deletion Policies"
-        },
-        {
-          "title": "Incident Response and Breach Notification"
+          "title": "Incident Response Protocols"
         }
       ]
     },
     {
-      "title": "Third-Party Audits and Assessments",
+      "title": "Privacy Compliance",
       "subsections": [
         {
-          "title": "Frequency of Audits"
+          "title": "Data Subject Rights"
         },
         {
-          "title": "Independent Audit Firms"
+          "title": "Data Retention Policies"
         },
         {
-          "title": "Summary of Findings"
+          "title": "Cross-Border Data Transfers"
         }
       ]
     },
     {
-      "title": "Compliance Responsibilities",
+      "title": "Compliance Monitoring",
       "subsections": [
         {
-          "title": "Responsibilities of Tool_2"
+          "title": "Continuous Monitoring Tools"
         },
         {
-          "title": "Responsibilities of Users"
+          "title": "Reporting Mechanisms"
         },
         {
-          "title": "Shared Responsibility Model"
+          "title": "Risk Assessment Procedures"
         }
       ]
     },
@@ -98,35 +130,27 @@
       "title": "Legal and Regulatory Updates",
       "subsections": [
         {
-          "title": "Monitoring Changes in Regulations"
+          "title": "Tracking Changes in Regulations"
         },
         {
-          "title": "Process for Updating Compliance Measures"
+          "title": "Impact Analysis"
+        },
+        {
+          "title": "Implementation of Updates"
         }
       ]
     },
     {
-      "title": "Frequently Asked Questions (FAQs)",
+      "title": "Appendices",
       "subsections": [
         {
-          "title": "General Compliance Questions"
+          "title": "Glossary of Terms"
         },
         {
-          "title": "Certification-Specific Questions"
+          "title": "References and Resources"
         },
         {
-          "title": "Data Security and Privacy Questions"
-        }
-      ]
-    },
-    {
-      "title": "Contact Information",
-      "subsections": [
-        {
-          "title": "Compliance Team Contact Details"
-        },
-        {
-          "title": "Support Channels for Compliance Queries"
+          "title": "Contact Information"
         }
       ]
     }

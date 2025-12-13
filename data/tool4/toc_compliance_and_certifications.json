@@ -8,7 +8,10 @@
           "title": "Purpose of This Document"
         },
         {
-          "title": "Overview of Tool_4 Compliance Standards"
+          "title": "Scope of Compliance"
+        },
+        {
+          "title": "Definitions and Key Terms"
         }
       ]
     },
@@ -16,45 +19,80 @@
       "title": "Regulatory Compliance",
       "subsections": [
         {
-          "title": "Applicable Regulations",
+          "title": "General Data Protection Regulation (GDPR)",
           "subsections": [
             {
-              "title": "GDPR Compliance"
+              "title": "Data Subject Rights"
             },
             {
-              "title": "CCPA Compliance"
-            },
-            {
-              "title": "HIPAA Compliance"
+              "title": "Data Processing Principles"
             }
           ]
         },
         {
-          "title": "Global Standards Alignment",
+          "title": "California Consumer Privacy Act (CCPA)",
           "subsections": [
             {
-              "title": "ISO/IEC 27001 Certification"
+              "title": "Consumer Rights and Disclosures"
             },
             {
-              "title": "SOC 2 Compliance"
+              "title": "Opt-Out Mechanisms"
+            }
+          ]
+        },
+        {
+          "title": "Other Regional Regulations",
+          "subsections": [
+            {
+              "title": "APAC Compliance Standards"
+            },
+            {
+              "title": "LATAM Data Protection Laws"
             }
           ]
         }
       ]
     },
     {
-      "title": "Security Certifications",
+      "title": "Certifications and Standards",
       "subsections": [
         {
-          "title": "Certification Overview"
+          "title": "ISO 27001 Certification",
+          "subsections": [
+            {
+              "title": "Scope of Certification"
+            },
+            {
+              "title": "Ongoing Compliance Measures"
+            }
+          ]
         },
         {
-          "title": "Third-Party Audits and Assessments"
+          "title": "SOC 2 Compliance",
+          "subsections": [
+            {
+              "title": "Trust Service Criteria"
+            },
+            {
+              "title": "Audit Process Overview"
+            }
+          ]
+        },
+        {
+          "title": "Other Industry Standards",
+          "subsections": [
+            {
+              "title": "PCI DSS Compliance"
+            },
+            {
+              "title": "HIPAA Alignment (if applicable)"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "Data Protection Measures",
+      "title": "Data Security Measures",
       "subsections": [
         {
           "title": "Encryption Standards"
@@ -63,51 +101,60 @@
           "title": "Access Control Policies"
         },
         {
-          "title": "Incident Response Protocols"
+          "title": "Incident Response Procedures"
         }
       ]
     },
     {
-      "title": "Compliance Reporting",
+      "title": "Audit and Assessment",
       "subsections": [
         {
-          "title": "Audit Logs and Monitoring"
+          "title": "Internal Audit Processes"
         },
         {
-          "title": "Reporting to Regulatory Authorities"
+          "title": "Third-Party Assessments"
+        },
+        {
+          "title": "Frequency and Reporting"
         }
       ]
     },
     {
-      "title": "Risk Management Framework",
+      "title": "Roles and Responsibilities",
       "subsections": [
         {
-          "title": "Risk Assessment Procedures"
+          "title": "Data Protection Officer (DPO)"
         },
         {
-          "title": "Mitigation Strategies"
+          "title": "Compliance Team"
+        },
+        {
+          "title": "Third-Party Vendors"
         }
       ]
     },
     {
-      "title": "Vendor and Third-Party Compliance",
+      "title": "Updates and Maintenance",
       "subsections": [
         {
-          "title": "Vendor Risk Assessments"
+          "title": "Version Control"
         },
         {
-          "title": "Third-Party Certification Requirements"
+          "title": "Change Management Procedures"
+        },
+        {
+          "title": "Stakeholder Notifications"
         }
       ]
     },
     {
-      "title": "Continuous Improvement",
+      "title": "Contact Information",
       "subsections": [
         {
-          "title": "Ongoing Compliance Monitoring"
+          "title": "Compliance Inquiries"
         },
         {
-          "title": "Updates to Certifications"
+          "title": "Reporting Violations"
         }
       ]
     },

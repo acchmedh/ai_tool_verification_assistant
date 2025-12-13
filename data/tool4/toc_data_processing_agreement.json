@@ -8,10 +8,10 @@
           "title": "Purpose of the Agreement"
         },
         {
-          "title": "Scope of Data Processing"
+          "title": "Definitions"
         },
         {
-          "title": "Definitions"
+          "title": "Scope of Data Processing"
         }
       ]
     },
@@ -19,13 +19,13 @@
       "title": "Roles and Responsibilities",
       "subsections": [
         {
-          "title": "Data Controller Obligations"
+          "title": "Responsibilities of the Data Controller"
         },
         {
-          "title": "Data Processor Obligations"
+          "title": "Responsibilities of the Data Processor"
         },
         {
-          "title": "Third-Party Subprocessors"
+          "title": "Joint Responsibilities"
         }
       ]
     },
@@ -33,13 +33,13 @@
       "title": "Data Processing Details",
       "subsections": [
         {
-          "title": "Categories of Data Processed"
+          "title": "Types of Data Processed"
         },
         {
           "title": "Purpose of Processing"
         },
         {
-          "title": "Retention and Deletion Policies"
+          "title": "Retention Periods"
         }
       ]
     },
@@ -47,13 +47,13 @@
       "title": "Security Measures",
       "subsections": [
         {
-          "title": "Technical and Organizational Safeguards"
+          "title": "Technical Safeguards"
         },
         {
-          "title": "Encryption Standards"
+          "title": "Organizational Safeguards"
         },
         {
-          "title": "Access Control Protocols"
+          "title": "Incident Response Protocols"
         }
       ]
     },
@@ -64,7 +64,7 @@
           "title": "Access and Rectification"
         },
         {
-          "title": "Erasure and Restriction"
+          "title": "Erasure Requests"
         },
         {
           "title": "Data Portability"
@@ -72,24 +72,13 @@
       ]
     },
     {
-      "title": "Incident Management",
+      "title": "Sub-processors",
       "subsections": [
         {
-          "title": "Breach Notification Procedures"
+          "title": "Approval and Notification Process"
         },
         {
-          "title": "Mitigation and Remediation"
-        }
-      ]
-    },
-    {
-      "title": "Audit and Compliance",
-      "subsections": [
-        {
-          "title": "Audit Rights"
-        },
-        {
-          "title": "Compliance with Applicable Laws"
+          "title": "Liability of Sub-processors"
         }
       ]
     },
@@ -100,10 +89,21 @@
           "title": "Transfer Mechanisms"
         },
         {
-          "title": "Adequacy Decisions"
+          "title": "Compliance with Applicable Laws"
+        }
+      ]
+    },
+    {
+      "title": "Audit and Monitoring",
+      "subsections": [
+        {
+          "title": "Audit Rights"
         },
         {
-          "title": "Standard Contractual Clauses"
+          "title": "Frequency of Audits"
+        },
+        {
+          "title": "Reporting Obligations"
         }
       ]
     },
@@ -114,7 +114,10 @@
           "title": "Termination Conditions"
         },
         {
-          "title": "Return or Deletion of Data"
+          "title": "Data Return or Deletion"
+        },
+        {
+          "title": "Survival of Obligations"
         }
       ]
     },

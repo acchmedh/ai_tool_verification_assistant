@@ -1,14 +1,17 @@
 {
-  "title": "Privacy Policy for Tool_4",
+  "title": "Privacy Policy",
   "sections": [
     {
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of this Privacy Policy"
+          "title": "Purpose of This Privacy Policy"
         },
         {
-          "title": "Scope of Application"
+          "title": "Scope and Applicability"
+        },
+        {
+          "title": "Definitions"
         }
       ]
     },
@@ -19,7 +22,7 @@
           "title": "Personal Information",
           "subsections": [
             {
-              "title": "Information Provided by Users"
+              "title": "Information You Provide Directly"
             },
             {
               "title": "Information Collected Automatically"
@@ -35,35 +38,27 @@
       "title": "How We Use Your Information",
       "subsections": [
         {
-          "title": "Purpose of Data Processing"
+          "title": "Providing and Improving Our Services"
         },
         {
-          "title": "Legal Basis for Processing"
-        }
-      ]
-    },
-    {
-      "title": "Sharing and Disclosure of Information",
-      "subsections": [
-        {
-          "title": "Third-Party Service Providers"
+          "title": "Communication and Support"
         },
         {
           "title": "Compliance with Legal Obligations"
-        },
-        {
-          "title": "Business Transfers"
         }
       ]
     },
     {
-      "title": "Data Retention",
+      "title": "How We Share Your Information",
       "subsections": [
         {
-          "title": "Retention Periods"
+          "title": "With Service Providers"
         },
         {
-          "title": "Criteria for Retention"
+          "title": "For Legal and Compliance Purposes"
+        },
+        {
+          "title": "In Business Transfers"
         }
       ]
     },
@@ -71,27 +66,24 @@
       "title": "Your Rights and Choices",
       "subsections": [
         {
-          "title": "Access and Correction"
-        },
-        {
-          "title": "Data Portability"
-        },
-        {
-          "title": "Right to Erasure"
+          "title": "Access and Correction of Information"
         },
         {
           "title": "Opt-Out Options"
+        },
+        {
+          "title": "Data Portability"
         }
       ]
     },
     {
-      "title": "Security Measures",
+      "title": "Data Retention and Security",
       "subsections": [
         {
-          "title": "Technical Safeguards"
+          "title": "Retention Periods"
         },
         {
-          "title": "Organizational Safeguards"
+          "title": "Security Measures"
         }
       ]
     },
@@ -99,21 +91,32 @@
       "title": "International Data Transfers",
       "subsections": [
         {
-          "title": "Cross-Border Data Handling"
+          "title": "Data Transfer Mechanisms"
         },
         {
-          "title": "Adequacy Decisions"
+          "title": "Compliance with Local Laws"
         }
       ]
     },
     {
-      "title": "Updates to This Privacy Policy",
+      "title": "Children’s Privacy",
+      "subsections": [
+        {
+          "title": "Age Restrictions"
+        },
+        {
+          "title": "Parental Consent Requirements"
+        }
+      ]
+    },
+    {
+      "title": "Changes to This Privacy Policy",
       "subsections": [
         {
           "title": "Notification of Changes"
         },
         {
-          "title": "Effective Date"
+          "title": "Effective Date of Changes"
         }
       ]
     },
@@ -121,10 +124,10 @@
       "title": "Contact Information",
       "subsections": [
         {
-          "title": "Privacy Queries"
+          "title": "How to Reach Us"
         },
         {
-          "title": "Reporting Concerns"
+          "title": "Dispute Resolution"
         }
       ]
     }

@@ -1,3 +1,6 @@
+tool_info:
+  name: 'l2-gpt-4o-mini'
+
 toc_model:
   name: 'l2-gpt-4o'
   temperature: 0.3

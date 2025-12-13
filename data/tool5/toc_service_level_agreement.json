@@ -8,141 +8,135 @@
           "title": "Purpose of the Agreement"
         },
         {
-          "title": "Parties to the Agreement"
+          "title": "Scope of Services"
         },
         {
-          "title": "Effective Date and Term"
+          "title": "Definitions and Terminology"
         }
       ]
     },
     {
-      "title": "Definitions",
+      "title": "Service Commitments",
       "subsections": [
         {
-          "title": "Key Terms"
+          "title": "Availability and Uptime Guarantee"
         },
         {
-          "title": "Interpretation Guidelines"
+          "title": "Performance Standards"
+        },
+        {
+          "title": "Data Processing and Workflow Optimization"
         }
       ]
     },
     {
-      "title": "Scope of Services",
+      "title": "Support and Maintenance",
       "subsections": [
         {
-          "title": "Description of Tool_5 Services"
-        },
-        {
-          "title": "Service Availability"
-        },
-        {
-          "title": "Exclusions and Limitations"
-        }
-      ]
-    },
-    {
-      "title": "Service Level Commitments",
-      "subsections": [
-        {
-          "title": "Performance Metrics",
+          "title": "Support Levels",
           "subsections": [
             {
-              "title": "Uptime Guarantee"
+              "title": "Standard Support"
             },
             {
-              "title": "Response Times"
+              "title": "Premium Support"
             }
           ]
         },
         {
-          "title": "Maintenance and Downtime"
+          "title": "Maintenance Windows"
         },
         {
-          "title": "Support Services"
+          "title": "Issue Resolution and Escalation Process"
         }
       ]
     },
     {
-      "title": "Roles and Responsibilities",
+      "title": "Customer Responsibilities",
       "subsections": [
         {
-          "title": "Provider Responsibilities"
+          "title": "System Requirements"
         },
         {
-          "title": "Customer Responsibilities"
+          "title": "Data Integrity and Security"
+        },
+        {
+          "title": "Compliance with Usage Policies"
         }
       ]
     },
     {
-      "title": "Incident Management",
+      "title": "Service Metrics and Reporting",
       "subsections": [
         {
-          "title": "Incident Reporting"
+          "title": "Key Performance Indicators (KPIs)"
         },
         {
-          "title": "Resolution Process"
+          "title": "Reporting Frequency"
         },
         {
-          "title": "Escalation Procedures"
+          "title": "Access to Performance Reports"
         }
       ]
     },
     {
-      "title": "Fees and Payment Terms",
+      "title": "Financial Terms",
       "subsections": [
         {
           "title": "Fee Structure"
         },
         {
-          "title": "Invoicing and Payment Schedule"
+          "title": "Refunds and Credits"
         },
         {
-          "title": "Late Payment Penalties"
+          "title": "Payment Terms"
         }
       ]
     },
     {
-      "title": "Confidentiality and Data Protection",
+      "title": "Liability and Indemnification",
       "subsections": [
         {
-          "title": "Confidential Information"
+          "title": "Limitations of Liability"
         },
         {
-          "title": "Data Security Measures"
-        },
-        {
-          "title": "Compliance with Privacy Laws"
+          "title": "Indemnification Obligations"
         }
       ]
     },
     {
-      "title": "Term and Termination",
+      "title": "Termination of Agreement",
       "subsections": [
         {
-          "title": "Termination for Convenience"
+          "title": "Termination Conditions"
         },
         {
-          "title": "Termination for Cause"
+          "title": "Notice Period"
         },
         {
-          "title": "Effect of Termination"
+          "title": "Post-Termination Obligations"
         }
       ]
     },
     {
-      "title": "General Provisions",
+      "title": "Amendments and Modifications",
       "subsections": [
         {
-          "title": "Force Majeure"
+          "title": "Process for Amendments"
         },
         {
-          "title": "Amendments and Modifications"
+          "title": "Notification of Changes"
+        }
+      ]
+    },
+    {
+      "title": "Governing Law and Dispute Resolution",
+      "subsections": [
+        {
+          "title": "Applicable Jurisdiction"
         },
         {
-          "title": "Governing Law and Jurisdiction"
-        },
-        {
-          "title": "Entire Agreement"
+          "title": "Dispute Resolution Mechanisms"
         }
       ]
     }

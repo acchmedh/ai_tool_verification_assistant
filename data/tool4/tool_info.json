@@ -1,17 +1,14 @@
 {
-  "tool_name": "Tool_4",
-  "category": "Security",
-  "user_base": "Data analysts",
-  "document_types": [
-    "compliance_and_certifications",
-    "service_level_agreement",
-    "terms_of_service",
-    "privacy_policy"
-  ],
   "description": {
     "name": "Tool_4",
-    "purpose": "Tool_4 is designed to provide advanced security analytics for data analysts, enhancing the detection of anomalies and potential threats within datasets. It incorporates machine learning algorithms to identify patterns that may signify security breaches or data leakages.",
-    "category": "Security",
-    "user_base": "Data analysts"
-  }
+    "purpose": "Tool_4 is designed to streamline data processing tasks for product managers, enabling them to analyze user feedback, sales data, and market trends efficiently. With powerful visualization tools and automated reporting features, it helps PMs make data-driven decisions quickly.",
+    "category": "Data Processing",
+    "user_base": "Product managers"
+  },
+  "document_types": [
+    "compliance_and_certifications",
+    "privacy_policy",
+    "terms_of_service",
+    "data_processing_agreement"
+  ]
 }

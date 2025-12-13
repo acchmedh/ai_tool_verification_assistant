@@ -8,110 +8,103 @@
           "title": "Purpose of the Agreement"
         },
         {
-          "title": "Parties to the Agreement"
+          "title": "Scope of Services"
         },
         {
-          "title": "Effective Date and Term"
+          "title": "Definitions and Terminology"
         }
       ]
     },
     {
-      "title": "Definitions and Interpretations",
+      "title": "Service Commitments",
       "subsections": [
         {
-          "title": "Key Terms"
-        },
-        {
-          "title": "Interpretation Guidelines"
-        }
-      ]
-    },
-    {
-      "title": "Scope of Services",
-      "subsections": [
-        {
-          "title": "Overview of Tool_3 Features"
-        },
-        {
-          "title": "Service Availability"
-        },
-        {
-          "title": "Exclusions and Limitations"
-        }
-      ]
-    },
-    {
-      "title": "Service Level Commitments",
-      "subsections": [
-        {
-          "title": "Performance Metrics",
+          "title": "Availability and Uptime",
           "subsections": [
             {
-              "title": "Uptime Guarantee"
+              "title": "Guaranteed Uptime Percentage"
             },
             {
-              "title": "Response Times"
+              "title": "Scheduled Downtime and Maintenance"
             }
           ]
         },
         {
-          "title": "Support and Maintenance"
+          "title": "Performance Standards"
         },
         {
-          "title": "Incident Management"
+          "title": "Support Response Times"
         }
       ]
     },
     {
-      "title": "Roles and Responsibilities",
+      "title": "Customer Responsibilities",
       "subsections": [
         {
-          "title": "Provider Responsibilities"
+          "title": "Access and Usage Requirements"
         },
         {
-          "title": "Customer Responsibilities"
+          "title": "Data Integrity and Security Obligations"
         }
       ]
     },
     {
-      "title": "Monitoring and Reporting",
+      "title": "Service Exclusions",
       "subsections": [
         {
-          "title": "Compliance Monitoring"
+          "title": "Uncovered Scenarios"
         },
         {
-          "title": "Reporting Frequency"
-        },
-        {
-          "title": "Escalation Procedures"
+          "title": "Third-Party Dependencies"
         }
       ]
     },
     {
-      "title": "Fees and Payment Terms",
+      "title": "Incident Management",
       "subsections": [
         {
-          "title": "Fee Structure"
+          "title": "Reporting Issues"
         },
         {
-          "title": "Invoicing and Payment Schedule"
-        },
-        {
-          "title": "Late Payment Penalties"
+          "title": "Resolution Process",
+          "subsections": [
+            {
+              "title": "Priority Levels"
+            },
+            {
+              "title": "Escalation Procedures"
+            }
+          ]
         }
       ]
     },
     {
-      "title": "Confidentiality and Data Security",
+      "title": "Financial Terms",
       "subsections": [
         {
-          "title": "Confidential Information"
+          "title": "Service Credits",
+          "subsections": [
+            {
+              "title": "Eligibility Criteria"
+            },
+            {
+              "title": "Calculation of Credits"
+            }
+          ]
         },
         {
-          "title": "Data Protection Measures"
+          "title": "Payment Terms"
+        }
+      ]
+    },
+    {
+      "title": "Confidentiality and Security",
+      "subsections": [
+        {
+          "title": "Data Protection Standards"
         },
         {
-          "title": "Breach Notification"
+          "title": "Confidential Information Handling"
         }
       ]
     },
@@ -123,14 +116,22 @@
         },
         {
           "title": "Suspension of Services"
-        },
-        {
-          "title": "Post-Termination Obligations"
         }
       ]
     },
     {
-      "title": "General Provisions",
+      "title": "Dispute Resolution",
+      "subsections": [
+        {
+          "title": "Arbitration Process"
+        },
+        {
+          "title": "Jurisdiction and Governing Law"
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous Provisions",
       "subsections": [
         {
           "title": "Force Majeure"
@@ -139,10 +140,7 @@
           "title": "Amendments to the Agreement"
         },
         {
-          "title": "Governing Law and Jurisdiction"
-        },
-        {
-          "title": "Entire Agreement"
+          "title": "Entire Agreement Clause"
         }
       ]
     }

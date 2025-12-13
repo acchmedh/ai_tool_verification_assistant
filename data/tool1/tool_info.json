@@ -1,17 +1,14 @@
 {
-  "tool_name": "Tool_1",
-  "category": "Collaboration",
-  "user_base": "Compliance officers",
-  "document_types": [
-    "terms_of_service",
-    "data_processing_agreement",
-    "security_whitepaper",
-    "service_level_agreement"
-  ],
   "description": {
     "name": "Tool_1",
-    "purpose": "A secure collaboration platform designed specifically for compliance officers to share documents, track regulatory changes, and manage audits in real-time.",
-    "category": "Collaboration",
-    "user_base": "Compliance officers"
-  }
+    "purpose": "Tool_1 is designed to enhance security measures for machine learning models by providing advanced threat detection, vulnerability assessments, and secure model deployment processes. It utilizes AI-driven algorithms to identify potential risks in data and model integrity, ensuring that ML engineers can develop and deploy their solutions with confidence.",
+    "category": "Security",
+    "user_base": "ML engineers"
+  },
+  "document_types": [
+    "data_processing_agreement",
+    "security_whitepaper",
+    "privacy_policy",
+    "terms_of_service"
+  ]
 }

@@ -5,7 +5,7 @@
       "title": "Introduction",
       "subsections": [
         {
-          "title": "Purpose of the Agreement"
+          "title": "Purpose of the Terms"
         },
         {
           "title": "Acceptance of Terms"
@@ -22,7 +22,7 @@
           "title": "Eligibility Requirements"
         },
         {
-          "title": "Account Creation and Security"
+          "title": "Account Creation and Maintenance"
         },
         {
           "title": "User Responsibilities"
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "title": "Use of the Platform",
+      "title": "Use of the Service",
       "subsections": [
         {
           "title": "Permitted Uses"
@@ -39,7 +39,7 @@
           "title": "Prohibited Activities"
         },
         {
-          "title": "Compliance with Laws and Regulations"
+          "title": "Compliance with Laws"
         }
       ]
     },
@@ -50,7 +50,7 @@
           "title": "Subscription Plans"
         },
         {
-          "title": "Billing and Payment"
+          "title": "Billing and Payment Methods"
         },
         {
           "title": "Refund Policy"
@@ -61,16 +61,13 @@
       "title": "Data Privacy and Security",
       "subsections": [
         {
-          "title": "Data Collection and Use"
+          "title": "Data Collection and Usage"
         },
         {
-          "title": "User Data Ownership"
+          "title": "User Data Protection"
         },
         {
-          "title": "Security Measures"
-        },
-        {
-          "title": "Breach Notification"
+          "title": "Confidentiality Obligations"
         }
       ]
     },
@@ -78,15 +75,29 @@
       "title": "Intellectual Property Rights",
       "subsections": [
         {
-          "title": "Ownership of Content"
+          "title": "Ownership of Tool_1"
         },
         {
-          "title": "License to Use the Platform"
+          "title": "User Content"
         },
         {
-          "title": "Third-Party Intellectual Property"
+          "title": "License Grant and Restrictions"
         }
       ]
+    },
+    {
+      "title": "Warranties and Disclaimers",
+      "subsections": [
+        {
+          "title": "No Warranty on Service"
+        },
+        {
+          "title": "Disclaimer of Liability"
+        }
+      ]
+    },
+    {
+      "title": "Limitation of Liability"
     },
     {
       "title": "Termination and Suspension",
@@ -103,30 +114,16 @@
       ]
     },
     {
-      "title": "Disclaimers and Limitations of Liability",
-      "subsections": [
-        {
-          "title": "No Warranty"
-        },
-        {
-          "title": "Limitation of Liability"
-        },
-        {
-          "title": "Indemnification"
-        }
-      ]
-    },
-    {
       "title": "Governing Law and Dispute Resolution",
       "subsections": [
         {
-          "title": "Governing Law"
+          "title": "Applicable Law"
         },
         {
           "title": "Arbitration Agreement"
         },
         {
-          "title": "Class Action Waiver"
+          "title": "Venue and Jurisdiction"
         }
       ]
     },

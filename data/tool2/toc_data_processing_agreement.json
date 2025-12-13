@@ -1,0 +1,133 @@
+{
+  "title": "Data Processing Agreement",
+  "sections": [
+    {
+      "title": "Introduction",
+      "subsections": [
+        {
+          "title": "Purpose of the Agreement"
+        },
+        {
+          "title": "Definitions and Interpretations"
+        }
+      ]
+    },
+    {
+      "title": "Scope of Data Processing",
+      "subsections": [
+        {
+          "title": "Categories of Data Processed"
+        },
+        {
+          "title": "Processing Activities"
+        },
+        {
+          "title": "Geographical Scope"
+        }
+      ]
+    },
+    {
+      "title": "Roles and Responsibilities",
+      "subsections": [
+        {
+          "title": "Responsibilities of the Data Controller"
+        },
+        {
+          "title": "Responsibilities of the Data Processor"
+        },
+        {
+          "title": "Sub-Processors"
+        }
+      ]
+    },
+    {
+      "title": "Data Security Measures",
+      "subsections": [
+        {
+          "title": "Technical and Organizational Measures"
+        },
+        {
+          "title": "Encryption and Access Controls"
+        },
+        {
+          "title": "Incident Response and Breach Notification"
+        }
+      ]
+    },
+    {
+      "title": "Compliance with Legal and Regulatory Standards",
+      "subsections": [
+        {
+          "title": "Applicable Laws and Regulations"
+        },
+        {
+          "title": "Cross-Border Data Transfers"
+        },
+        {
+          "title": "Retention and Deletion of Data"
+        }
+      ]
+    },
+    {
+      "title": "Audit and Monitoring",
+      "subsections": [
+        {
+          "title": "Right to Audit"
+        },
+        {
+          "title": "Frequency and Scope of Audits"
+        },
+        {
+          "title": "Processor Obligations During Audits"
+        }
+      ]
+    },
+    {
+      "title": "Confidentiality",
+      "subsections": [
+        {
+          "title": "Confidentiality Obligations"
+        },
+        {
+          "title": "Exceptions to Confidentiality"
+        }
+      ]
+    },
+    {
+      "title": "Liability and Indemnification",
+      "subsections": [
+        {
+          "title": "Liability Limitations"
+        },
+        {
+          "title": "Indemnification Clauses"
+        }
+      ]
+    },
+    {
+      "title": "Termination of Agreement",
+      "subsections": [
+        {
+          "title": "Termination Conditions"
+        },
+        {
+          "title": "Post-Termination Obligations"
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous Provisions",
+      "subsections": [
+        {
+          "title": "Governing Law"
+        },
+        {
+          "title": "Dispute Resolution"
+        },
+        {
+          "title": "Amendments to the Agreement"
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,14 @@
 {
-  "tool_name": "Tool_2",
-  "category": "Collaboration",
-  "user_base": "Data analysts",
-  "document_types": [
-    "compliance_and_certifications",
-    "terms_of_service",
-    "security_whitepaper",
-    "privacy_policy"
-  ],
   "description": {
     "name": "Tool_2",
-    "purpose": "A collaborative platform that enables data analysts to share insights, visualize data together in real-time, and collaboratively work on data projects, enhancing productivity and teamwork.",
-    "category": "Collaboration",
-    "user_base": "Data analysts"
-  }
+    "purpose": "A comprehensive security compliance management tool that helps organizations ensure adherence to regulatory standards and streamline audit processes.",
+    "category": "Security",
+    "user_base": "Compliance officers"
+  },
+  "document_types": [
+    "data_processing_agreement",
+    "privacy_policy",
+    "compliance_and_certifications",
+    "terms_of_service"
+  ]
 }
