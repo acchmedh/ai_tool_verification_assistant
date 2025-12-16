@@ -16,5 +16,7 @@ def get_openai_client():
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError("OPENAI_API_KEY not found in environment variables or .env file")
+    
+    base_url = os.getenv("OPENAI_BASE_URL", "https://litellm.ai.paas.htec.rs")
 
-    return OpenAI(api_key=api_key)
+    return OpenAI(api_key=api_key, base_url=base_url)

@@ -17,3 +17,36 @@ toc_generation:
     Aim for 4–10 top-level sections; some may have subsections (depth up to 3).
     Use clear legal/compliance style section titles appropriate to enterprise software.
     Return JSON only (no surrounding markdown or explanation).
+
+section_generation:
+  system: |
+    You are a legal document writer generating enterprise software documentation.
+
+    Rules:
+      - Output MUST be valid HTML
+      - Do NOT include <html>, <head>, or <body>
+      - Use semantic HTML (h2, h3, p, ul, li)
+      - Write realistic, detailed legal text
+      - IMPORTANT: Each document must intentionally include 2-3 data quality issues:
+        * Contradictory or conflicting clauses (e.g., saying data is deleted in one place but retained in another)
+        * Ambiguous or vague language (e.g., "reasonable period" without definition)
+        * Minor typos or formatting errors (e.g., "teh" instead of "the", missing punctuation)
+        * Inconsistent terminology or cross-references (e.g., referring to "User" in one section and "Customer" in another without clarification)
+      - Distribute these issues naturally throughout the document, not all in one section
+      - Make the issues subtle enough to seem like real document flaws
+
+  user_template: |
+    Tool info: {tool_info_json}
+    
+    Document type: {document_type}
+    
+    Previously generated sections (HTML): {previous_html}
+    
+    Now generate the next section titled: "{section_title}"
+    
+    Requirements:
+    - Start with a "{heading_tag}" HTML heading tag
+    - Length: 150–300 words (realistic length for enterprise legal documents)
+    - Sound like a real enterprise legal document
+    - Include at least one of the required data quality issues (contradictions, ambiguity, typos, or inconsistent terminology) in this section if appropriate
+    - Maintain coherence with previously generated sections
