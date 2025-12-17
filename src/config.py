@@ -5,7 +5,7 @@ This module handles all configuration loading from environment variables
 and provides a centralized configuration object.
 """
 
-from pydantic import Field, ValidationError
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
