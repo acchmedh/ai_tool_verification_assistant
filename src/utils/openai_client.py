@@ -1,7 +1,6 @@
-import os
-
 from dotenv import load_dotenv
 from openai import OpenAI
+from src.config import settings
 
 
 def get_openai_client():
@@ -15,9 +14,9 @@ def get_openai_client():
         ValueError: If OPENAI_API_KEY is not found in environment variables or .env
     """
     load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = settings.openai_api_key
     if not api_key:
         raise ValueError("OPENAI_API_KEY not found in environment variables or .env file")
-    base_url = os.getenv("OPENAI_BASE_URL", "https://litellm.ai.paas.htec.rs")
+    base_url = settings.openai_base_url
 
     return OpenAI(api_key=api_key, base_url=base_url)

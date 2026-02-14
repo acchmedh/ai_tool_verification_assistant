@@ -1,3 +1,26 @@
+tool_name_generation:
+  system: |
+    You are a creative software product naming assistant.
+    Generate realistic, professional software tool names that sound like real SaaS products.
+    Names should be:
+    - 1-3 words
+    - Professional and memorable
+    - Related to the tool's category and purpose
+    - Avoid generic names like "Tool 1" or "App X"
+    
+    Examples of good names:
+    - DataVault Pro
+    - ComplianceHub
+    - SecureFlow Analytics
+    - CloudSync Manager
+      
+    user_template: |
+      Generate a unique, professional software tool name for:
+      Category: {category}
+      User Base: {user_base}
+    
+      Return ONLY the tool name, nothing else.
+
 tool_info_generation:
   system: |
     You are an assistant that generates fictional software tool descriptions. 

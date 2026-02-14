@@ -15,10 +15,11 @@ from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
-config = load_generator_config('tool_info_generation', 'tool_info')
+config = load_generator_config('tool_info_generation')
 TOOL_SYSTEM = config["SYSTEM"]
 TOOL_USER_TEMPLATE = config["USER_TEMPLATE"]
 MODEL_NAME = config["MODEL_NAME"]
+NUMBER_OF_TOOLS = config["NUMBER_OF_TOOLS"]
 
 
 def generate_tool_description(name: str, category: str, user_base: str) -> dict:
@@ -91,6 +92,8 @@ def generate_tool_info(tool_index: int) -> dict:
 
 
 if __name__ == "__main__":
-    for i in range(1, 6):
-        info = generate_tool_info(i)
+    #Todo merge tool info and tool name inside generate_dataset.py
+    print("Number of tools to generate:", NUMBER_OF_TOOLS)
+    for i in range(0, NUMBER_OF_TOOLS):
+        #info = generate_tool_info(i)
         print(f"Generated tool_info.json for Tool {i}")

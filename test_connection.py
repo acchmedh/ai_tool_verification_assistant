@@ -7,24 +7,24 @@ to ensure the connection is working properly.
 
 from openai import OpenAI
 from loguru import logger
-
 from src.config import settings
 from src.utils.logger import setup_logger
+from src.utils.openai_client import get_openai_client
 
 
 def test_chat_completion() -> bool:
     """Test the chat completion API."""
     try:
         logger.info("Testing chat completion API...")
-        client = OpenAI(
-            api_key=settings.openai_api_key,
-            base_url=settings.openai_base_url,
-        )
+        client = get_openai_client()
 
         response = client.chat.completions.create(
             model=settings.default_model,
             messages=[
-                {"role": "user", "content": "Say 'Hello, connection test successful!' and nothing else."}
+                {
+                    "role": "user",
+                    "content": "Say 'Hello, connection test successful!' and nothing else.",
+                }
             ],
             max_tokens=50,
             temperature=0.0,
@@ -103,7 +103,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
-
-
