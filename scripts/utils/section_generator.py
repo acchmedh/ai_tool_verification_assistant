@@ -9,7 +9,7 @@ ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
 from src.utils.openai_client import get_openai_client
-from scripts.utils.config import load_generator_config, DATA_DIR
+from scripts.utils.generation_config import load_generator_config, DATA_DIR
 
 client = get_openai_client()
 

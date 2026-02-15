@@ -3,8 +3,8 @@
 from pathlib import Path
 import yaml
 from typing import Any, Optional
-from src.config import settings
-from src.typings import GeneratorConfig
+from core.settings import settings
+from scripts.utils.typings import GeneratorConfig, DatasetConfig
 
 ROOT = Path(__file__).parent.parent.parent
 DATA_DIR = ROOT / "data"
@@ -29,6 +29,19 @@ def load_generation() -> dict[str, Any]:
     return load_yaml(GENERATION_PATH)
 
 
+def load_dataset_config() -> DatasetConfig:
+    """Loads dataset configuration (categories, user_bases, document_types) from generation.yaml"""
+    generation = load_generation()
+    dataset = generation.get("dataset", {})
+
+    return DatasetConfig(
+        categories=dataset.get("categories", []),
+        user_bases=dataset.get("user_bases", []),
+        document_types=dataset.get("document_types", []),
+        number_of_tools=dataset.get("num_tools", 1)
+    )
+
+
 def load_generator_config(prompt_key: str, model_key: Optional[str] = None) -> GeneratorConfig:
     """Loads configuration for a generator script (prompts and models)."""
     prompts = load_prompts()
@@ -40,19 +53,18 @@ def load_generator_config(prompt_key: str, model_key: Optional[str] = None) -> G
     prompt_config = prompts[prompt_key]
 
     config: GeneratorConfig = {
-        "SYSTEM": prompt_config["system"],
-        "USER_TEMPLATE": prompt_config["user_template"],
-        "NUMBER_OF_TOOLS": generation.get("dataset", {}).get("num_tools", 1)
+        "system": prompt_config["system"],
+        "user_template": prompt_config["user_template"],
     }
 
     models = generation.get("models", {})
 
-    if model_key:
+    if model_key and model_key in models:
         model_config = models[model_key]
-        config["MODEL_NAME"] = model_config["name"]
+        config["model_name"] = model_config["name"]
         if "temperature" in model_config:
-            config["TEMPERATURE"] = model_config["temperature"]
+            config["temperature"] = model_config["temperature"]
     else:
-        config["MODEL_NAME"] = settings.default_model
+        config["model_name"] = settings.default_model
 
     return config

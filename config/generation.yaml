@@ -1,7 +1,3 @@
-dataset:
-  num_tools: 5
-  docs_per_tool: 4
-
 models:
   toc_generation:
     name: 'l2-gpt-4o'
@@ -10,27 +6,30 @@ models:
     name: 'l2-gpt-4.1-mini'
     temperature: 0.8
 
-categories:
-  - "Data Processing"
-  - "AI Analytics"
-  - "Collaboration"
-  - "Compliance Monitoring"
-  - "Security"
+dataset:
+  num_tools: 5
+  docs_per_tool: 4
+  categories:
+    - "Data Processing"
+    - "AI Analytics"
+    - "Collaboration"
+    - "Compliance Monitoring"
+    - "Security"
 
-user_bases:
-  - "ML engineers"
-  - "Data analysts"
-  - "Enterprise IT"
-  - "Compliance officers"
-  - "Product managers"
+  user_bases:
+    - "ML engineers"
+    - "Data analysts"
+    - "Enterprise IT"
+    - "Compliance officers"
+    - "Product managers"
 
-document_types:
-  - "privacy_policy"
-  - "terms_of_service"
-  - "data_processing_agreement"
-  - "service_level_agreement"
-  - "security_whitepaper"
-  - "compliance_and_certifications"
+  document_types:
+    - "privacy_policy"
+    - "terms_of_service"
+    - "data_processing_agreement"
+    - "service_level_agreement"
+    - "security_whitepaper"
+    - "compliance_and_certifications"
 
 output:
   base_dir: "data"

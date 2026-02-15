@@ -7,7 +7,7 @@ to ensure the connection is working properly.
 
 from openai import OpenAI
 from loguru import logger
-from src.config import settings
+from src.core.settings import settings
 from src.utils.logger import setup_logger
 from src.utils.openai_client import get_openai_client
 

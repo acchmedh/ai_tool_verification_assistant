@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from openai import OpenAI
-from src.config import settings
+from core.settings import settings
 
 
 def get_openai_client():

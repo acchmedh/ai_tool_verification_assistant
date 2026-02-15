@@ -14,12 +14,12 @@ tool_name_generation:
     - SecureFlow Analytics
     - CloudSync Manager
       
-    user_template: |
-      Generate a unique, professional software tool name for:
-      Category: {category}
-      User Base: {user_base}
-    
-      Return ONLY the tool name, nothing else.
+  user_template: |
+    Generate a unique, professional software tool name for:
+    Category: {category}
+    User Base: {user_base}
+  
+    Return ONLY the tool name, nothing else.
 
 tool_info_generation:
   system: |

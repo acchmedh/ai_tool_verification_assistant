@@ -8,18 +8,24 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from scripts.utils.config import load_generator_config
+from scripts.utils.generation_config import load_generator_config, load_dataset_config
 from scripts.utils.json_utils import extract_json
-from scripts.utils.constants import CATEGORIES, USER_BASES, DOCUMENT_TYPES
 from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
+# Load generator config
 config = load_generator_config('tool_info_generation')
-TOOL_SYSTEM = config["SYSTEM"]
-TOOL_USER_TEMPLATE = config["USER_TEMPLATE"]
-MODEL_NAME = config["MODEL_NAME"]
-NUMBER_OF_TOOLS = config["NUMBER_OF_TOOLS"]
+SYSTEM = config["system"]
+USER_TEMPLATE = config["user_template"]
+MODEL_NAME = config["model_name"]
+
+# Load dataset config
+dataset_config = load_dataset_config()
+CATEGORIES = dataset_config["categories"]
+USER_BASES = dataset_config["user_bases"]
+DOCUMENT_TYPES = dataset_config["document_types"]
+NUMBER_OF_TOOLS = dataset_config["number_of_tools"]
 
 
 def generate_tool_description(name: str, category: str, user_base: str) -> dict:
@@ -37,7 +43,7 @@ def generate_tool_description(name: str, category: str, user_base: str) -> dict:
         RuntimeError: If the LLM API call fails.
         ValueError: If the response cannot be parsed as JSON.
     """
-    user_prompt = TOOL_USER_TEMPLATE.format(
+    user_prompt = USER_TEMPLATE.format(
         name=name,
         category=category,
         user_base=user_base
@@ -46,7 +52,7 @@ def generate_tool_description(name: str, category: str, user_base: str) -> dict:
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
-            {"role": "system", "content": TOOL_SYSTEM},
+            {"role": "system", "content": SYSTEM},
             {"role": "user", "content": user_prompt}
         ]
     )
@@ -92,8 +98,14 @@ def generate_tool_info(tool_index: int) -> dict:
 
 
 if __name__ == "__main__":
-    #Todo merge tool info and tool name inside generate_dataset.py
+    # Todo merge tool info and tool name inside generate_dataset.py
     print("Number of tools to generate:", NUMBER_OF_TOOLS)
+    print(CATEGORIES)
+    print(USER_BASES)
+    print(DOCUMENT_TYPES)
+    print(SYSTEM)
+    print(USER_TEMPLATE)
+    print(MODEL_NAME)
     for i in range(0, NUMBER_OF_TOOLS):
-        #info = generate_tool_info(i)
+        # info = generate_tool_info(i)
         print(f"Generated tool_info.json for Tool {i}")
