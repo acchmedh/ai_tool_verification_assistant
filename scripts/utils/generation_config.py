@@ -5,7 +5,7 @@ import sys
 import yaml
 from typing import Any, Optional
 
-# Add project root to Python path
+# Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 SRC_DIR = ROOT / "src"
 sys.path.insert(0, str(ROOT))

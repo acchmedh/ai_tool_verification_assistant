@@ -5,8 +5,8 @@ This script tests both the chat completion API and embedding API
 to ensure the connection is working properly.
 """
 
-from openai import OpenAI
 from loguru import logger
+
 from src.core.settings import settings
 from src.utils.logger import setup_logger
 from src.utils.openai_client import get_openai_client
@@ -44,10 +44,7 @@ def test_embeddings() -> bool:
     """Test the embeddings API."""
     try:
         logger.info("Testing embeddings API...")
-        client = OpenAI(
-            api_key=settings.openai_api_key,
-            base_url=settings.openai_base_url,
-        )
+        client = get_openai_client()
 
         response = client.embeddings.create(
             model=settings.embedding_model,

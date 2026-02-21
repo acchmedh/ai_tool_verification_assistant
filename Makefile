@@ -16,15 +16,15 @@ setup: ## Initial setup: create venv and install dependencies
 	@echo "Virtual environment created. Activate it with: source venv/bin/activate"
 	@echo "Then run: make install-dev"
 
-lint: ## Run linters
-	ruff check src/
+lint: ## Run linters (src/, scripts/, main.py, test_connection.py)
+	ruff check src/ scripts/ main.py test_connection.py
 
 lint-fix: ## Run Ruff with auto-fix
-	ruff check src/ --fix
+	ruff check src/ scripts/ main.py test_connection.py --fix
 
 format: ## Format code with black and ruff
-	black src/ main.py
-	ruff format src/ main.py
+	black src/ scripts/ main.py test_connection.py
+	ruff format src/ scripts/ main.py test_connection.py
 
 type-check: ## Run type checking
 	mypy src/

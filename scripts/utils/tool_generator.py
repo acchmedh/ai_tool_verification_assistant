@@ -3,12 +3,11 @@ import random
 import sys
 from pathlib import Path
 
-# Add project root to a path for imports
+# Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-DATA_DIR = ROOT / "data"
 
-from scripts.utils.generation_config import load_generator_config, load_dataset_config
+from scripts.utils.generation_config import load_generator_config, load_dataset_config, DATA_DIR
 from scripts.utils.constants import TOOL_INFO_RESPONSE_FORMAT
 from src.utils.openai_client import get_openai_client
 

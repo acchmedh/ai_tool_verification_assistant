@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 from jsonschema import validate, ValidationError
 
-# Add project root to a path for imports
+# Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 

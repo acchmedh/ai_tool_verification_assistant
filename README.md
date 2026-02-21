@@ -30,36 +30,55 @@ This solution helps automate and accelerate the verification process by providin
 
 ## 🎯 Features
 
-- **Synthetic Data Generation**: Generate realistic legal and compliance documents for verification
-- **Semantic Search**: Advanced RAG-based document retrieval using embeddings
-- **Intelligent Chatbot**: Natural language Q&A interface for document queries
-- **Evaluation Framework**: Standard metrics for performance assessment
-- **Configurable Architecture**: Modular design for easy customization
+- **Synthetic Data Generation** (implemented): Generate realistic legal and compliance documents for verification:
+  - **Ideation**: Fictional tool names and metadata (`tool_info.json`) via structured outputs.
+  - **TOC**: Table-of-contents JSON per document type via structured outputs.
+  - **Sections**: Section-by-section HTML generation with 2–3 data quality issues per document; strict HTML validation (lxml); rate-limit retry and pacing.
+- **Configurable models**: Separate model and temperature per task (ideation, TOC, section) in `config/generation.yaml`.
+- **Semantic Search**: Advanced RAG-based document retrieval using embeddings (planned).
+- **Intelligent Chatbot**: Natural language Q&A interface for document queries (planned).
+- **Evaluation Framework**: Standard metrics for performance assessment (planned).
 
 ## 🏗️ Project Structure
 
 ```
 ai_tool_verification_assistant/
-├── data/                  # Data directory (synthetic datasets, documents)
-│   ├── raw/              # Raw data files
-│   └── processed/        # Processed data files
-├── src/                  # Source code
-│   ├── __init__.py
-│   ├── config.py         # Configuration management
-│   ├── data_ingestion/   # Data ingestion and indexing modules
-│   ├── chatbot/          # RAG chatbot implementation
-│   ├── evaluation/       # Evaluation metrics and analysis
-│   └── utils/            # Utility functions
+├── config/
+│   ├── generation.yaml   # Models (ideation, toc, section), dataset (categories, document_types)
+│   └── prompts.yaml      # System/user prompts for ideation, toc, section generation
+├── data/                 # Generated dataset (one folder per tool)
+│   └── <ToolName>/
+│       ├── tool_info.json
+│       ├── toc_<document_type>.json
+│       └── <document_type>.html
+├── scripts/
+│   ├── dataset/
+│   │   └── generate_dataset.py   # CLI: --tools, --tocs, --sections, --all
+│   └── utils/
+│       ├── constants.py          # TOC/TOOL_INFO JSON schemas for structured outputs
+│       ├── generation_config.py # Load prompts, models, DATA_DIR from config
+│       ├── section_generator.py # HTML sections, rate-limit retry, validation (lxml)
+│       ├── toc_generator.py     # TOC generation (structured outputs)
+│       ├── tool_generator.py    # Ideation / tool_info (structured outputs)
+│       └── typings.py           # GeneratorConfig, DatasetConfig
+├── src/
+│   ├── core/
+│   │   └── settings.py   # Pydantic settings from .env
+│   └── utils/
 │       ├── __init__.py
-│       └── logger.py     # Logging configuration
+│       ├── logger.py
+│       └── openai_client.py    # get_openai_client()
 ├── logs/                 # Application logs (generated)
 ├── rag_store/            # ChromaDB vector store (generated)
-├── .gitignore           # Git ignore patterns
-├── env.example          # Environment variables template
-├── pyproject.toml       # Project configuration and dependencies
-├── requirements.txt     # Python dependencies
-├── README.md           # This file
-└── main.py             # Entry point
+├── .gitignore
+├── env.example           # Environment variables template
+├── main.py               # Application entry point
+├── Makefile              # install, lint, format, type-check, run, test-connection
+├── pyproject.toml        # Project config, black/ruff/mypy
+├── requirements.txt      # Python dependencies
+├── setup.py              # Minimal setup for backward compatibility
+├── test_connection.py    # Test OpenAI/LiteLLM chat and embeddings
+└── README.md
 ```
 
 ## 🚀 Quick Start
@@ -92,6 +111,7 @@ ai_tool_verification_assistant/
    ```bash
    pip install -e ".[dev]"
    ```
+   Or: `make install-dev`
 
 4. **Set up environment variables**
    
@@ -116,9 +136,9 @@ All configuration is managed through environment variables (loaded from `.env` f
 |----------|-------------|---------|
 | `OPENAI_API_KEY` | Your HTEC LiteLLM API key | **Required** |
 | `OPENAI_BASE_URL` | API base URL | `https://litellm.ai.paas.htec.rs` |
-| `DEFAULT_MODEL` | Default LLM model | `l2-gpt-4o-mini` |
+| `DEFAULT_MODEL` | Default LLM model (fallback when no model_key) | `l2-gpt-4o-mini` |
 | `EMBEDDING_MODEL` | Embedding model for RAG | `l2-text-embedding-3-small` |
-| `TEMPERATURE` | LLM temperature (0.0-2.0) | `0.7` |
+| `TEMPERATURE` | LLM temperature (0.0–2.0) | `0.7` |
 | `MAX_TOKENS` | Maximum tokens per request | `2000` |
 | `CHROMA_PERSIST_DIRECTORY` | ChromaDB persistence directory | `./rag_store` |
 | `CHUNK_SIZE` | Text chunk size for splitting | `1000` |
@@ -126,6 +146,16 @@ All configuration is managed through environment variables (loaded from `.env` f
 | `LOG_LEVEL` | Logging level | `INFO` |
 | `LOG_FILE` | Log file path | `logs/app.log` |
 | `DATA_DIR` | Data directory path | `./data` |
+
+### Generation Config (`config/generation.yaml`)
+
+- **models**: Separate model and temperature per task:
+  - `ideation_model`: Tool names and metadata (e.g. `l2-gpt-4o-mini`, temperature 0.8).
+  - `toc_model`: Table-of-contents (e.g. `l2-gpt-4o`, temperature 0.7).
+  - `section_model`: Section HTML (e.g. `l2-gpt-4.1-nano`, temperature 0.7).
+- **dataset**: `num_tools`, `docs_per_tool`, `categories`, `user_bases`, `document_types`.
+
+Prompts for each task are in `config/prompts.yaml`.
 
 ## 📖 Usage
 
@@ -135,32 +165,52 @@ All configuration is managed through environment variables (loaded from `.env` f
 python main.py
 ```
 
-### Development Workflow
+Or: `make run`
 
-1. **Code Formatting**
-   ```bash
-   black src/ main.py
-   ```
+### Generating the Synthetic Dataset
 
-2. **Linting**
-   ```bash
-   ruff check src/
-   ```
+Use the dataset generation script to create tools, TOCs, and HTML documents:
 
-3. **Type Checking**
-   ```bash
-   mypy src/
-   ```
+```bash
+# Generate everything (tools → TOCs → sections)
+python scripts/dataset/generate_dataset.py --all
+
+# Or step by step:
+python scripts/dataset/generate_dataset.py --tools    # Tool folders and tool_info.json
+python scripts/dataset/generate_dataset.py --tocs     # toc_<document_type>.json per tool
+python scripts/dataset/generate_dataset.py --sections # <document_type>.html per tool
+```
+
+If no flag is passed, the script prints help.
+
+### Testing the API Connection
+
+```bash
+python test_connection.py
+```
+
+Or: `make test-connection`
+
+Tests both chat completions and embeddings using your `.env` configuration.
 
 ## 🛠️ Development
 
 ### Code Quality Tools
 
-This project uses several tools to ensure code quality:
-
 - **Black**: Code formatting
-- **Ruff**: Fast Python linter
+- **Ruff**: Linting and formatting
 - **MyPy**: Static type checking
+
+### Commands
+
+```bash
+make help           # List all make targets
+make lint           # Run ruff check on src/
+make lint-fix       # Ruff with auto-fix
+make format         # Black and ruff format (src/, main.py)
+make type-check     # mypy src/
+make clean          # Remove __pycache__, build artifacts
+```
 
 ### Adding Dependencies
 
@@ -182,13 +232,13 @@ This project follows PEP 8 style guidelines:
 
 1. Follow the code style guidelines outlined above
 2. Keep code quality checks green before committing
-4. Document your changes in code comments and docstrings
+3. Document your changes in code comments and docstrings
 
 ## 📚 Documentation
 
 - Code is documented with docstrings following Google style
-- Configuration options are documented in this README
-- API documentation will be available in the code
+- Configuration options are documented in this README and in `config/`
+- Prompts and model settings are in `config/prompts.yaml` and `config/generation.yaml`
 
 ## 🔒 Security
 
@@ -202,14 +252,16 @@ This project is developed for HTEC L2 AI Course completion.
 
 ## 🗺️ Roadmap
 
-- [ ] Implement synthetic data generation
+- [x] Implement synthetic data generation (ideation, TOC, sections)
+- [x] Structured outputs for JSON (TOC, tool_info)
+- [x] Configurable models and temperature per task
+- [x] Rate-limit handling and HTML validation for section generation
 - [ ] Build document ingestion pipeline
 - [ ] Create vector store indexing
 - [ ] Develop RAG-based chatbot
 - [ ] Add evaluation metrics framework
 - [ ] Performance optimization
 - [ ] User interface development
-
 
 ---
 
