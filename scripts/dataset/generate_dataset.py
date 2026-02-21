@@ -10,31 +10,20 @@ from scripts.utils.tool_generator import generate_tools
 from scripts.utils.toc_generator import generate_all_tocs
 from scripts.utils.section_generator import generate_all_sections
 
+
 def main():
     parser = argparse.ArgumentParser(description="Dataset Generation Console App")
 
-    parser.add_argument(
-        "--all",
-        action="store_true",
-        help="Generate all files for all tools"
-    )
+    parser.add_argument("--all", action="store_true", help="Generate all files for all tools")
 
     parser.add_argument(
-        "--tools",
-        action="store_true",
-        help="Generate folder name and {tool_name}_info.json files"
+        "--tools", action="store_true", help="Generate folder name and {tool_name}_info.json files"
     )
 
-    parser.add_argument(
-        "--tocs",
-        action="store_true",
-        help="Generate TOC files for all tools"
-    )
+    parser.add_argument("--tocs", action="store_true", help="Generate TOC files for all tools")
 
     parser.add_argument(
-        "--sections",
-        action="store_true",
-        help="Generate HTML files for all sections in TOCs"
+        "--sections", action="store_true", help="Generate HTML files for all sections in TOCs"
     )
 
     args = parser.parse_args()

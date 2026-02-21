@@ -1,5 +1,6 @@
 import sys
 import json
+import random
 from pathlib import Path
 from html.parser import HTMLParser
 from typing import Any
@@ -13,19 +14,45 @@ from scripts.utils.generation_config import load_generator_config, DATA_DIR
 
 client = get_openai_client()
 
-config = load_generator_config('section_generation', 'section_model')
-SECTION_SYSTEM = config['system']
-SECTION_USER_TEMPLATE = config['user_template']
-MODEL_NAME = config['model_name']
-TEMPERATURE = config['temperature']
+config = load_generator_config("section_generation", "section_model")
+SECTION_SYSTEM = config["system"]
+SECTION_USER_TEMPLATE = config["user_template"]
+MODEL_NAME = config["model_name"]
+TEMPERATURE = config["temperature"]
+
+# Number of data quality issues to place per document (2-3 total, one per chosen section).
+ISSUES_MIN_PER_DOCUMENT = 2
+ISSUES_MAX_PER_DOCUMENT = 3
+
+
+def _flatten_toc_depth_first(sections: list[dict], depth: int = 0) -> list[tuple[dict, int]]:
+    """Returns sections in depth-first order as (section_dict, depth) for indexing."""
+    result: list[tuple[dict, int]] = []
+    for s in sections:
+        result.append((s, depth))
+        if s.get("subsections"):
+            result.extend(_flatten_toc_depth_first(s["subsections"], depth + 1))
+    return result
+
+
+def _pick_issue_section_indices(total_sections: int) -> set[int]:
+    """Picks 2-3 section indices (0-based) that should each include one data quality issue."""
+    if total_sections <= 0:
+        return set()
+    target = min(
+        random.randint(ISSUES_MIN_PER_DOCUMENT, ISSUES_MAX_PER_DOCUMENT),
+        total_sections,
+    )
+    return set(random.sample(range(total_sections), target))
 
 
 def call_section_model(
-        tool_info: dict,
-        document_type: str,
-        previous_html: list[str],
-        section_title: str,
-        heading_tag: str = "h2"
+    tool_info: dict,
+    document_type: str,
+    previous_html: list[str],
+    section_title: str,
+    heading_tag: str = "h2",
+    include_issue_in_this_section: bool = False,
 ) -> str:
     """Calls the LLM API to generate HTML for a single section.
 
@@ -35,18 +62,25 @@ def call_section_model(
         previous_html: List of previously generated HTML sections (for context)
         section_title: Title of the section to generate
         heading_tag: HTML heading tag to use (h2, h3, h4, etc.)
+        include_issue_in_this_section: If True, this section must include exactly one data quality issue.
 
     Returns:
         str: Raw HTML content for the section
     """
     previous_html_str = "\n\n".join(previous_html) if previous_html else "(No previous sections)"
+    data_quality_instruction = (
+        "Include exactly one data quality issue in this section (one of: contradiction, ambiguity, minor typo, or inconsistent terminology). Make it subtle."
+        if include_issue_in_this_section
+        else "Do not include any data quality issues in this section; the document's 2-3 issues are placed in other sections."
+    )
 
     user_prompt = SECTION_USER_TEMPLATE.format(
         tool_info_json=json.dumps(tool_info, ensure_ascii=False, indent=2),
         document_type=document_type,
         previous_html=previous_html_str,
         section_title=section_title,
-        heading_tag=heading_tag
+        heading_tag=heading_tag,
+        data_quality_instruction=data_quality_instruction,
     )
 
     print(f"  Generating section: {section_title}...", end=" ", flush=True)
@@ -55,11 +89,11 @@ def call_section_model(
             model=MODEL_NAME,
             messages=[
                 {"role": "system", "content": SECTION_SYSTEM},
-                {"role": "user", "content": user_prompt}
+                {"role": "user", "content": user_prompt},
             ],
             temperature=TEMPERATURE,
             max_tokens=1500,
-            timeout=120.0
+            timeout=120.0,
         )
         print("✓")
         return response.choices[0].message.content
@@ -69,11 +103,12 @@ def call_section_model(
 
 
 def generate_section_html(
-        tool_info: dict,
-        document_type: str,
-        previous_html: list[str],
-        section_title: str,
-        depth: int = 0
+    tool_info: dict,
+    document_type: str,
+    previous_html: list[str],
+    section_title: str,
+    depth: int = 0,
+    include_issue_in_this_section: bool = False,
 ) -> str:
     """Generates HTML for a single section using LLM.
 
@@ -83,6 +118,7 @@ def generate_section_html(
         previous_html: List of previously generated HTML sections
         section_title: Title of the section to generate
         depth: Nesting depth (0 = top-level, 1 = subsection, etc.)
+        include_issue_in_this_section: If True, this section must include exactly one data quality issue.
 
     Returns:
         str: HTML content for the section
@@ -94,46 +130,49 @@ def generate_section_html(
         document_type=document_type,
         previous_html=previous_html,
         section_title=section_title,
-        heading_tag=heading_tag
+        heading_tag=heading_tag,
+        include_issue_in_this_section=include_issue_in_this_section,
     )
 
 
 def traverse_toc_and_generate(
-        toc: dict[str, Any],
-        tool_info: dict,
-        document_type: str,
-        accumulated_html: list[str],
-        depth: int = 0
+    toc: dict[str, Any],
+    tool_info: dict,
+    document_type: str,
+    accumulated_html: list[str],
+    section_index: list[int],
+    issue_section_indices: set[int],
+    depth: int = 0,
 ) -> None:
     """Recursively traverses TOC structure and generates HTML for all sections.
-    
-    This function modifies the accumulated_html list in place, adding generated sections.
-
-    Args:
-        toc: TOC section dictionary with 'title' and optional 'subsections'
-        tool_info: Dictionary containing tool metadata
-        document_type: Type of document being generated
-        accumulated_html: List to accumulate generated HTML sections (modified in place)
-        depth: Current nesting depth
+    Modifies accumulated_html in place. section_index is [current 0-based index];
+    issue_section_indices are the indices that must each include one data quality issue (2-3 per document).
     """
+    idx = section_index[0]
+    include_issue = idx in issue_section_indices
+    section_index[0] += 1
+
     section_html = generate_section_html(
         tool_info=tool_info,
         document_type=document_type,
         previous_html=accumulated_html.copy(),
-        section_title=toc['title'],
-        depth=depth
+        section_title=toc["title"],
+        depth=depth,
+        include_issue_in_this_section=include_issue,
     )
 
     accumulated_html.append(section_html)
 
-    if 'subsections' in toc and toc['subsections']:
-        for subsection in toc['subsections']:
+    if "subsections" in toc and toc["subsections"]:
+        for subsection in toc["subsections"]:
             traverse_toc_and_generate(
                 toc=subsection,
                 tool_info=tool_info,
                 document_type=document_type,
                 accumulated_html=accumulated_html,
-                depth=depth + 1
+                section_index=section_index,
+                issue_section_indices=issue_section_indices,
+                depth=depth + 1,
             )
 
 
@@ -204,19 +243,26 @@ def generate_document_html(tool_folder: Path, document_type: str) -> None:
 
     toc = json.loads(toc_path.read_text(encoding="utf-8"))
 
-    print(f"Generating HTML for {tool_folder.name} / {document_type} ...")
+    flattened = _flatten_toc_depth_first(toc["sections"])
+    total_sections = len(flattened)
+    issue_section_indices = _pick_issue_section_indices(total_sections)
+
+    print(f"Generating HTML for {tool_folder.name} / {document_type} ... ({total_sections} sections, {len(issue_section_indices)} with data quality issues)")
 
     sections_html = []
-    for section in toc['sections']:
+    section_index = [0]
+    for section in toc["sections"]:
         traverse_toc_and_generate(
             toc=section,
-            tool_info=tool_info['description'],
+            tool_info=tool_info["description"],
             document_type=document_type,
             accumulated_html=sections_html,
-            depth=0
+            section_index=section_index,
+            issue_section_indices=issue_section_indices,
+            depth=0,
         )
 
-    html_document = assemble_html_document(toc['title'], sections_html)
+    html_document = assemble_html_document(toc["title"], sections_html)
 
     if not validate_html(html_document):
         print(f"Warning: Generated HTML for {tool_folder.name} / {document_type} may be malformed")
@@ -228,11 +274,11 @@ def generate_document_html(tool_folder: Path, document_type: str) -> None:
 
 def generate_all_sections() -> None:
     """Main function that iterates through all tool folders and generates HTML files for each document type.
-    
+
     Processes all tool directories in the data folder, reads their tool_info.json files and TOC files,
     and generates HTML documents section by section. The generated HTML files are validated before
     being saved.
-    
+
     Generated HTML files are saved as `{document_type}.html` in each tool's directory.
     """
     for tool_folder in sorted(DATA_DIR.iterdir()):
@@ -257,5 +303,5 @@ def generate_all_sections() -> None:
                 print(f"Failed to generate HTML for {tool_folder.name} / {doc}: {e}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_all_sections()

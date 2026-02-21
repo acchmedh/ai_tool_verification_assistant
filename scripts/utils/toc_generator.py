@@ -13,7 +13,7 @@ from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
-config = load_generator_config('toc_generation', 'toc_model')
+config = load_generator_config("toc_generation", "toc_model")
 TOC_SYSTEM = config["system"]
 TOC_USER_TEMPLATE = config["user_template"]
 MODEL_NAME = config["model_name"]
@@ -38,13 +38,13 @@ def call_toc_model(tool_info: dict, document_type: str) -> dict:
     """
     user_prompt = TOC_USER_TEMPLATE.format(
         tool_info_json=json.dumps(tool_info, ensure_ascii=False, indent=2),
-        document_type=document_type
+        document_type=document_type,
     )
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
             {"role": "system", "content": TOC_SYSTEM},
-            {"role": "user", "content": user_prompt}
+            {"role": "user", "content": user_prompt},
         ],
         temperature=TEMPERATURE,
         response_format=TOC_RESPONSE_FORMAT,
@@ -82,20 +82,21 @@ def validate_and_save_toc(toc_obj: dict, out_path: Path) -> dict:
 
 def generate_all_tocs() -> None:
     """Main function that iterates through all tool folders and generates TOC files for each document type.
-    
+
     Processes all tool directories in the data folder, reads their tool_info.json files,
     and generates Table of Contents (TOC) JSON files for each document type specified
     in the tool's configuration. The generated TOC files are validated against TOC_SCHEMA
     before being saved.
-    
+
     The function will skip tool folders that:
     - Don't contain a tool_info.json file
     - Don't have any document_types specified
-    
+
     Generated TOC files are saved as `toc_{document_type}.json` in each tool's directory.
     """
     for tool_folder in sorted(DATA_DIR.iterdir()):
-        if not tool_folder.is_dir(): continue
+        if not tool_folder.is_dir():
+            continue
         tool_info_path = tool_folder / "tool_info.json"
         if not tool_info_path.exists():
             print(f"Skipping {tool_folder} (no tool_info.json)")
@@ -117,5 +118,5 @@ def generate_all_tocs() -> None:
                 print(f"Failed to generate or save TOC for {tool_folder.name} / {doc}: {e}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_all_tocs()

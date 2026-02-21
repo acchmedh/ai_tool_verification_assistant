@@ -23,7 +23,7 @@ NUMBER_OF_TOOLS = dataset_config["number_of_tools"]
 DOCS_PER_TOOL = dataset_config["docs_per_tool"]
 
 # Load tool info generation config
-config = load_generator_config('tool_info_generation')
+config = load_generator_config("tool_info_generation")
 SYSTEM = config["system"]
 USER_TEMPLATE = config["user_template"]
 MODEL_NAME = config["model_name"]
@@ -32,14 +32,14 @@ MODEL_NAME = config["model_name"]
 def sanitize_folder_name(tool_name: str) -> str:
     """Converts tool name to valid folder name (removes special chars, spaces to underscores).
 
-        Args:
-            tool_name: Original tool name from LLM
+    Args:
+        tool_name: Original tool name from LLM
 
-        Returns:
-            str: Sanitized folder name
-        """
-    sanitized = "".join(c if c.isalnum() or c in (' ', '_', '-') else '' for c in tool_name)
-    sanitized = sanitized.replace(' ', '_')
+    Returns:
+        str: Sanitized folder name
+    """
+    sanitized = "".join(c if c.isalnum() or c in (" ", "_", "-") else "" for c in tool_name)
+    sanitized = sanitized.replace(" ", "_")
     return sanitized
 
 
@@ -60,17 +60,12 @@ def generate_tool_info_with_name(category: str, user_base: str) -> dict:
         ValueError: If the model refused or content is missing/invalid.
     """
     user_prompt = USER_TEMPLATE.format(
-        name="<generate_creative_name>",
-        category=category,
-        user_base=user_base
+        name="<generate_creative_name>", category=category, user_base=user_base
     )
 
     response = client.chat.completions.create(
         model=MODEL_NAME,
-        messages=[
-            {"role": "system", "content": SYSTEM},
-            {"role": "user", "content": user_prompt}
-        ],
+        messages=[{"role": "system", "content": SYSTEM}, {"role": "user", "content": user_prompt}],
         response_format=TOOL_INFO_RESPONSE_FORMAT,
     )
 
@@ -120,7 +115,6 @@ def generate_tool() -> None:
     tool_info_path.write_text(json.dumps(tool_info, indent=2), encoding="utf-8")
 
     print(f"✓ Created {tool_folder.name}/tool_info.json")
-
 
 
 def generate_tools() -> None:
