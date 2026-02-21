@@ -84,7 +84,7 @@ def generate_tool() -> None:
 
     Creates:
     - Folder: data/{sanitized_tool_name}/
-    - File: data/{sanitized_tool_name}/{sanitized_tool_name}_info.json
+    - File: data/{sanitized_tool_name}/tool_info.json
 
     Args:
         tool_index: Index for fallback naming if generation fails.
@@ -110,8 +110,6 @@ def generate_tool() -> None:
         "document_types": document_types,
     }
 
-    # Save as {tool_name}_info.json
-    # info_file_name = f"{folder_name}_info.json"
     tool_info_path = tool_folder / "tool_info.json"
     tool_info_path.write_text(json.dumps(tool_info, indent=2), encoding="utf-8")
 

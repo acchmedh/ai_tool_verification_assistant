@@ -59,7 +59,7 @@ def call_section_model(
     section_title: str,
     heading_tag: str = "h2",
     include_issue_in_this_section: bool = False,
-) -> str:
+) -> str | None:
     """Calls the LLM API to generate HTML for a single section.
 
     Args:
