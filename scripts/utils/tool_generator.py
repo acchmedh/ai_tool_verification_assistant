@@ -22,11 +22,11 @@ DOCUMENT_TYPES = dataset_config["document_types"]
 NUMBER_OF_TOOLS = dataset_config["number_of_tools"]
 DOCS_PER_TOOL = dataset_config["docs_per_tool"]
 
-# Load tool info generation config
-config = load_generator_config("tool_info_generation")
+config = load_generator_config("tool_info_generation", "ideation_model")
 SYSTEM = config["system"]
 USER_TEMPLATE = config["user_template"]
 MODEL_NAME = config["model_name"]
+TEMPERATURE = config["temperature"]
 
 
 def sanitize_folder_name(tool_name: str) -> str:
@@ -67,6 +67,7 @@ def generate_tool_info_with_name(category: str, user_base: str) -> dict:
         model=MODEL_NAME,
         messages=[{"role": "system", "content": SYSTEM}, {"role": "user", "content": user_prompt}],
         response_format=TOOL_INFO_RESPONSE_FORMAT,
+        temperature=TEMPERATURE,
     )
 
     message = response.choices[0].message
