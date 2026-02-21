@@ -1,12 +1,12 @@
-import os
 import json
 import random
 import sys
 from pathlib import Path
 
 # Add project root to a path for imports
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
+DATA_DIR = ROOT / "data"
 
 from scripts.utils.generation_config import load_generator_config, load_dataset_config
 from scripts.utils.json_utils import extract_json
@@ -14,37 +14,51 @@ from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
-# Load generator config
-config = load_generator_config('tool_info_generation')
-SYSTEM = config["system"]
-USER_TEMPLATE = config["user_template"]
-MODEL_NAME = config["model_name"]
-
 # Load dataset config
 dataset_config = load_dataset_config()
 CATEGORIES = dataset_config["categories"]
 USER_BASES = dataset_config["user_bases"]
 DOCUMENT_TYPES = dataset_config["document_types"]
 NUMBER_OF_TOOLS = dataset_config["number_of_tools"]
+DOCS_PER_TOOL = dataset_config["docs_per_tool"]
+
+# Load tool info generation config
+config = load_generator_config('tool_info_generation')
+SYSTEM = config["system"]
+USER_TEMPLATE = config["user_template"]
+MODEL_NAME = config["model_name"]
 
 
-def generate_tool_description(name: str, category: str, user_base: str) -> dict:
-    """Calls the LLM API to generate a tool description in JSON format.
+def sanitize_folder_name(tool_name: str) -> str:
+    """Converts tool name to valid folder name (removes special chars, spaces to underscores).
+
+        Args:
+            tool_name: Original tool name from LLM
+
+        Returns:
+            str: Sanitized folder name
+        """
+    sanitized = "".join(c if c.isalnum() or c in (' ', '_', '-') else '' for c in tool_name)
+    sanitized = sanitized.replace(' ', '_')
+    return sanitized
+
+
+def generate_tool_info_with_name(category: str, user_base: str) -> dict:
+    """Calls the LLM API to generate a tool info including creative name.
 
     Args:
-        name: The name of the tool.
         category: The category of the tool.
         user_base: The intended user base for the tool.
 
     Returns:
-        dict: Parsed JSON object containing the tool description.
+        dict: Parsed JSON object containing name, purpose, category, user_base.
 
     Raises:
-        RuntimeError: If the LLM API call fails.
-        ValueError: If the response cannot be parsed as JSON.
+        ValueError: If the response cannot be parsed as JSON or lacks required fields.
+
     """
     user_prompt = USER_TEMPLATE.format(
-        name=name,
+        name="<generate_creative_name>",
         category=category,
         user_base=user_base
     )
@@ -65,47 +79,55 @@ def generate_tool_description(name: str, category: str, user_base: str) -> dict:
     return result
 
 
-def generate_tool_info(tool_index: int) -> dict:
-    """Generates and saves tool information as a JSON file.
+def generate_tool() -> None:
+    """Generates a tool with creative name, folder, and info file.
 
-    Randomly selects a category, user base, and document types, then generates a tool description
-    using the LLM API. The resulting information is saved to `data/tool{tool_index}/tool_info.json`.
+    Creates:
+    - Folder: data/{sanitized_tool_name}/
+    - File: data/{sanitized_tool_name}/{sanitized_tool_name}_info.json
 
     Args:
-        tool_index: Index used to name the tool and output folder.
-
-    Returns:
-        dict: Dictionary containing the generated tool information.
+        tool_index: Index for fallback naming if generation fails.
     """
-    tool_name = f"Tool_{tool_index}"
     category = random.choice(CATEGORIES)
     user_base = random.choice(USER_BASES)
-    document_types = random.sample(DOCUMENT_TYPES, 4)
+    document_types = random.sample(DOCUMENT_TYPES, DOCS_PER_TOOL)
 
-    description = generate_tool_description(tool_name, category, user_base)
+    description = generate_tool_info_with_name(category, user_base)
+    tool_name = description["name"]
 
+    # Sanitize the tool name for the folder
+    folder_name = sanitize_folder_name(tool_name)
+    print(f"  Generated tool: {folder_name}")
+
+    # Create folder
+    tool_folder = DATA_DIR / folder_name
+    tool_folder.mkdir(parents=True, exist_ok=True)
+
+    # Prepare tool info
     tool_info = {
         "description": description,
         "document_types": document_types,
     }
 
-    folder = f"data/tool{tool_index}"
-    os.makedirs(folder, exist_ok=True)
+    # Save as {tool_name}_info.json
+    info_file_name = f"{folder_name}_info.json"
+    tool_info_path = tool_folder / info_file_name
+    tool_info_path.write_text(json.dumps(tool_info, indent=2), encoding="utf-8")
 
-    with open(f"{folder}/tool_info.json", "w") as f:
-        json.dump(tool_info, f, indent=2)
-    return tool_info
+    print(f"✓ Created {tool_folder.name}/{info_file_name}")
+
+
+
+def generate_tools() -> None:
+    for i in range(NUMBER_OF_TOOLS):
+        try:
+            print(f"Generating Tool {i+1}...")
+            generate_tool()
+            print()
+        except Exception as e:
+            print(f"✗ Failed to generate Tool {i}: {e}\n")
 
 
 if __name__ == "__main__":
-    # Todo merge tool info and tool name inside generate_dataset.py
-    print("Number of tools to generate:", NUMBER_OF_TOOLS)
-    print(CATEGORIES)
-    print(USER_BASES)
-    print(DOCUMENT_TYPES)
-    print(SYSTEM)
-    print(USER_TEMPLATE)
-    print(MODEL_NAME)
-    for i in range(0, NUMBER_OF_TOOLS):
-        # info = generate_tool_info(i)
-        print(f"Generated tool_info.json for Tool {i}")
+    generate_tools()

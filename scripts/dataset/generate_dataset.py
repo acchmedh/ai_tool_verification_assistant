@@ -1,20 +1,12 @@
 import argparse
+import sys
+from pathlib import Path
 
-from tool_generator import generate_tool_info
-# from toc_generator import generate_all_tocs
-# from utils.config import load_generator_config
+# Add project root to Python path
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
 
-
-def generate_tools():
-    config = load_generator_config('tool_info_generation')
-    number_of_tools = config["NUMBER_OF_TOOLS"]
-
-    print(f"Generating {number_of_tools} tools...")
-
-    for i in range(number_of_tools):
-        generate_tool_info(i)
-        print(f"Generated tool_info.json for Tool {i}")
-
+from scripts.utils.tool_generator import generate_tools
 
 def main():
     parser = argparse.ArgumentParser(description="Dataset Generation Console App")
@@ -22,20 +14,8 @@ def main():
     parser.add_argument(
         "--tools",
         action="store_true",
-        help="Generate tool_info.json files"
+        help="Generate folder name and {tool_name}_info.json files"
     )
-
-    # parser.add_argument(
-    #     "--tocs",
-    #     action="store_true",
-    #     help="Generate TOC files for all tools"
-    # )
-    #
-    # parser.add_argument(
-    #     "--all",
-    #     action="store_true",
-    #     help="Generate tools and TOCs"
-    # )
 
     args = parser.parse_args()
 

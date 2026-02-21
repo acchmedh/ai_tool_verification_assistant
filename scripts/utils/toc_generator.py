@@ -4,7 +4,7 @@ from pathlib import Path
 from jsonschema import validate, ValidationError
 
 # Add project root to a path for imports
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from scripts.utils.generation_config import DATA_DIR, load_generator_config
@@ -15,10 +15,10 @@ from src.utils.openai_client import get_openai_client
 client = get_openai_client()
 
 config = load_generator_config('toc_generation', 'toc_model')
-TOC_SYSTEM = config["SYSTEM"]
-TOC_USER_TEMPLATE = config["USER_TEMPLATE"]
-MODEL_NAME = config["MODEL_NAME"]
-TEMPERATURE = config["TEMPERATURE"]
+TOC_SYSTEM = config["system"]
+TOC_USER_TEMPLATE = config["user_template"]
+MODEL_NAME = config["model_name"]
+TEMPERATURE = config["temperature"]
 
 
 def call_toc_model(tool_info: dict, document_type: str) -> str:

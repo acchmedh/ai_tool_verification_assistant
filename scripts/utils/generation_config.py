@@ -1,12 +1,19 @@
 """Configuration loading utilities for prompts, models, and path constants."""
 
 from pathlib import Path
+import sys
 import yaml
 from typing import Any, Optional
-from core.settings import settings
+
+# Add project root to Python path
+ROOT = Path(__file__).resolve().parents[2]
+SRC_DIR = ROOT / "src"
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(SRC_DIR))
+
+from src.core.settings import settings
 from scripts.utils.typings import GeneratorConfig, DatasetConfig
 
-ROOT = Path(__file__).parent.parent.parent
 DATA_DIR = ROOT / "data"
 CONFIG_DIR = ROOT / "config"
 PROMPTS_PATH = CONFIG_DIR / "prompts.yaml"
@@ -38,7 +45,8 @@ def load_dataset_config() -> DatasetConfig:
         categories=dataset.get("categories", []),
         user_bases=dataset.get("user_bases", []),
         document_types=dataset.get("document_types", []),
-        number_of_tools=dataset.get("num_tools", 1)
+        number_of_tools=dataset.get("num_tools", 1),
+        docs_per_tool=dataset.get("docs_per_tool", 1)
     )
 
 
