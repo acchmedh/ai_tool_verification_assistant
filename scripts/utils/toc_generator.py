@@ -8,8 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from scripts.utils.generation_config import DATA_DIR, load_generator_config
-from scripts.utils.json_utils import extract_json
-from scripts.utils.constants import TOC_SCHEMA
+from scripts.utils.constants import TOC_SCHEMA, TOC_RESPONSE_FORMAT
 from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
@@ -21,15 +20,21 @@ MODEL_NAME = config["model_name"]
 TEMPERATURE = config["temperature"]
 
 
-def call_toc_model(tool_info: dict, document_type: str) -> str:
-    """Calls the LLM API to generate a TOC JSON.
+def call_toc_model(tool_info: dict, document_type: str) -> dict:
+    """Calls the LLM API to generate a TOC using structured outputs.
+
+    The API is given a JSON schema so the model returns guaranteed valid JSON
+    conforming to the TOC structure (no regex or best-effort parsing).
 
     Args:
         tool_info: Dictionary containing tool metadata (name, category, user_base, etc.)
         document_type: Type of document to generate TOC for (e.g., "privacy_policy", "terms_of_service")
 
     Returns:
-        str: Raw text response from the LLM containing the TOC JSON
+        dict: Parsed TOC object (title, sections) from the structured output.
+
+    Raises:
+        ValueError: If the model refused or content is missing.
     """
     user_prompt = TOC_USER_TEMPLATE.format(
         tool_info_json=json.dumps(tool_info, ensure_ascii=False, indent=2),
@@ -41,34 +46,38 @@ def call_toc_model(tool_info: dict, document_type: str) -> str:
             {"role": "system", "content": TOC_SYSTEM},
             {"role": "user", "content": user_prompt}
         ],
-        temperature=TEMPERATURE
+        temperature=TEMPERATURE,
+        response_format=TOC_RESPONSE_FORMAT,
     )
-    return response.choices[0].message.content
+    message = response.choices[0].message
+    if getattr(message, "refusal", None):
+        raise ValueError(f"Model refused to generate TOC: {message.refusal}")
+    content = message.content
+    if not content or not content.strip():
+        raise ValueError("Empty content in model output")
+    obj = json.loads(content)
+    return obj
 
 
-def validate_and_save_toc(raw_text: str, out_path: Path) -> dict:
-    """Extracts JSON from LLM response, validates it against TOC_SCHEMA, and saves to file.
+def validate_and_save_toc(toc_obj: dict, out_path: Path) -> dict:
+    """Validates TOC against TOC_SCHEMA and saves to file.
 
     Args:
-        raw_text: Raw text response from LLM that should contain JSON
-        out_path: Path where the validated TOC JSON will be saved
+        toc_obj: TOC dictionary from structured output (already valid JSON shape).
+        out_path: Path where the validated TOC JSON will be saved.
 
     Returns:
-        dict: Validated TOC dictionary that was saved to file
+        dict: Validated TOC dictionary that was saved to file.
 
     Raises:
-        ValueError: If JSON extraction fails or schema validation fails
+        ValueError: If schema validation fails.
     """
-    obj = extract_json(raw_text)
-    if obj is None:
-        raise ValueError("No JSON object found in model output")
     try:
-        validate(instance=obj, schema=TOC_SCHEMA)
+        validate(instance=toc_obj, schema=TOC_SCHEMA)
     except ValidationError as e:
         raise ValueError(f"TOC JSON failed schema validation: {e.message}")
-    # Save pretty JSON
-    out_path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
-    return obj
+    out_path.write_text(json.dumps(toc_obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    return toc_obj
 
 
 def generate_all_tocs() -> None:
@@ -100,14 +109,12 @@ def generate_all_tocs() -> None:
         for doc in docs:
             out_file = tool_folder / f"toc_{doc}.json"
             print(f"Generating TOC for {tool_folder.name} / {doc} ...")
-            raw = call_toc_model(tool_info, doc)
-
-            # Validate & save TOC JSON
             try:
-                validate_and_save_toc(raw, out_file)
+                toc_obj = call_toc_model(tool_info, doc)
+                validate_and_save_toc(toc_obj, out_file)
                 print(f"Saved TOC: {out_file}")
-            except json.JSONDecodeError:
-                print(f"Failed to parse TOC JSON for {tool_folder.name} / {doc}")
+            except (ValueError, json.JSONDecodeError) as e:
+                print(f"Failed to generate or save TOC for {tool_folder.name} / {doc}: {e}")
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ sys.path.insert(0, str(ROOT))
 DATA_DIR = ROOT / "data"
 
 from scripts.utils.generation_config import load_generator_config, load_dataset_config
-from scripts.utils.json_utils import extract_json
+from scripts.utils.constants import TOOL_INFO_RESPONSE_FORMAT
 from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
@@ -44,18 +44,20 @@ def sanitize_folder_name(tool_name: str) -> str:
 
 
 def generate_tool_info_with_name(category: str, user_base: str) -> dict:
-    """Calls the LLM API to generate a tool info including creative name.
+    """Calls the LLM API to generate tool info (including creative name) using structured outputs.
+
+    The API is given a JSON schema so the model returns guaranteed valid JSON
+    with name, purpose, category, user_base (no regex or best-effort parsing).
 
     Args:
         category: The category of the tool.
         user_base: The intended user base for the tool.
 
     Returns:
-        dict: Parsed JSON object containing name, purpose, category, user_base.
+        dict: Parsed object with name, purpose, category, user_base.
 
     Raises:
-        ValueError: If the response cannot be parsed as JSON or lacks required fields.
-
+        ValueError: If the model refused or content is missing/invalid.
     """
     user_prompt = USER_TEMPLATE.format(
         name="<generate_creative_name>",
@@ -68,15 +70,17 @@ def generate_tool_info_with_name(category: str, user_base: str) -> dict:
         messages=[
             {"role": "system", "content": SYSTEM},
             {"role": "user", "content": user_prompt}
-        ]
+        ],
+        response_format=TOOL_INFO_RESPONSE_FORMAT,
     )
 
-    content = response.choices[0].message.content.strip()
-
-    result = extract_json(content)
-    if result is None:
-        raise ValueError(f"Failed to extract JSON from LLM response: {content[:100]}...")
-    return result
+    message = response.choices[0].message
+    if getattr(message, "refusal", None):
+        raise ValueError(f"Model refused to generate tool info: {message.refusal}")
+    content = (message.content or "").strip()
+    if not content:
+        raise ValueError("Empty content in model output")
+    return json.loads(content)
 
 
 def generate_tool() -> None:
