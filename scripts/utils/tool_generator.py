@@ -111,11 +111,11 @@ def generate_tool() -> None:
     }
 
     # Save as {tool_name}_info.json
-    info_file_name = f"{folder_name}_info.json"
-    tool_info_path = tool_folder / info_file_name
+    # info_file_name = f"{folder_name}_info.json"
+    tool_info_path = tool_folder / "tool_info.json"
     tool_info_path.write_text(json.dumps(tool_info, indent=2), encoding="utf-8")
 
-    print(f"✓ Created {tool_folder.name}/{info_file_name}")
+    print(f"✓ Created {tool_folder.name}/tool_info.json")
 
 
 

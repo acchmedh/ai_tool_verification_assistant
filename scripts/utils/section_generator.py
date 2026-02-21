@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 from typing import Any
 
 # Add project root to a path for imports
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from src.utils.openai_client import get_openai_client
@@ -14,10 +14,10 @@ from scripts.utils.generation_config import load_generator_config, DATA_DIR
 client = get_openai_client()
 
 config = load_generator_config('section_generation', 'section_model')
-SECTION_SYSTEM = config['SYSTEM']
-SECTION_USER_TEMPLATE = config['USER_TEMPLATE']
-MODEL_NAME = config['MODEL_NAME']
-TEMPERATURE = config['TEMPERATURE']
+SECTION_SYSTEM = config['system']
+SECTION_USER_TEMPLATE = config['user_template']
+MODEL_NAME = config['model_name']
+TEMPERATURE = config['temperature']
 
 
 def call_section_model(
