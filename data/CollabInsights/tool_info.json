@@ -1,0 +1,14 @@
+{
+  "description": {
+    "name": "CollabInsights",
+    "purpose": "A collaboration platform designed specifically for data analysts to share insights, visualizations, and collaborate on data projects in real-time.",
+    "category": "Collaboration",
+    "user_base": "Data analysts"
+  },
+  "document_types": [
+    "compliance_and_certifications",
+    "privacy_policy",
+    "terms_of_service",
+    "data_processing_agreement"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "title": "Data Processing Agreement",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose of the Agreement",
+          "id": "purpose-of-agreement",
+          "subsections": []
+        },
+        {
+          "title": "Definitions",
+          "id": "definitions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Scope and Applicability",
+      "id": "scope-applicability",
+      "subsections": [
+        {
+          "title": "Parties Involved",
+          "id": "parties-involved",
+          "subsections": []
+        },
+        {
+          "title": "Covered Data Types",
+          "id": "covered-data-types",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Responsibilities of the Parties",
+      "id": "responsibilities-parties",
+      "subsections": [
+        {
+          "title": "Data Controller Obligations",
+          "id": "data-controller-obligations",
+          "subsections": []
+        },
+        {
+          "title": "Data Processor Duties",
+          "id": "data-processor-duties",
+          "subsections": [
+            {
+              "title": "Processing Activities",
+              "id": "processing-activities",
+              "subsections": []
+            },
+            {
+              "title": "Compliance Standards",
+              "id": "compliance-standards",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Data Security Measures",
+      "id": "data-security-measures",
+      "subsections": [
+        {
+          "title": "Technical Safeguards",
+          "id": "technical-safeguards",
+          "subsections": []
+        },
+        {
+          "title": "Organizational Measures",
+          "id": "organizational-measures",
+          "subsections": []
+        },
+        {
+          "title": "Incident Response Protocols",
+          "id": "incident-response-protocols",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Subject Rights",
+      "id": "data-subject-rights",
+      "subsections": [
+        {
+          "title": "Access and Rectification Requests",
+          "id": "access-rectification-requests",
+          "subsections": []
+        },
+        {
+          "title": "Erasure and Data Portability",
+          "id": "erasure-data-portability",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

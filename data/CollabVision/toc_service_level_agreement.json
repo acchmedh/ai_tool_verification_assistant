@@ -1,0 +1,149 @@
+{
+  "title": "Service Level Agreement for CollabVision",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose of the Agreement",
+          "id": "purpose-of-the-agreement",
+          "subsections": []
+        },
+        {
+          "title": "Definitions",
+          "id": "definitions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Scope of Services",
+      "id": "scope-of-services",
+      "subsections": [
+        {
+          "title": "Services Provided",
+          "id": "services-provided",
+          "subsections": []
+        },
+        {
+          "title": "Geographic Availability",
+          "id": "geographic-availability",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Service Availability and Performance",
+      "id": "service-availability-and-performance",
+      "subsections": [
+        {
+          "title": "Uptime Guarantee",
+          "id": "uptime-guarantee",
+          "subsections": []
+        },
+        {
+          "title": "Performance Metrics",
+          "id": "performance-metrics",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Support and Maintenance",
+      "id": "support-and-maintenance",
+      "subsections": [
+        {
+          "title": "Support Levels",
+          "id": "support-levels",
+          "subsections": []
+        },
+        {
+          "title": "Response Times",
+          "id": "response-times",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Customer Responsibilities",
+      "id": "customer-responsibilities",
+      "subsections": [
+        {
+          "title": "User Obligations",
+          "id": "user-obligations",
+          "subsections": []
+        },
+        {
+          "title": "Security and Compliance",
+          "id": "security-and-compliance",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Incident Management",
+      "id": "incident-management",
+      "subsections": [
+        {
+          "title": "Reporting Incidents",
+          "id": "reporting-incidents",
+          "subsections": []
+        },
+        {
+          "title": "Resolution Process",
+          "id": "resolution-process",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Compensation and Penalties",
+      "id": "compensation-and-penalties",
+      "subsections": [
+        {
+          "title": "Service Credits",
+          "id": "service-credits",
+          "subsections": []
+        },
+        {
+          "title": "Limitations of Liability",
+          "id": "limitations-of-liability",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Amendments and Termination",
+      "id": "amendments-and-termination",
+      "subsections": [
+        {
+          "title": "Agreement Modifications",
+          "id": "agreement-modifications",
+          "subsections": []
+        },
+        {
+          "title": "Termination Conditions",
+          "id": "termination-conditions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "id": "miscellaneous",
+      "subsections": [
+        {
+          "title": "Governing Law",
+          "id": "governing-law",
+          "subsections": []
+        },
+        {
+          "title": "Dispute Resolution",
+          "id": "dispute-resolution",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

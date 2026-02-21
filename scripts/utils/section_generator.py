@@ -1,9 +1,10 @@
 import sys
 import json
 import random
+import time
 from pathlib import Path
-from html.parser import HTMLParser
 from typing import Any
+from lxml import etree
 
 # Add project root to a path for imports
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,6 +24,11 @@ TEMPERATURE = config["temperature"]
 # Number of data quality issues to place per document (2-3 total, one per chosen section).
 ISSUES_MIN_PER_DOCUMENT = 2
 ISSUES_MAX_PER_DOCUMENT = 3
+
+# Rate limit: retry 429 after this many seconds; delay between section calls to avoid bursting.
+RATE_LIMIT_WAIT_SECONDS = 90
+DELAY_BETWEEN_SECTIONS_SECONDS = 2
+MAX_RETRIES_ON_RATE_LIMIT = 5
 
 
 def _flatten_toc_depth_first(sections: list[dict], depth: int = 0) -> list[tuple[dict, int]]:
@@ -84,22 +90,36 @@ def call_section_model(
     )
 
     print(f"  Generating section: {section_title}...", end=" ", flush=True)
-    try:
-        response = client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[
-                {"role": "system", "content": SECTION_SYSTEM},
-                {"role": "user", "content": user_prompt},
-            ],
-            temperature=TEMPERATURE,
-            max_tokens=1500,
-            timeout=120.0,
-        )
-        print("✓")
-        return response.choices[0].message.content
-    except Exception as e:
-        print(f"✗ Error: {e}")
-        raise
+    last_error: Exception | None = None
+    for attempt in range(MAX_RETRIES_ON_RATE_LIMIT):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[
+                    {"role": "system", "content": SECTION_SYSTEM},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=TEMPERATURE,
+                max_tokens=1500,
+                timeout=120.0,
+            )
+            print("✓")
+            return response.choices[0].message.content
+        except Exception as e:
+            last_error = e
+            err_str = str(e).lower()
+            is_rate_limit = "429" in str(e) or "rate limit" in err_str
+            if is_rate_limit and attempt < MAX_RETRIES_ON_RATE_LIMIT - 1:
+                print(
+                    f"\n  Rate limited, waiting {RATE_LIMIT_WAIT_SECONDS}s before retry ({attempt + 1}/{MAX_RETRIES_ON_RATE_LIMIT})...",
+                    flush=True,
+                )
+                time.sleep(RATE_LIMIT_WAIT_SECONDS)
+            else:
+                print(f"✗ Error: {e}")
+                raise
+    if last_error is not None:
+        raise last_error
 
 
 def generate_section_html(
@@ -162,6 +182,7 @@ def traverse_toc_and_generate(
     )
 
     accumulated_html.append(section_html)
+    time.sleep(DELAY_BETWEEN_SECTIONS_SECONDS)
 
     if "subsections" in toc and toc["subsections"]:
         for subsection in toc["subsections"]:
@@ -205,20 +226,17 @@ def assemble_html_document(title: str, sections_html: list[str]) -> str:
 
 
 def validate_html(html_content: str) -> bool:
-    """Validates that HTML content is well-formed.
+    """Validates that HTML is well-formed, including correct tag nesting.
 
-    Args:
-        html_content: HTML content to validate
-
-    Returns:
-        bool: True if HTML appears valid, False otherwise
+    Uses lxml's strict HTML parser (recover=False) so malformed nesting
+    (e.g. <div><span></div></span>) or unclosed tags raise and are reported.
+    The stdlib HTMLParser is fault-tolerant by design and does not catch these.
     """
     try:
-        parser = HTMLParser()
-        parser.feed(html_content)
-        parser.close()
+        parser = etree.HTMLParser(recover=False)
+        etree.fromstring(html_content.encode("utf-8"), parser=parser)
         return True
-    except Exception:
+    except (etree.LxmlError, etree.XMLSyntaxError):
         return False
 
 
@@ -247,7 +265,9 @@ def generate_document_html(tool_folder: Path, document_type: str) -> None:
     total_sections = len(flattened)
     issue_section_indices = _pick_issue_section_indices(total_sections)
 
-    print(f"Generating HTML for {tool_folder.name} / {document_type} ... ({total_sections} sections, {len(issue_section_indices)} with data quality issues)")
+    print(
+        f"Generating HTML for {tool_folder.name} / {document_type} ... ({total_sections} sections, {len(issue_section_indices)} with data quality issues)"
+    )
 
     sections_html = []
     section_index = [0]

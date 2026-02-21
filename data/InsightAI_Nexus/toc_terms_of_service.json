@@ -1,0 +1,175 @@
+{
+  "title": "Terms of Service",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose",
+          "id": "purpose",
+          "subsections": []
+        },
+        {
+          "title": "Scope",
+          "id": "scope",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "User Agreement",
+      "id": "user_agreement",
+      "subsections": [
+        {
+          "title": "Acceptance of Terms",
+          "id": "acceptance_of_terms",
+          "subsections": []
+        },
+        {
+          "title": "Modification of Terms",
+          "id": "modification_of_terms",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Account Management",
+      "id": "account_management",
+      "subsections": [
+        {
+          "title": "Registration Requirements",
+          "id": "registration_requirements",
+          "subsections": []
+        },
+        {
+          "title": "Account Responsibilities",
+          "id": "account_responsibilities",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Usage Guidelines",
+      "id": "usage_guidelines",
+      "subsections": [
+        {
+          "title": "Permitted Uses",
+          "id": "permitted_uses",
+          "subsections": []
+        },
+        {
+          "title": "Prohibited Activities",
+          "id": "prohibited_activities",
+          "subsections": []
+        },
+        {
+          "title": "Data Security and Integrity",
+          "id": "data_security_integrity",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Fees and Payment Terms",
+      "id": "fees_payment_terms",
+      "subsections": [
+        {
+          "title": "Pricing Structure",
+          "id": "pricing_structure",
+          "subsections": []
+        },
+        {
+          "title": "Billing Process",
+          "id": "billing_process",
+          "subsections": []
+        },
+        {
+          "title": "Refund Policy",
+          "id": "refund_policy",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Intellectual Property",
+      "id": "intellectual_property",
+      "subsections": [
+        {
+          "title": "Ownership Rights",
+          "id": "ownership_rights",
+          "subsections": []
+        },
+        {
+          "title": "License Grant",
+          "id": "license_grant",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Confidentiality",
+      "id": "confidentiality",
+      "subsections": [
+        {
+          "title": "Definition of Confidential Information",
+          "id": "confidential_information_definition",
+          "subsections": []
+        },
+        {
+          "title": "Obligations of Confidentiality",
+          "id": "confidentiality_obligations",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Liability and Disclaimers",
+      "id": "liability_disclaimers",
+      "subsections": [
+        {
+          "title": "Limitation of Liability",
+          "id": "limitation_of_liability",
+          "subsections": []
+        },
+        {
+          "title": "Warranty Disclaimer",
+          "id": "warranty_disclaimer",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Termination of Agreement",
+      "id": "termination_agreement",
+      "subsections": [
+        {
+          "title": "Termination Conditions",
+          "id": "termination_conditions",
+          "subsections": []
+        },
+        {
+          "title": "Post-Termination Obligations",
+          "id": "post_termination_obligations",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Governing Law and Dispute Resolution",
+      "id": "governing_law_dispute_resolution",
+      "subsections": [
+        {
+          "title": "Applicable Law",
+          "id": "applicable_law",
+          "subsections": []
+        },
+        {
+          "title": "Arbitration Clause",
+          "id": "arbitration_clause",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

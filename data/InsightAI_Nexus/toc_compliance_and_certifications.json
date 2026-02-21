@@ -1,0 +1,159 @@
+{
+  "title": "Compliance and Certifications for InsightAI Nexus",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose and Scope",
+          "id": "purpose-and-scope",
+          "subsections": []
+        },
+        {
+          "title": "Definitions and Terminology",
+          "id": "definitions-and-terminology",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Compliance Standards",
+      "id": "compliance-standards",
+      "subsections": [
+        {
+          "title": "ISO Certifications",
+          "id": "iso-certifications",
+          "subsections": []
+        },
+        {
+          "title": "GDPR Compliance",
+          "id": "gdpr-compliance",
+          "subsections": []
+        },
+        {
+          "title": "HIPAA Compliance",
+          "id": "hipaa-compliance",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Protection and Privacy",
+      "id": "data-protection-and-privacy",
+      "subsections": [
+        {
+          "title": "Data Encryption Measures",
+          "id": "data-encryption-measures",
+          "subsections": []
+        },
+        {
+          "title": "Access Controls",
+          "id": "access-controls",
+          "subsections": []
+        },
+        {
+          "title": "Privacy by Design",
+          "id": "privacy-by-design",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Audits and Assessments",
+      "id": "audits-and-assessments",
+      "subsections": [
+        {
+          "title": "Internal Audits",
+          "id": "internal-audits",
+          "subsections": []
+        },
+        {
+          "title": "Third-Party Assessments",
+          "id": "third-party-assessments",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regulatory Requirements",
+      "id": "regulatory-requirements",
+      "subsections": [
+        {
+          "title": "Jurisdictional Compliance",
+          "id": "jurisdictional-compliance",
+          "subsections": []
+        },
+        {
+          "title": "Industry-Specific Regulations",
+          "id": "industry-specific-regulations",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Certifications",
+      "id": "certifications",
+      "subsections": [
+        {
+          "title": "Process for Certification Acquisition",
+          "id": "process-for-certification-acquisition",
+          "subsections": []
+        },
+        {
+          "title": "Document Repository",
+          "id": "document-repository",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Training and Awareness",
+      "id": "training-and-awareness",
+      "subsections": [
+        {
+          "title": "Employee Training Programs",
+          "id": "employee-training-programs",
+          "subsections": []
+        },
+        {
+          "title": "Stakeholder Engagement",
+          "id": "stakeholder-engagement",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Incident Response and Reporting",
+      "id": "incident-response-and-reporting",
+      "subsections": [
+        {
+          "title": "Incident Response Policy",
+          "id": "incident-response-policy",
+          "subsections": []
+        },
+        {
+          "title": "Reporting Procedures",
+          "id": "reporting-procedures",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Continuous Improvement",
+      "id": "continuous-improvement",
+      "subsections": [
+        {
+          "title": "Feedback Mechanisms",
+          "id": "feedback-mechanisms",
+          "subsections": []
+        },
+        {
+          "title": "Ongoing Compliance Monitoring",
+          "id": "ongoing-compliance-monitoring",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

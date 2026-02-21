@@ -1,0 +1,117 @@
+{
+  "title": "Compliance and Certifications for CollabInsights",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose of Document",
+          "id": "purpose-of-document",
+          "subsections": []
+        },
+        {
+          "title": "Overview of Certification Standards",
+          "id": "overview-of-certification-standards",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regulatory Compliance",
+      "id": "regulatory-compliance",
+      "subsections": [
+        {
+          "title": "GDPR Compliance",
+          "id": "gdpr-compliance",
+          "subsections": []
+        },
+        {
+          "title": "CCPA Compliance",
+          "id": "ccpa-compliance",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Security Standards",
+      "id": "security-standards",
+      "subsections": [
+        {
+          "title": "ISO/IEC 27001 Certification",
+          "id": "iso-iec-27001-certification",
+          "subsections": []
+        },
+        {
+          "title": "SOC 2 Type II Audit",
+          "id": "soc-2-type-ii-audit",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Operational Certification",
+      "id": "operational-certification",
+      "subsections": [
+        {
+          "title": "Compliance with Industry Best Practices",
+          "id": "compliance-with-industry-best-practices",
+          "subsections": []
+        },
+        {
+          "title": "Regular Internal Audits",
+          "id": "regular-internal-audits",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Protection Measures",
+      "id": "data-protection-measures",
+      "subsections": [
+        {
+          "title": "Encryption Standards",
+          "id": "encryption-standards",
+          "subsections": []
+        },
+        {
+          "title": "Access Control Policies",
+          "id": "access-control-policies",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Third-Party Audits",
+      "id": "third-party-audits",
+      "subsections": [
+        {
+          "title": "Audit Frequency and Scope",
+          "id": "audit-frequency-and-scope",
+          "subsections": []
+        },
+        {
+          "title": "Independent Auditor Credentials",
+          "id": "independent-auditor-credentials",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Ongoing Compliance Monitoring",
+      "id": "ongoing-compliance-monitoring",
+      "subsections": [
+        {
+          "title": "Monitoring Tools and Processes",
+          "id": "monitoring-tools-and-processes",
+          "subsections": []
+        },
+        {
+          "title": "Reporting Mechanisms",
+          "id": "reporting-mechanisms",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

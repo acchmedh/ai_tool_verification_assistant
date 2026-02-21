@@ -1,0 +1,14 @@
+{
+  "description": {
+    "name": "CompliConnect",
+    "purpose": "Facilitates collaboration among compliance officers to streamline processes and ensure regulatory adherence.",
+    "category": "Collaboration",
+    "user_base": "Compliance officers"
+  },
+  "document_types": [
+    "security_whitepaper",
+    "terms_of_service",
+    "service_level_agreement",
+    "privacy_policy"
+  ]
+}

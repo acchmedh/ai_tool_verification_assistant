@@ -1,0 +1,143 @@
+{
+  "title": "Data Processing Agreement",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose of the Agreement",
+          "id": "purpose-of-the-agreement",
+          "subsections": []
+        },
+        {
+          "title": "Definitions",
+          "id": "definitions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Roles and Responsibilities",
+      "id": "roles-and-responsibilities",
+      "subsections": [
+        {
+          "title": "Data Controller Obligations",
+          "id": "data-controller-obligations",
+          "subsections": []
+        },
+        {
+          "title": "Data Processor Obligations",
+          "id": "data-processor-obligations",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Handling and Processing",
+      "id": "data-handling-and-processing",
+      "subsections": [
+        {
+          "title": "Data Collection",
+          "id": "data-collection",
+          "subsections": []
+        },
+        {
+          "title": "Data Storage",
+          "id": "data-storage",
+          "subsections": []
+        },
+        {
+          "title": "Data Transfer",
+          "id": "data-transfer",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Security Measures",
+      "id": "security-measures",
+      "subsections": [
+        {
+          "title": "Technical Safeguards",
+          "id": "technical-safeguards",
+          "subsections": []
+        },
+        {
+          "title": "Organizational Measures",
+          "id": "organizational-measures",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Audit and Inspection Rights",
+      "id": "audit-and-inspection-rights",
+      "subsections": [
+        {
+          "title": "Audit Process",
+          "id": "audit-process",
+          "subsections": []
+        },
+        {
+          "title": "Inspection Scope",
+          "id": "inspection-scope",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Subprocessors",
+      "id": "subprocessors",
+      "subsections": [
+        {
+          "title": "List of Approved Subprocessors",
+          "id": "list-of-approved-subprocessors",
+          "subsections": []
+        },
+        {
+          "title": "Subprocessor Obligations",
+          "id": "subprocessor-obligations",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Subject Rights",
+      "id": "data-subject-rights",
+      "subsections": [
+        {
+          "title": "Access Requests",
+          "id": "access-requests",
+          "subsections": []
+        },
+        {
+          "title": "Rectification and Erasure",
+          "id": "rectification-and-erasure",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Term and Termination",
+      "id": "term-and-termination",
+      "subsections": [
+        {
+          "title": "Agreement Duration",
+          "id": "agreement-duration",
+          "subsections": []
+        },
+        {
+          "title": "Termination Conditions",
+          "id": "termination-conditions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Governing Law and Jurisdiction",
+      "id": "governing-law-and-jurisdiction",
+      "subsections": []
+    }
+  ]
+}

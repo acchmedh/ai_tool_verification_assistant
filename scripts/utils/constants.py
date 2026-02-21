@@ -12,10 +12,9 @@ TOC_SCHEMA = {
     "definitions": {
         "section": {
             "type": "object",
-            "required": ["title"],
+            "required": ["title", "id", "subsections"],
             "properties": {
                 "title": {"type": "string"},
-                "page": {"type": "integer"},
                 "id": {"type": "string"},
                 "subsections": {
                     "type": "array",

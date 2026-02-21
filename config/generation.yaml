@@ -1,13 +1,13 @@
 models:
   ideation_model:
     name: l2-gpt-4o-mini
-    temperature: 0.9
+    temperature: 0.8
   toc_model:
     name: l2-gpt-4o
     temperature: 0.7
   section_model:
-    name: l2-gpt-4.1-mini
-    temperature: 0.8
+    name: l2-gpt-4.1-nano
+    temperature: 0.7
 
 dataset:
   num_tools: 5

@@ -1,0 +1,148 @@
+{
+  "title": "Data Processing Agreement",
+  "sections": [
+    {
+      "title": "Introduction",
+      "id": "introduction",
+      "subsections": [
+        {
+          "title": "Purpose and Scope",
+          "id": "purpose_scope",
+          "subsections": []
+        },
+        {
+          "title": "Definitions",
+          "id": "definitions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Roles and Responsibilities",
+      "id": "roles_responsibilities",
+      "subsections": [
+        {
+          "title": "Data Controller Obligations",
+          "id": "controller_obligations",
+          "subsections": []
+        },
+        {
+          "title": "Data Processor Obligations",
+          "id": "processor_obligations",
+          "subsections": []
+        },
+        {
+          "title": "Joint Controller Provisions",
+          "id": "joint_controller_provisions",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Handling and Processing",
+      "id": "data_handling_processing",
+      "subsections": [
+        {
+          "title": "Processing Instructions",
+          "id": "processing_instructions",
+          "subsections": []
+        },
+        {
+          "title": "Retention and Deletion",
+          "id": "retention_deletion",
+          "subsections": []
+        },
+        {
+          "title": "Sub-Processors",
+          "id": "sub_processors",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Security Measures",
+      "id": "security_measures",
+      "subsections": [
+        {
+          "title": "Technical and Organizational Measures",
+          "id": "technical_organizational_measures",
+          "subsections": []
+        },
+        {
+          "title": "Incident Response and Notification",
+          "id": "incident_response_notification",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Compliance with Applicable Laws",
+      "id": "compliance_laws",
+      "subsections": [
+        {
+          "title": "Data Protection Regulations",
+          "id": "data_protection_regulations",
+          "subsections": []
+        },
+        {
+          "title": "Cross-Border Data Transfers",
+          "id": "cross_border_transfers",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Liability and Indemnification",
+      "id": "liability_indemnification",
+      "subsections": [
+        {
+          "title": "Limitation of Liability",
+          "id": "limitation_liability",
+          "subsections": []
+        },
+        {
+          "title": "Indemnification Terms",
+          "id": "indemnification_terms",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Termination",
+      "id": "termination",
+      "subsections": [
+        {
+          "title": "Effects of Termination",
+          "id": "effects_termination",
+          "subsections": []
+        },
+        {
+          "title": "Post-Termination Obligations",
+          "id": "post_termination_obligations",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous Provisions",
+      "id": "miscellaneous_provisions",
+      "subsections": [
+        {
+          "title": "Governing Law and Jurisdiction",
+          "id": "governing_law_jurisdiction",
+          "subsections": []
+        },
+        {
+          "title": "Amendments",
+          "id": "amendments",
+          "subsections": []
+        },
+        {
+          "title": "Entire Agreement",
+          "id": "entire_agreement",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

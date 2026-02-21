@@ -1,0 +1,14 @@
+{
+  "description": {
+    "name": "InsightAI Nexus",
+    "purpose": "Advanced analytics platform harnessing AI to derive actionable insights from enterprise data.",
+    "category": "AI Analytics",
+    "user_base": "Enterprise IT"
+  },
+  "document_types": [
+    "service_level_agreement",
+    "privacy_policy",
+    "terms_of_service",
+    "compliance_and_certifications"
+  ]
+}

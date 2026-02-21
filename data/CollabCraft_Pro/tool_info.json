@@ -1,0 +1,14 @@
+{
+  "description": {
+    "name": "CollabCraft Pro",
+    "purpose": "A collaborative platform designed for product managers to streamline communication, align goals, and manage workflows effectively throughout the product lifecycle.",
+    "category": "Collaboration",
+    "user_base": "Product managers"
+  },
+  "document_types": [
+    "data_processing_agreement",
+    "security_whitepaper",
+    "terms_of_service",
+    "service_level_agreement"
+  ]
+}

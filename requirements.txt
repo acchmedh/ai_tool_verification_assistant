@@ -13,6 +13,9 @@ langchain-community>=0.3.27
 chromadb>=0.5.0
 sentence-transformers>=3.0.0
 
+# HTML validation (strict parsing; catches malformed nesting)
+lxml>=5.0.0
+
 # Data processing
 pandas>=2.2.0
 numpy>=2.0.0

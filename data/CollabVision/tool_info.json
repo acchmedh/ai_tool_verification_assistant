@@ -1,0 +1,14 @@
+{
+  "description": {
+    "name": "CollabVision",
+    "purpose": "A collaborative platform designed to streamline product management workflows, enabling teams to align on goals, share insights, and track progress effectively.",
+    "category": "Collaboration",
+    "user_base": "Product managers"
+  },
+  "document_types": [
+    "data_processing_agreement",
+    "terms_of_service",
+    "service_level_agreement",
+    "security_whitepaper"
+  ]
+}
