@@ -6,15 +6,14 @@ from typing import Any
 
 import yaml
 
-from scripts.utils.typings import DatasetConfig, GeneratorConfig
-from src.core.settings import settings
-
-# Add project root to path for imports
+# Project root on path first so "scripts" and "src" resolve when run as script
 ROOT = Path(__file__).resolve().parents[2]
 SRC_DIR = ROOT / "src"
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(SRC_DIR))
 
+from scripts.utils.typings import DatasetConfig, GeneratorConfig
+from src.core.settings import settings
 
 DATA_DIR = ROOT / "data"
 CONFIG_DIR = ROOT / "config"

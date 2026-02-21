@@ -2,13 +2,13 @@ import argparse
 import sys
 from pathlib import Path
 
+# Project root on path first so "scripts" and "src" resolve when run as script
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+
 from scripts.utils.section_generator import generate_all_sections
 from scripts.utils.toc_generator import generate_all_tocs
 from scripts.utils.tool_generator import generate_tools
-
-# Add project root to path for imports
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT))
 
 
 def main():

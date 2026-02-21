@@ -7,13 +7,12 @@ from typing import Any
 
 from lxml import etree
 
-from scripts.utils.generation_config import DATA_DIR, load_generator_config
-from src.utils.openai_client import get_openai_client
-
-# Add project root to path for imports
+# Project root on path first so "scripts" and "src" resolve when run as script
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
+from scripts.utils.generation_config import DATA_DIR, load_generator_config
+from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
