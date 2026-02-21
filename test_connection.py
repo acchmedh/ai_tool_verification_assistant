@@ -31,7 +31,7 @@ def test_chat_completion() -> bool:
         )
 
         message = response.choices[0].message.content
-        logger.success(f"✅ Chat completion test passed!")
+        logger.success("✅ Chat completion test passed!")
         logger.info(f"Response: {message}")
         return True
 
@@ -52,7 +52,7 @@ def test_embeddings() -> bool:
         )
 
         embedding = response.data[0].embedding
-        logger.success(f"✅ Embeddings test passed!")
+        logger.success("✅ Embeddings test passed!")
         logger.info(f"Embedding dimension: {len(embedding)}")
         return True
 

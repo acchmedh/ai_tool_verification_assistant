@@ -1,17 +1,19 @@
-import sys
 import json
 import random
+import sys
 import time
 from pathlib import Path
 from typing import Any
+
 from lxml import etree
+
+from scripts.utils.generation_config import DATA_DIR, load_generator_config
+from src.utils.openai_client import get_openai_client
 
 # Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from src.utils.openai_client import get_openai_client
-from scripts.utils.generation_config import load_generator_config, DATA_DIR
 
 client = get_openai_client()
 

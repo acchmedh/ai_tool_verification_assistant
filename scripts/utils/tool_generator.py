@@ -3,13 +3,13 @@ import random
 import sys
 from pathlib import Path
 
+from scripts.utils.constants import TOOL_INFO_RESPONSE_FORMAT
+from scripts.utils.generation_config import DATA_DIR, load_dataset_config, load_generator_config
+from src.utils.openai_client import get_openai_client
+
 # Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-
-from scripts.utils.generation_config import load_generator_config, load_dataset_config, DATA_DIR
-from scripts.utils.constants import TOOL_INFO_RESPONSE_FORMAT
-from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
@@ -118,7 +118,7 @@ def generate_tool() -> None:
 def generate_tools() -> None:
     for i in range(NUMBER_OF_TOOLS):
         try:
-            print(f"Generating Tool {i+1}...")
+            print(f"Generating Tool {i + 1}...")
             generate_tool()
             print()
         except Exception as e:

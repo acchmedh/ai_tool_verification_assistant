@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 from openai import OpenAI
+
 from core.settings import settings
 
 

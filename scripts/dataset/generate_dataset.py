@@ -2,13 +2,13 @@ import argparse
 import sys
 from pathlib import Path
 
+from scripts.utils.section_generator import generate_all_sections
+from scripts.utils.toc_generator import generate_all_tocs
+from scripts.utils.tool_generator import generate_tools
+
 # Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-
-from scripts.utils.tool_generator import generate_tools
-from scripts.utils.toc_generator import generate_all_tocs
-from scripts.utils.section_generator import generate_all_sections
 
 
 def main():

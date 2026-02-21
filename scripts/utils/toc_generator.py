@@ -1,15 +1,16 @@
 import json
 import sys
 from pathlib import Path
-from jsonschema import validate, ValidationError
+
+from jsonschema import ValidationError, validate
+
+from scripts.utils.constants import TOC_RESPONSE_FORMAT, TOC_SCHEMA
+from scripts.utils.generation_config import DATA_DIR, load_generator_config
+from src.utils.openai_client import get_openai_client
 
 # Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-
-from scripts.utils.generation_config import DATA_DIR, load_generator_config
-from scripts.utils.constants import TOC_SCHEMA, TOC_RESPONSE_FORMAT
-from src.utils.openai_client import get_openai_client
 
 client = get_openai_client()
 
@@ -75,7 +76,7 @@ def validate_and_save_toc(toc_obj: dict, out_path: Path) -> dict:
     try:
         validate(instance=toc_obj, schema=TOC_SCHEMA)
     except ValidationError as e:
-        raise ValueError(f"TOC JSON failed schema validation: {e.message}")
+        raise ValueError(f"TOC JSON failed schema validation: {e.message}") from e
     out_path.write_text(json.dumps(toc_obj, ensure_ascii=False, indent=2), encoding="utf-8")
     return toc_obj
 

@@ -17,7 +17,7 @@ def main() -> None:
     setup_logger()
 
     logger.info("AI Tool Verification Assistant")
-    logger.info(f"Version: 0.1.0")
+    logger.info("Version: 0.1.0")
     logger.info("=" * 50)
 
     # Display configuration (without sensitive data)

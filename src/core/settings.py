@@ -5,10 +5,13 @@ This module handles all configuration loading from environment variables
 and provides a centralized configuration object.
 """
 
-from pydantic import Field
 from pathlib import Path
+
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
 BASE_DIR = Path(__file__).resolve().parents[2]
+
 
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""

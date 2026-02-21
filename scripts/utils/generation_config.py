@@ -1,9 +1,13 @@
 """Configuration loading utilities for prompts, models, and path constants."""
 
-from pathlib import Path
 import sys
+from pathlib import Path
+from typing import Any
+
 import yaml
-from typing import Any, Optional
+
+from scripts.utils.typings import DatasetConfig, GeneratorConfig
+from src.core.settings import settings
 
 # Add project root to path for imports
 ROOT = Path(__file__).resolve().parents[2]
@@ -11,8 +15,6 @@ SRC_DIR = ROOT / "src"
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(SRC_DIR))
 
-from src.core.settings import settings
-from scripts.utils.typings import GeneratorConfig, DatasetConfig
 
 DATA_DIR = ROOT / "data"
 CONFIG_DIR = ROOT / "config"
@@ -22,7 +24,7 @@ GENERATION_PATH = CONFIG_DIR / "generation.yaml"
 
 def load_yaml(path: Path) -> dict[str, Any]:
     """Loads and parses a YAML file."""
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
@@ -46,11 +48,11 @@ def load_dataset_config() -> DatasetConfig:
         user_bases=dataset.get("user_bases", []),
         document_types=dataset.get("document_types", []),
         number_of_tools=dataset.get("num_tools", 1),
-        docs_per_tool=dataset.get("docs_per_tool", 1)
+        docs_per_tool=dataset.get("docs_per_tool", 1),
     )
 
 
-def load_generator_config(prompt_key: str, model_key: Optional[str] = None) -> GeneratorConfig:
+def load_generator_config(prompt_key: str, model_key: str | None = None) -> GeneratorConfig:
     """Loads configuration for a generator script (prompts and models)."""
     prompts = load_prompts()
     generation = load_generation()
