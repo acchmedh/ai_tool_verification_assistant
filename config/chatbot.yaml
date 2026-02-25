@@ -1,0 +1,14 @@
+model:
+  name: l2-gpt-4o-mini
+  temperature: 0.7
+  max_tokens: 512
+
+tools:
+  # Globally enable or disable all tools
+  enabled: true
+  # If empty or omitted, all declared tools are allowed.
+  # Otherwise, only tools with names in this list will be used.
+  enabled_tools:
+    - get_current_date
+    - add_days_to_date
+
