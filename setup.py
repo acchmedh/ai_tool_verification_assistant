@@ -8,4 +8,3 @@ For modern Python packaging, see pyproject.toml.
 from setuptools import setup
 
 setup()
-

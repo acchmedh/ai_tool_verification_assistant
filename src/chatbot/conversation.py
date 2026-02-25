@@ -24,7 +24,9 @@ class Conversation:
         self.messages.append(msg)
 
     def add_tool_result(self, tool_call_id: str, content: str):
-        self.messages.append({"role": "tool", "tool_call_id": tool_call_id, "content": str(content)})
+        self.messages.append(
+            {"role": "tool", "tool_call_id": tool_call_id, "content": str(content)}
+        )
 
     def get_messages(self):
         return self.messages
